@@ -16,18 +16,19 @@ Slack Workspace: <https://cunyttp.slack.com/archives/C01433YF022>
 
 Office Hours : Wednesdays, 12pm - 1pm EST
 
-## Repo Structure
+## Course Overview
+We will categorize coding interview problems into a set of 16 patterns. Each pattern will be a complete tool - consisting of data structures, algorithms, and analysis techniques. These tools will enable you to solve a specific category of problems. The goal is to develop an understanding of the underlying pattern, so that, we can apply that pattern to solve other problems.
 
-- This README contains your syllabus
-- The `assignments` folder is where you find the assigned classwork & homework for each day. Assignments are broken down into 1 of 16 patterns, furthermore, you will find subfolders with the week and day designation (*for example w1d1 stands for "week 1 day 1")
+Each problem not only maps to the same pattern but also presents different constraints. Overall, the course has around 125+ problems of varying difficulties. The problems solved under these patterns use a varied set of algorithmic techniques.
+
+We will start with a brief introduction of each pattern before jumping into the problems. Under each pattern, the first problem will explain the underlying pattern in detail to build the concepts that can be applied to later problems. The later problems will focus on the different constraints each problem presents and how our algorithm needs to change to handle them.
   
 ## Assignments
 
-For any assignment where we ask you to solve a problem(s), please submit
-your work to github using the directions below under
-'submitting HW'.
+- For any assignment where we ask you to solve a problem(s) or conduct mock technical interviews in class, please work in a code editor of choice and submit your work to github periodically throughout the day with descriptive comments
+- The `assignments` folder is where you find the assigned classwork & homework for each day. Assignments are broken down into 1 of 16 patterns, furthermore, you will find subfolders with the week and day designation (*for example w1d1 stands for "week 1 day 1")
 
-## Submitting HW
+## Submitting Work
 
 To get setup to submit homework, **fork this repository**.
 
@@ -40,17 +41,25 @@ Then do the following when you do homework:
   file at `week2/day1/assignment-name`. In general, the path for a
   file is `week#/day#/assignment-name`. The same is true for
   submitting classwork we did on 6/5. You would look for the correct
-  file under `week2/day1/assignment-name`.
-- Do the work.
+  file under `week2/day1/assignment-name`
+- Do the work
 - When you are ready to start comitting work to your fork, place your
   work in the appropriate file, and change it. Unless I say otherwise,
   you can submit your solutions as Javascript of C++ files. If you
   need to change the file extension of the file, that is fine. Just
   don't change the base name of the file. Example: you can change
   `implement-hash-table.cpp` to `implement-hash-table.js` 
-  but not to `hash-tbl.cpp`. 
+  but not to `hash-tbl.cpp` 
 - Commit your changes, push them to your fork, and then submit a pull
-  request from your fork against my repository.
+  request from your fork against my repository
+  
+## Homework
+
+### Expectations
+
+- You will complete all algos listed in the syllabus on a weekly basis. 
+- We will review your comments/high level overview & code to identify strengths and weaknesses within your understanding of each pattern.
+- You will NOT complete your homework all in one shot & will NOT save. Attempting to master Data-structures and Algorithms requires constant exposure to these questions and solutions. You will create a PR through GitHub each night solving at minimum one problem which you were not able to solve during class time.
 
 ## What if the problem is too hard? Can't solve it in time?
 
@@ -84,13 +93,6 @@ program containing the following:
 	- Many will struggle with the common coding patterns for the first few times they encounter them, it is extremely important to learn how to move on with the intentions of revisiting said topic at a later date.
 		example:
 		- While we were young we would be assigned tasks like brushing our teeth, bathing, etc... Our parents would surely not allow us 			to "attempt" to brush our teeth for 90 minutes in pursuit of perfection at this stage in our lives, instead, they would likely step in and "take over" to ensure that we got it done. The emphasis was never on getting it perfect in one singular session, but, achieving muscle memory and improvement of motor skills through repition.
-
-## Course Overview
-We will categorize coding interview problems into a set of 16 patterns. Each pattern will be a complete tool - consisting of data structures, algorithms, and analysis techniques. These tools will enable you to solve a specific category of problems. The goal is to develop an understanding of the underlying pattern, so that, we can apply that pattern to solve other problems.
-
-Each problem not only maps to the same pattern but also presents different constraints. Overall, the course has around 125+ problems of varying difficulties. The problems solved under these patterns use a varied set of algorithmic techniques.
-
-We will start with a brief introduction of each pattern before jumping into the problems. Under each pattern, the first problem will explain the underlying pattern in detail to build the concepts that can be applied to later problems. The later problems will focus on the different constraints each problem presents and how our algorithm needs to change to handle them.
 
 ## Syllabus
 
@@ -335,129 +337,3 @@ We will start with a brief introduction of each pattern before jumping into the 
 - [] Alien Dictionary (hard): LC #269
 - [] Reconstructing a Sequence (hard): LC #444
 - [] Minimum Height Trees (hard): LC #310
-
-
-
-
-
-### Slides & Resources
-
-### Homework
-
-Homework1
-
-1. p2p problems. **Due 1/2.** Remember to submit work 1/3, after p2p
-   finishes.
-    - `p2p-problem-1`
-    - `p2p-problem-2`
-
-Please create a gist containing your solutions or attempt at designing solutions. At the top of your code, make a comment with your name, your group, and the two problem names. This will be the system starting Wednesday night, with p2p 3. Slack Elise your code by 7pm the night before you act as interviewer, so I can be sure you worked on the problems yourself. 
-
-Homework2
-
-1. p2p problems. **Due 1/6.** Remember to submit work 1/7, after p2p
-   finishes.
-    - `p2p-problem-1`
-    - `p2p-problem-2`
-2. Read intro material on hash tables
-   [here](https://leetcode.com/explore/learn/card/hash-table/) **Due
-   1/6.** Read up until the problem "design a hash set", and do not do
-   it.
-3. Read the [lists review
-   packet](https://drive.google.com/open?id=1Ro83seOpzj7Yz4gcWz84qxg3CGhiArT8uB_xB9onZO0), if you need a refresher on arrays, or linked lists. **Due 1/9.** 
-4. Do [Kth largest element in an
-   array](https://leetcode.com/problems/kth-largest-element-in-an-array/).
-   **Due 1/9.** `kth-largest`.
-
-Homework3
-
-1. Read solutions for p2p 2 problems. **Due tk.**
-2. Find an *easy* question on LC from the category for *strings* or
-   *arrays*. Solve it, and write at least 3 edge cases to present to an
-   interviewee and at least 2 hints to help an interviewee follow
-   along with your solution to the problem. If you have trouble coming
-   up with at least 3 edge cases and 2 hints by tonight, message me on
-   slack with the link to your question, a summary of your algorithm,
-   your edge cases, and your hints. We'll figure something out. **Due
-   tk.**. Submit this in the same way we've asked you to [submit
-   answers to p2p
-   problems] Please create a gist containing your solutions or attempt at designing solutions. At the top of your code, make a comment with your name, your group, and the two problem names. This will be the system starting Wednesday night, with p2p 3. Slack Elise your code by 7pm the night before you act as interviewer, so I can be sure you worked on the problems yourself. 
-
-Homework4  
-
-1. p2p problems for p2p 3. **Due tk.** 
-Please create a gist containing your solutions or attempt at designing solutions. At the top of your code, make a comment with your name, your group, and the two problem names. This will be the system starting Wednesday night, with p2p 3. Slack Elise your code by 7pm the night before you act as interviewer, so I can be sure you worked on the problems yourself. 
-    - `p2p-problem-1`
-    - `p2p-problem-2`
-
-Homework5  
-
-1. Implement dutch national flag partitioning for a linked list, this
-   is on Hacker Rank. You will receive an invite. *Check your spam for
-   the invite if you can't find it, and reach out to me or Elise!* **Due
-   tk.**
-2. Stacks+queues unit pre-reading <https://drive.google.com/open?id=1MN29NToPCiKZy2_Sg_A7xuR2_BbKaIv-zXEGEkzpc6g>. **Due tk **
-3. Stacks+queues unit intro question, "Implement Max Stack". This is
-   on Hacker Rank. **Due tk.**
-4. Trees unit pre-reading. Review slides on trees, the representation as
-   a data structure and **many important definitions** I will use in
-   class.
-   <https://docs.google.com/presentation/d/1ONw1IU8wVmXGKuK6yUfPti6f2q9603CYQyCrjT7QQMk/edit?usp=sharing>.
-   **Due tk.**
-
-Homework6 
-
-1. Hacker Rank problem `braces`. You will recieve an invite. **Due
-   tk.**
-2. [Backspace string
-   compare](https://leetcode.com/problems/backspace-string-compare/).
-   **Due tk.** `backspace-string-compare`.
-
-Homework7 
-
-1. p2p problems for p2p 4. You must do these problems and read the
-   answers in the same night. **Due tk.**
-
-Homework8  
-
-1. p2p problems for p2p 5. **Due tk.**
-2. If you took a mock interview with a Bloomberg engineer today,
-   *please fill out [this
-   survey](https://docs.google.com/forms/d/e/1FAIpQLSfKCfYaRXMKL80BEdYPIN4ckdPGF7q3S0eOz9OGFsU0F3cjrw/viewform)*.
-   If you haven't done so already. **Due tk.**
-
-Homework9 
-
-1. Read [Recursion pre-work packet](https://drive.google.com/open?id=137-FK-Y2DYqpTkSb5yHm8wHoVEPQ8bh2). **Due tk.**
-2. Finish these problems from class. **Due tk.**
-    - <https://leetcode.com/problems/binary-tree-level-order-traversal/>
-    - <https://leetcode.com/problems/populating-next-right-pointers-in-each-node/>
-
-Homework10  
-
-1. p2p problems for p2p 6. **Due tk.**
-
-Homework11
-
-1. Read solutions to p2p problems for p2p 6. **Due tk.**
-2. Spend 1 hour working on problems from either the Recursion Day 1
-   Slides or Recursion Day 2 slides. They are linked in the classwork
-   section under the dates 1/20 and 1/21. **Due tk.**
-
-Homework12  
-
-1. p2p problems for p2p 7. **Due tk.**
-2. Find your own problem for p2p 7! You can pick any problem you want
-   from LeetCode. Solve it, write at least 3 edge cases and 2 hints to
-   present to an interviewee when they're trying to solve your
-   problem.  If you have trouble coming
-   up with at least 3 edge cases and 2 hints by tonight, message me on
-   slack with all of the below items. We'll figure something out.
-   **Due 1/23.** Submit this as a gist to Elise. You don't have to
-   submit a pull request for this. Don't bite off more than you can
-   chew! 
-    - the link to your question
-    - your program (if you have one)
-    - a summary of your algorithm
-    - your edge cases
-    - and your hints.  
