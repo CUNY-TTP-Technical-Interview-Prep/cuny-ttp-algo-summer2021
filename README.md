@@ -2,9 +2,9 @@
 
 Class Days: Mon - Thur
 
-Class Times: 9am to 12pm EST
+Class Times: 9am to 12pm EST 
 
-Dates: June 1st (Tue) to June 30th (Wed)
+Dates: June 1st (Tue) to June 30th (Wed)    
 
 Lead Instructor: Christopher Linares - <cbluiux@gmail.com>
 
@@ -12,27 +12,19 @@ TA: Melissa Pastore - <melissa.pastore@gmail.com>
 
 TA: Kirstie Rodriguez - <KirstieNRodriguez@gmail.com>
 
-Slack Workspace: <https://cunyttp.slack.com/archives/C01433YF022>
+Slack Workspace: <https://cunyttp.slack.com/archives/C01433YF022> 
 
 Office Hours : Wednesdays, 12pm - 1pm EST
 
 ## Repo Structure
 
-- This README contains your assignments
-- The `patterns-template` folder is where you will put your work when you
-  submit a pull request for review by our team.
-
+- This README contains your syllabus
+- The `assignments` folder is where you find the assigned classwork & homework for each day. Assignments are broken down into 1 of 16 patterns, furthermore, you will find subfolders with the week and day designation (*for example w1d1 stands for "week 1 day 1")
+  
 ## Assignments
 
-Each assignment has the following format:
-
-Date given: description. Due date. Assignment name.
-
-The due date means before class on that date. So if a homework is due
-on 6/10, then it is due before 10:00 AM on 6/10.
-
-For any assignment where we ask you to solve a problem, please submit
-your program to the github using the directions below under
+For any assignment where we ask you to solve a problem(s), please submit
+your work to github using the directions below under
 'submitting HW'.
 
 ## Submitting HW
@@ -55,40 +47,50 @@ Then do the following when you do homework:
   you can submit your solutions as Javascript of C++ files. If you
   need to change the file extension of the file, that is fine. Just
   don't change the base name of the file. Example: you can change
-  `implement-hash-table.cpp` to `implement-hash-table.js`
-  but not to `hash-tbl.cpp`.
+  `implement-hash-table.cpp` to `implement-hash-table.js` 
+  but not to `hash-tbl.cpp`. 
 - Commit your changes, push them to your fork, and then submit a pull
   request from your fork against my repository.
 
-## What if the problem is too hard?
+## What if the problem is too hard? Can't solve it in time?
 
-If you are not able to solve the problem at home then post up a
+1. Spend 15-30 minutes trying to solve the problem if you are not able to, write and submit a
 program containing the following:
 
-As comments:
+	As comments:
 
-- a description of the approach(es) you thought of
-- a description of where you got stuck on these approaches. For
-  example:
-    - Was there a flaw in the approach you found and you had to think
+	- a description of the approach(es) you thought of
+	- a description of where you got stuck on these approaches. For
+  		example:
+    	- Was there a flaw in the approach you found and you had to think
       of a new one? What was the flaw? How did you try to get around
       it?
-    - Were you just unable to implement the approach? Which part(s)
+    	- Were you just unable to implement the approach? Which part(s)
       were you unable to implement, and why?
 
-As code:
+2. If you get stuck reverse engineer the existing solution and take a few moments to digest it. (*a few moments may take longer for leetcode hard)
 
-- whatever part of a program you wrote if you wrote one
+	As code:
 
-We prefer you submit something that runs, but sometimes we don't get
-that far. Whether it runs or not, just submit what you have.
+	- Type out the the program in your language by referencing the solution provided (2-3 times, No copy/pasting)
+	- Reference leetcode discussion and reverse engineer a solution which fits most with your style.
+		example:
+		- If you seldom use higher order functions, then do not attempt to reverse engineer solutions which focus on these
+		- If you prefer a certain implementation of a data-structure over another, please cater to your strengths
+
+3. Move on to the next problem.
+	
+	As a mindset:
+	- Many will struggle with the common coding patterns for the first few times they encounter them, it is extremely important to learn how to move on with the intentions of revisiting said topic at a later date.
+		example:
+		- While we were young we would be assigned tasks like brushing our teeth, bathing, etc... Our parents would surely not allow us 			to "attempt" to brush our teeth for 90 minutes in pursuit of perfection at this stage in our lives, instead, they would likely step in and "take over" to ensure that we got it done. The emphasis was never on getting it perfect in one singular session, but, achieving muscle memory and improvement of motor skills through repition.
 
 ## Course Overview
 We will categorize coding interview problems into a set of 16 patterns. Each pattern will be a complete tool - consisting of data structures, algorithms, and analysis techniques. These tools will enable you to solve a specific category of problems. The goal is to develop an understanding of the underlying pattern, so that, we can apply that pattern to solve other problems.
 
 Each problem not only maps to the same pattern but also presents different constraints. Overall, the course has around 125+ problems of varying difficulties. The problems solved under these patterns use a varied set of algorithmic techniques.
 
-We will start with a brief introduction of each pattern before jumping onto the problems. Under each pattern, the first problem will explain the underlying pattern in detail to build the concepts that can be applied to later problems. The later problems will focus on the different constraints each problem presents and how our algorithm needs to change to handle them.
+We will start with a brief introduction of each pattern before jumping into the problems. Under each pattern, the first problem will explain the underlying pattern in detail to build the concepts that can be applied to later problems. The later problems will focus on the different constraints each problem presents and how our algorithm needs to change to handle them.
 
 ## Syllabus
 
@@ -127,7 +129,7 @@ We will start with a brief introduction of each pattern before jumping onto the 
 #### 06/07 (Mon):
 - "Two Pointers" Continued: P2P Mock Interview ( Each Pair Choose One! )
   - [] Triplets with Smaller Sum (medium): LC #259
-  - [] Subarrays with Product Less than a Target (medium): LC #713
+  - [] Subarrays with Product Less than a Target (medium): LC #713 
   - [] Dutch National Flag Problem (medium): LC #75
 - Intro to "Fast & Slow Pointers" Pattern: Lecture & Discussion
   - [] LinkedList Cycle (easy): LC #141
@@ -135,29 +137,29 @@ We will start with a brief introduction of each pattern before jumping onto the 
 
 #### 06/08 (Tues):
 - "Fast & Slow Pointers" Continued: P2P Mock Interview ( Each Pair Choose One! )
-  - [] Start of LinkedList Cycle (medium): LC #142
+  - [] Start of LinkedList Cycle (medium): LC #142 
   - [] Happy Number (medium): LC #202
-  - [] Middle of the LinkedList (easy): LC #876
+  - [] Middle of the LinkedList (easy): LC #876 
 - Intro to "Merge Intervals" Pattern: Lecture & Discussion
   - [] Merge Intervals (medium): LC #56
 
 #### 06/09 (Wed):
 - "Merge Intervals" Continued ( Each Pair Choose One! )
   - [] Insert Interval (medium): LC #57
-  - [] Intervals Intersection (medium): LC #986
-  - [] Conflicting Appointments (medium): LC #252
+  - [] Intervals Intersection (medium): LC #986 
+  - [] Conflicting Appointments (medium): LC #252 
 - Intro to "Cyclic Sort" Pattern: Lecture & Discussion
   - [] Cyclic Sort (easy)
 
 #### 06/10 (Thur):
 - "Cyclic Sort" Continued ( Each Pair Choose Two! )
-  - [] Find the Missing Number (easy): LC #268
-  - [] Find all Missing Numbers (easy): LC #448
-  - [] Find the Duplicate Number (easy): LC #287
-  - [] Find all Duplicate Numbers (easy): LC #442
+  - [] Find the Missing Number (easy): LC #268 
+  - [] Find all Missing Numbers (easy): LC #448 
+  - [] Find the Duplicate Number (easy): LC #287 
+  - [] Find all Duplicate Numbers (easy): LC #442 
 - Intro to "In Place Reversal of a LL" Pattern: Lecture & Discussion
   - [] Reverse a LinkedList (easy): LC #206
-
+  
 ### .
 ### /// Week Three ///
 
@@ -165,7 +167,7 @@ We will start with a brief introduction of each pattern before jumping onto the 
 - "In Place Reversal of a LL" Continued ( Each Pair Choose One! )
   - [] Reverse a LinkedList (easy): LC #206
   - [] Reverse a Sub-list (medium): LC #92
-  - [] Reverse every K-element Sub-list (medium): LC #25
+  - [] Reverse every K-element Sub-list (medium): LC #25 
 - Intro to "Trees: BFS" Pattern & Discussion
   - [] Binary Tree Level Order Traversal (easy): LC #102
 
@@ -174,11 +176,11 @@ We will start with a brief introduction of each pattern before jumping onto the 
 - "Trees: BFS" Continued ( Each Pair Choose Two! )
   - [] Reverse Level Order Traversal (easy): LC #107
   - [] Zigzag Traversal (medium): LC #103
-  - [] Level Averages in a Binary Tree (easy): LC #637
+  - [] Level Averages in a Binary Tree (easy): LC #637 
 
 #### 06/16 (Wed):
 - "Trees: BFS" Continued ( Each Pair Choose One! )
-  - [] Minimum Depth of a Binary Tree (easy): LC #111 & LC #104
+  - [] Minimum Depth of a Binary Tree (easy): LC #111 & LC #104 
   - [] Level Order Successor (easy)
   - [] Connect Level Order Siblings (medium): LC #117
 - Intro to "Trees: DFS" Pattern & Discussion
@@ -186,7 +188,7 @@ We will start with a brief introduction of each pattern before jumping onto the 
 
 #### 06/17 (Thur):
 - "Trees: DFS" Continued ( Each Pair Choose Two! )
-  - [] All Paths for a Sum (medium): LC #113 & LC #257
+  - [] All Paths for a Sum (medium): LC #113 & LC #257 
   - [] Sum of Path Numbers (medium): LC #129
   - [] Path With Given Sequence (medium): LC #1430
   - [] Count Paths for a Sum (medium): LC #437
@@ -236,15 +238,15 @@ We will start with a brief introduction of each pattern before jumping onto the 
 #### /// Sliding Window ///
 - [] No-repeat Substring (hard): LC #3
 - [] Longest Substring with Same Letters after Replacement (hard)
-- [] Longest Subarray with Ones after Replacement (hard): LC #424
-- [] Find Permutation (hard): LC #567 & LC #1004
+- [] Longest Subarray with Ones after Replacement (hard): LC #424 
+- [] Find Permutation (hard): LC #567 & LC #1004 
 - [] Find String Anagrams (hard): LC #438
 - [] Smallest Window Containing Substring (hard): LC #76
 - [] Words Concatenation (hard): LC #30
 
 #### /// Two Pointers ///
-- [] Quadruple Sum to Target (medium): LC #18
-- [] Comparing Strings containing Backspaces (medium): LC #844
+- [] Quadruple Sum to Target (medium): LC #18 
+- [] Comparing Strings containing Backspaces (medium): LC #844 
 - [] Minimum Window Sort (medium): LC #581
 
 #### /// Fast & Slow Pointers ///
@@ -280,22 +282,22 @@ We will start with a brief introduction of each pattern before jumping onto the 
 
 #### /// Subsets ///
 - [] Balanced Parentheses (hard): LC #22
-- [] Unique Generalized Abbreviations (hard): LC #320
+- [] Unique Generalized Abbreviations (hard): LC #320 
 - [] Evaluate Expression (hard): LC #241
 - [] Structurally Unique Binary Search Trees (hard): LC #95
 - [] Count of Structurally Unique Binary Search Trees (hard): LC #96
 
 #### /// Modified Binary Search ///
-- [] Search in a Sorted Infinite Array (medium): LC #702
-- [] Minimum Difference Element (medium): LC #658 (k == 1)
+- [] Search in a Sorted Infinite Array (medium): LC #702 
+- [] Minimum Difference Element (medium): LC #658 (k == 1) 
 - [] Bitonic Array Maximum (easy)
 - [] Search Bitonic Array (medium)
 - [] Search in Rotated Array (medium): LC #33 & LC #81
 - [] Rotation Count (medium): LC #153 & LC #154
 
 #### /// Bitwise XOR /// --> Low Chances of
-- [] Two Single Numbers (medium): LC #260
-- [] Complement of Base 10 Number (medium): LC #476
+- [] Two Single Numbers (medium): LC #260 
+- [] Complement of Base 10 Number (medium): LC #476 
 - [] Problem Statement (hard): LC #832
 
 #### /// Top "K" Elements ///
@@ -320,9 +322,9 @@ We will start with a brief introduction of each pattern before jumping onto the 
 - [] Problem K Pairs with Largest Sums (Hard): LC $373
 
 #### /// Knapsack (Dynamic Programming) ///
-- [] Equal Subset Sum Partition (medium): LC #416
+- [] Equal Subset Sum Partition (medium): LC #416 
 - [] Subset Sum (medium)
-- [] Minimum Subset Sum Difference (hard)
+- [] Minimum Subset Sum Difference (hard) 
 - [] Count of Subset Sum (hard)
 - [] Target Sum (hard): LC #494
 
@@ -349,7 +351,7 @@ Homework1
     - `p2p-problem-1`
     - `p2p-problem-2`
 
-Please create a gist containing your solutions or attempt at designing solutions. At the top of your code, make a comment with your name, your group, and the two problem names. This will be the system starting Wednesday night, with p2p 3. Slack Elise your code by 7pm the night before you act as interviewer, so I can be sure you worked on the problems yourself.
+Please create a gist containing your solutions or attempt at designing solutions. At the top of your code, make a comment with your name, your group, and the two problem names. This will be the system starting Wednesday night, with p2p 3. Slack Elise your code by 7pm the night before you act as interviewer, so I can be sure you worked on the problems yourself. 
 
 Homework2
 
@@ -362,7 +364,7 @@ Homework2
    1/6.** Read up until the problem "design a hash set", and do not do
    it.
 3. Read the [lists review
-   packet](https://drive.google.com/open?id=1Ro83seOpzj7Yz4gcWz84qxg3CGhiArT8uB_xB9onZO0), if you need a refresher on arrays, or linked lists. **Due 1/9.**
+   packet](https://drive.google.com/open?id=1Ro83seOpzj7Yz4gcWz84qxg3CGhiArT8uB_xB9onZO0), if you need a refresher on arrays, or linked lists. **Due 1/9.** 
 4. Do [Kth largest element in an
    array](https://leetcode.com/problems/kth-largest-element-in-an-array/).
    **Due 1/9.** `kth-largest`.
@@ -379,16 +381,16 @@ Homework3
    your edge cases, and your hints. We'll figure something out. **Due
    tk.**. Submit this in the same way we've asked you to [submit
    answers to p2p
-   problems] Please create a gist containing your solutions or attempt at designing solutions. At the top of your code, make a comment with your name, your group, and the two problem names. This will be the system starting Wednesday night, with p2p 3. Slack Elise your code by 7pm the night before you act as interviewer, so I can be sure you worked on the problems yourself.
+   problems] Please create a gist containing your solutions or attempt at designing solutions. At the top of your code, make a comment with your name, your group, and the two problem names. This will be the system starting Wednesday night, with p2p 3. Slack Elise your code by 7pm the night before you act as interviewer, so I can be sure you worked on the problems yourself. 
 
-Homework4
+Homework4  
 
-1. p2p problems for p2p 3. **Due tk.**
-Please create a gist containing your solutions or attempt at designing solutions. At the top of your code, make a comment with your name, your group, and the two problem names. This will be the system starting Wednesday night, with p2p 3. Slack Elise your code by 7pm the night before you act as interviewer, so I can be sure you worked on the problems yourself.
+1. p2p problems for p2p 3. **Due tk.** 
+Please create a gist containing your solutions or attempt at designing solutions. At the top of your code, make a comment with your name, your group, and the two problem names. This will be the system starting Wednesday night, with p2p 3. Slack Elise your code by 7pm the night before you act as interviewer, so I can be sure you worked on the problems yourself. 
     - `p2p-problem-1`
     - `p2p-problem-2`
 
-Homework5
+Homework5  
 
 1. Implement dutch national flag partitioning for a linked list, this
    is on Hacker Rank. You will receive an invite. *Check your spam for
@@ -403,7 +405,7 @@ Homework5
    <https://docs.google.com/presentation/d/1ONw1IU8wVmXGKuK6yUfPti6f2q9603CYQyCrjT7QQMk/edit?usp=sharing>.
    **Due tk.**
 
-Homework6
+Homework6 
 
 1. Hacker Rank problem `braces`. You will recieve an invite. **Due
    tk.**
@@ -411,12 +413,12 @@ Homework6
    compare](https://leetcode.com/problems/backspace-string-compare/).
    **Due tk.** `backspace-string-compare`.
 
-Homework7
+Homework7 
 
 1. p2p problems for p2p 4. You must do these problems and read the
    answers in the same night. **Due tk.**
 
-Homework8
+Homework8  
 
 1. p2p problems for p2p 5. **Due tk.**
 2. If you took a mock interview with a Bloomberg engineer today,
@@ -424,14 +426,14 @@ Homework8
    survey](https://docs.google.com/forms/d/e/1FAIpQLSfKCfYaRXMKL80BEdYPIN4ckdPGF7q3S0eOz9OGFsU0F3cjrw/viewform)*.
    If you haven't done so already. **Due tk.**
 
-Homework9
+Homework9 
 
 1. Read [Recursion pre-work packet](https://drive.google.com/open?id=137-FK-Y2DYqpTkSb5yHm8wHoVEPQ8bh2). **Due tk.**
 2. Finish these problems from class. **Due tk.**
     - <https://leetcode.com/problems/binary-tree-level-order-traversal/>
     - <https://leetcode.com/problems/populating-next-right-pointers-in-each-node/>
 
-Homework10
+Homework10  
 
 1. p2p problems for p2p 6. **Due tk.**
 
@@ -442,7 +444,7 @@ Homework11
    Slides or Recursion Day 2 slides. They are linked in the classwork
    section under the dates 1/20 and 1/21. **Due tk.**
 
-Homework12
+Homework12  
 
 1. p2p problems for p2p 7. **Due tk.**
 2. Find your own problem for p2p 7! You can pick any problem you want
@@ -453,26 +455,9 @@ Homework12
    slack with all of the below items. We'll figure something out.
    **Due 1/23.** Submit this as a gist to Elise. You don't have to
    submit a pull request for this. Don't bite off more than you can
-   chew!
+   chew! 
     - the link to your question
     - your program (if you have one)
     - a summary of your algorithm
     - your edge cases
-    - and your hints.
-
-
-
-
-
-# Algorithms
-
-Solve the following algorithms! During the pre-coursework you will be able to jump into our Zoom channel and use it as a library to study.
-
-1. Spend 15 minutes trying to solve the problem.
-2. If you get stuck watch the solution video.
-3. Move on to the next problem.
-4. If you can't solve it right now, that is fine just move on to the next problem.
-
-Do not spend more then 1 hour per problem.
-
-The solutions videos can be found in the following course: https://www.udemy.com/course/ultimate-javascript-leetcode-interview-bootcamp/?referralCode=6B683FD41E9DEDE9FF4C
+    - and your hints.  
