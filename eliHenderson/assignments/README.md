@@ -86,8 +86,8 @@ program containing the following:
 
 #### 06/01 (Tue):
 
-- Intros, Icebreakers & "Hot Seat"
-- Setup, Github & Expectations
+- [X] Intros, Icebreakers & "Hot Seat"
+- [X] Setup, Github & Expectations
 - Technical Interviewing Intro & Discussion
 - DSA Appendix Slides & Discussion
 - Initial HackerRank Assesment
