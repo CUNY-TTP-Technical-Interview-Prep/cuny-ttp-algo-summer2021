@@ -1,4 +1,6 @@
-function max_subarray_size_k(k, arr) {}
+function max_subarray_size_k(k, arr) {
+  // TODO: Write your code here
+}
 
 console.log(
   `Maximum sum of a subarray of size K: ${max_subarray_size_k(
