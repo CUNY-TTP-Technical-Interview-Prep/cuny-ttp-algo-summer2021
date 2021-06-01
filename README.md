@@ -30,28 +30,14 @@ We will start with a brief introduction of each pattern before jumping into the 
 
 ## Submitting Work
 
-To get setup to submit homework, **fork this repository**.
-
-Then do the following when you do homework:
-
-- Pull from my repository to your fork. There will be files in the
-  correct location for the work to do that day. If you are submitting
-  homework *due on* 6/5 (not assigned 6/5), for example, which is the
-  1st day of the 2nd week of the bootcamp, then you would find the
-  file at `week2/day1/assignment-name`. In general, the path for a
-  file is `week#/day#/assignment-name`. The same is true for
-  submitting classwork we did on 6/5. You would look for the correct
-  file under `week2/day1/assignment-name`
-- Do the work
-- When you are ready to start comitting work to your fork, place your
-  work in the appropriate file, and change it. Unless I say otherwise,
-  you can submit your solutions as Javascript of C++ files. If you
-  need to change the file extension of the file, that is fine. Just
-  don't change the base name of the file. Example: you can change
-  `implement-hash-table.cpp` to `implement-hash-table.js` 
-  but not to `hash-tbl.cpp` 
-- Commit your changes, push them to your fork, and then submit a pull
-  request from your fork against my repository
+1. To get setup to submit homework & classwork, **fork & clone this repository**.
+2. Pull from the **cuny-ttp-algo-summer2021** repository into your fork often as files will be updated 2-3 times per week. 
+3. When you are ready to start comitting work to your fork, create a new folder with your name in camelCase (*example: christopherLinares) and copy the "assignments" folder and "README" file into your new folder. You can submit your solutions as Javascript, C++ OR Python files. Please don't change the base name of the file.
+4. Please double check to ensure that you did **NOT** "cut & paste" these files, but, instead made fresh copies into the folder with your name
+5. Please always make sure that you are working in your folder and not a classmates
+6. Please attempt to commit early and commit often
+7. We will strive for creating at minimum one PR to the CUNY-TTP-Technical-Interview-Prep Org on Github per day
+8. Be vigilent of feedback/comments/change requests/etc on GitHub. Github is just as important as checking slack or email threads...
   
 ## Homework
 
