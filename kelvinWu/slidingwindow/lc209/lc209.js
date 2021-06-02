@@ -22,7 +22,9 @@ function smallest_subarray_with_given_sum(s, arr) {
       end++;
       if (end != arr.length) currentSum += arr[end];
     }
+
     // console.log(currentSum);
+
     if (currentSum >= s) minLength = Math.min(minLength, end - start + 1);
   }
   if (minLength == Number.MAX_SAFE_INTEGER) return 0;
