@@ -21,22 +21,38 @@
 // [1,2,3,4,6] k=3
 
 function max_subarray_size_k(k, arr) {
-  if (!arr.length || k >= arr.length || k < 0) return null;
+  // basic edge cases, k is null, arr is null,
+  // k is negative, k>arr.length
+  if (!arr.length || k > arr.length || k < 0 || k == null) return null;
 
-  let sum = 0;
-  let largest = 0;
-  let counter = 1;
+  let sum = 0; // accumulator
+  let largest = 0; // stores hightest num
+  let counter = 1; // current position of num in a for...of loop.
 
+  // performs like a do...while
   for (let num of arr) {
-    sum += num;
+    // limits outOfBound and offByOne errors.
+    sum += num; // accumulating the sum of the numbers visited
+
+    // checking if counter has reached a window size k
     if (counter >= k) {
-      largest = sum > largest ? sum : largest;
-      sum -= arr[counter - k];
+      // comparing sum to largest, and storing larger of the two.
+      // this works because our value will never be -negative.
+      // largest = sum > largest ? sum : largest;
+
+      sum -= arr[counter - k]; // removing the first item from the last window of k size.
     }
-    counter++;
+    counter++; // increasing counter, effectively moving the window forward.
   }
   return largest;
 }
+
+/*
+Notes: 
+Keywords: contiguous, sub-array, substring
+Goal: attempt to complete it in O(n) but absolutely less than O(n^2) TC, O(1) space.
+
+*/
 
 console.log(
   `Maximum sum of a subarray of size K: ${max_subarray_size_k(
@@ -56,6 +72,10 @@ console.log(
 
 console.log(
   `Maximum sum of a subarray of size K: ${max_subarray_size_k(2, [2])}`
+);
+
+console.log(
+  `Maximum sum of a subarray of size K: ${max_subarray_size_k(-1, [2])}`
 );
 
 // bruteforce/naive approach
