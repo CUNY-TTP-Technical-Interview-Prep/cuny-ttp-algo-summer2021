@@ -1,33 +1,5 @@
-/*
-inputs k pos num a sub array and another array of sub arrays
-output maxsum while shifting
-
-k is basically window size across array index
-
-reutn zero or  null if the array length is zero or k is 0
-
-
-
-*/
-
 function max_subarray_size_k(k, arr) {
-  let maxSum = 0,
-  winStart = 0,
-  windSum = 0;
-
-  //
-
-  for (let winEnd = 0; winEnd < arr.length; winEnd++){
-      if(arr[winEnd] == winEnd + 1){
-        windSum += arr[winEnd];
-        console.log(windSum)
-
-      }
-
-  }
-
-
-
+  // TODO: Write your code here
 }
 
 console.log(
@@ -40,20 +12,6 @@ console.log(
   `Maximum sum of a subarray of size K: ${max_subarray_size_k(
     2,
     [2, 3, 4, 1, 5]
-  )}`
-);
-
-console.log(
-  `Maximum sum of a subarray of size K: ${max_subarray_size_k(
-    0,
-    [2]
-  )}`
-);
-
-console.log(
-  `Maximum sum of a subarray of size K: ${max_subarray_size_k(
-    9,
-    []
   )}`
 );
 

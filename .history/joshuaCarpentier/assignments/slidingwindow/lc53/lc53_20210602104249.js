@@ -20,7 +20,7 @@ function max_subarray_size_k(k, arr) {
   for (let winEnd = 0; winEnd < arr.length; winEnd++){
       if(arr[winEnd] == winEnd + 1){
         windSum += arr[winEnd];
-        console.log(windSum)
+
 
       }
 
