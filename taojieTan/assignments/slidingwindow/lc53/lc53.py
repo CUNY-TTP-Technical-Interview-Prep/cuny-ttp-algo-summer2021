@@ -3,13 +3,45 @@
 # Given an array of positive numbers and a positive number ‘k,’ find the maximum sum of any contiguous subarray of size ‘k’.
 
 def max_sub_array_of_size_k(k, arr):
+# input: positive size k, positive integers array
+# output: max sum 
+# edge cases: k == 0
+    if k == 0: return 0
 
+# initialize window_start and window_end to keep track of the size of sliding window
+    window_start = 0
+    window_end = 0
+
+# initialize max_sum to keep track of the max sum of subarray with size k
+    max_sum = 0
+
+# initialize a temp variable to keep track of the sum of sliding window
+    temp = 0
+
+# loop through the array to add integer to temp 
+    while window_end < len(arr):
+      temp += arr[window_end]
+
+      # if the size of sliding window is larger than k - 1 (since array index starts from zero)
+      # we subtract the value with window_start index of array from the sum of sliding window
+      # then compare the current max_sum with temp and store the larger sum
+      # and slide the window index to the right 
+      # while loop keeps going until we hit the end of array
+      if window_end > k - 1:
+        temp -= arr[window_start]
+        max_sum = max(temp, max_sum)
+        window_start += 1
+      
+      window_end += 1
+
+    return max_sum
 
 def main():
   print("Maximum sum of a subarray of size K: " + str(max_sub_array_of_size_k(3, [2, 1, 5, 1, 3, 2])))
   print("Maximum sum of a subarray of size K: " + str(max_sub_array_of_size_k(2, [2, 3, 4, 1, 5])))
-
-
+  print("Maximum sum of a subarray of size K: " + str(max_sub_array_of_size_k(4, [2, 1, 5, 1, 3, 2, 10, 1])))
+  print("Maximum sum of a subarray of size K: " + str(max_sub_array_of_size_k(0, [2, 1, 5, 1, 3, 2, 10, 1])))
+  print("Maximum sum of a subarray of size K: " + str(max_sub_array_of_size_k(3, [])))
 main()
 
 
