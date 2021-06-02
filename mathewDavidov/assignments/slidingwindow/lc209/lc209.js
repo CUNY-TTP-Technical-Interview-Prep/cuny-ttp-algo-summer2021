@@ -5,7 +5,8 @@
 function smallest_subarray_with_given_sum(s, arr) {
   //debugged
 
-  let winSum
+  let winSum = 0;
+  let minLength = Infinity;
 
 console.log(
   `Smallest subarray length: ${smallest_subarray_with_given_sum(
