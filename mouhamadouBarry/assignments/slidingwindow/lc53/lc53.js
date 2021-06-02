@@ -1,5 +1,44 @@
+/*
+Given an integer array nums, 
+find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+
+
+input - k, arr
+output - int, has the largest sum
+
+varable - maxSum, windowStart, windowEnd, currentSum
+
+for (let i=0; i<arr.length; i++)
+  currentSum =+ arr[i]
+  windowEnd++
+  
+  if(windowEnd > k-1)
+    -comparing currentSum with maxSum
+    -currentSum - arr[windowStart]
+    -WindowStart++
+
+*/
 function max_subarray_size_k(k, arr) {
   // TODO: Write your code here
+  let maxSum = 0;
+	let currentSum = 0;
+	let windowStart = 0;
+	let windowEnd = 0;
+
+	for (let i = 0; i < arr.length; i++) {
+		currentSum += arr[i];
+		windowEnd++;
+		//come back
+		if (windowEnd > k - 1) {
+			maxSum = Math.max(maxSum, currentSum);
+			//subtract element
+			currentSum = currentSum - arr[windowStart];
+			windowStart++;
+		}
+	}
+	return maxSum;
+
+  
 }
 
 console.log(
