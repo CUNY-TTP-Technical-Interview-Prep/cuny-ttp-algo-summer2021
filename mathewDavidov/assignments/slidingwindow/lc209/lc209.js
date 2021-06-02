@@ -1,6 +1,11 @@
+/*
+
+*/
+
 function smallest_subarray_with_given_sum(s, arr) {
-  // TODO: Write code here
-}
+  //debugged
+
+  let winSum
 
 console.log(
   `Smallest subarray length: ${smallest_subarray_with_given_sum(
