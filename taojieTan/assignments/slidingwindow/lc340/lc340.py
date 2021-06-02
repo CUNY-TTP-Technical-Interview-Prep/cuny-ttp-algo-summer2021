@@ -6,13 +6,59 @@
 
 def longest_substring_with_k_distinct(str1, k):
 # TODO: Write code here
+    #input: positive integer k, a string
+    #output: longest length of substring with no more than k distinct characters
+
+    if k == 0: 
+      return 0
+
+    #initialize window_start and window_end to keep track of size of sliding window
+    window_start = 0
+    window_end = 0
+
+    #initialize a dictionary to keep track of occurrence of each character in subarray
+    char_occurrence = {}
+
+    #initialize max_length to keep track of longer length of subarray with no more than k distinct characters
+    max_length = 0
+
+    #loop through the string to store occurrence of each character into char_occurrence
+    #if the occurrence of characters in char_occurrence is greater than k, 
+    #decrement the occurrence of the leftmost character in window by one until it is smaller or equal than k 
+    #in the meanwhile, shrink the size of sliding window by increment window_start index by one
+    #when finish the inner while loop, we choose larger length by compareing current max_length with size of sliding window
+    #we break out of the outter while loop when window_end hits end of the string 
+    while window_end < len(str1):
+      rightmost_char = str1[window_end]
+
+      if rightmost_char in char_occurrence:
+        char_occurrence[rightmost_char] += 1 
+      else:
+        char_occurrence[rightmost_char] = 1
+      
+      while len(char_occurrence) > k:
+        leftmost_char = str1[window_start]
+        char_occurrence[leftmost_char] -= 1
+
+        if char_occurrence[leftmost_char] == 0:
+          del char_occurrence[leftmost_char]
+
+        window_start += 1
+
+      max_length = max(max_length, window_end - window_start + 1)
+      window_end += 1
+
+    return max_length
 
 
 def main():
   print("Length of the longest substring: " + str(longest_substring_with_k_distinct("araaci", 2)))
   print("Length of the longest substring: " + str(longest_substring_with_k_distinct("araaci", 1)))
   print("Length of the longest substring: " + str(longest_substring_with_k_distinct("cbbebi", 3)))
-
+  print("Length of the longest substring: " + str(longest_substring_with_k_distinct("stringcc", 2)))
+  print("Length of the longest substring: " + str(longest_substring_with_k_distinct("", 3)))
+  print("Length of the longest substring: " + str(longest_substring_with_k_distinct("cbbebi", 0)))
+  print("Length of the longest substring: " + str(longest_substring_with_k_distinct("ccccccc", 3)))
 
 main()
 
