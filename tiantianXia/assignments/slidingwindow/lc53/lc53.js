@@ -1,5 +1,31 @@
+// Problem Statement #
+
+// Given an array of positive numbers and a positive number ‘k,’ find the maximum sum of any contiguous subarray of size ‘k’.
+
+/*
+inputs - an array of positive numbers, positive k for the subarray size
+outputs - the maximum sum of the subarrays
+
+
+*/
+
 function max_subarray_size_k(k, arr) {
   // TODO: Write your code here
+  let maxSum = 0,
+    currentSum = 0,
+    windowStart = 0;
+
+    for(let windowEnd = 0; windowEnd < arr.length; windowEnd ++){
+      currentSum += arr[windowEnd];
+
+      if(windowEnd >= k - 1){
+        maxSum = Math.max(maxSum, currentSum);
+        currentSum -= arr[windowStart];
+        windowStart += 1;
+      }
+    }
+
+    return maxSum;
 }
 
 console.log(
