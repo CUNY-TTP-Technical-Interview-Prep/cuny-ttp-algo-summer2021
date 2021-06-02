@@ -1,5 +1,19 @@
 function max_subarray_size_k(k, arr) {
-  // TODO: Write your code here
+  let sumCalc = 0;
+  //this adds up the first window 
+  for (let i = 0; i < k; i++) {
+    sumCalc += arr[i];
+  }
+
+  //sums the rest of the window by removing the first
+  //element and only adding the last element
+  let sum = sumCalc
+  for (let i = k; i < arr.length; i++) {
+    sum += arr[i] - arr[i - k];//here we're removing the first element of each window
+    sumCalc = Math.max(sumCalc, sum);//Here we compare each sum to find max
+  }
+
+  return sumCalc
 }
 
 console.log(
