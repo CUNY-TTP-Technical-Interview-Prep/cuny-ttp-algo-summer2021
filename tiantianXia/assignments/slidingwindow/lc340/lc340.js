@@ -4,8 +4,66 @@
 
 // You can assume that K is less than or equal to the length of the given string.
 
+/*
+input - a string with any length, size of the substring k
+output - return then length of the longest substring with distinct characters.
+variable windowEnd, windowStart: to operate a sliding window
+maxLen: to store the longest length of the subarray
+frequency: an array for the characters.
+
+run a for loop to store all the characters to the frequency
+  if the character is not in the frequency array
+    set the character position to 0
+  add one to the character position
+   if the character frequncy is bigger than k
+      compare the max length and window size find the bigger one
+      window size update and windowStart change to the windowEnd
+      set character frequency to one since the window get update
+    else 
+      maxlen add one in case all the character fufill the requirement 
+  
+  return the maxlen
+
+  edge case k = 0, empty str, 
+
+*/
 function longest_substring_with_k_distinct(str, k) {
+  if( k === 0 || str.length === 0) return 0;
   // TODO: Write code here
+  let windowStart = 0,
+    windowEnd = 0,
+    maxLen = 0,
+    frequency = {};
+
+  
+  for(windowEnd; windowEnd < str.length; windowEnd++){
+    console.log(str[windowEnd]);
+    if(!(str[windowEnd] in frequency)){
+      frequency[str[windowEnd]] = 0;
+    }
+    frequency[str[windowEnd]] += 1;
+    if(frequency[str[windowEnd]] > k){
+      maxLen = Math.max(maxLen, windowEnd - windowStart);
+      if(str[windowStart] === str[windowEnd]){
+        windowStart ++;
+      }else{
+        let findLast = windowEnd;
+        let count = 0;
+        while(count <=k){
+          if(str[findLast] !== str[windowEnd] ){
+            findLast --;
+          }else{
+            windowStart = findLast;
+            count ++;
+          }
+        }
+      }
+      frequency[str[windowEnd]] -= 1;
+    }
+  }
+  maxLen = Math.max(maxLen, windowEnd - windowStart);
+
+  return maxLen;
 }
 
 console.log(
