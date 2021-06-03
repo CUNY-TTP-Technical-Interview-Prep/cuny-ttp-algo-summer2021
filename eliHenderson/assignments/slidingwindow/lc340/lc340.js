@@ -23,7 +23,8 @@
  *  what if the string is empty
  *  how do we handle letter case, do we count 'H' as 'h'?
  *
- *
+ *  Time Comp: O(N)
+ *  Space Comp O(K)
  */
 
 function longest_substring_with_k_distinct(str, k) {
