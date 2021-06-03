@@ -102,7 +102,7 @@ We will start with a brief introduction of each pattern before jumping into the 
   - [x] Longest Substring with K Distinct Characters (medium): LC #340
   - [] Fruits into Baskets (medium): LC 904
 - Intro to "Two Pointers" Pattern: Lecture & Discussion
-  - [] Pair with Target Sum (easy): LC #1
+  - [x] Pair with Target Sum (easy): LC #1
 
 #### 06/03 (Thur):
 
