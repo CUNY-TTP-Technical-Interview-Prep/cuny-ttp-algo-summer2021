@@ -1,5 +1,22 @@
 function max_subarray_size_k(k, arr) {
   // TODO: Write your code here
+  if (k > arr.length || k == 0) return 0;
+
+  let maxSum = 0,
+    currentSum = 0;
+
+  for (let i = 0; i <= arr.length - k; i++) {
+    currentSum = 0;
+    for (let j = i; j < k + i; j++) {
+      currentSum += arr[j];
+    }
+
+    if (currentSum > maxSum) {
+      maxSum = currentSum;
+    }
+  }
+
+  return maxSum;
 }
 
 console.log(
@@ -12,6 +29,18 @@ console.log(
   `Maximum sum of a subarray of size K: ${max_subarray_size_k(
     2,
     [2, 3, 4, 1, 5]
+  )}`
+);
+console.log(
+  `Maximum sum of a subarray of size K: ${max_subarray_size_k(
+    0,
+    [2, 1, 5, 1, 3, 2]
+  )}`
+);
+console.log(
+  `Maximum sum of a subarray of size K: ${max_subarray_size_k(
+    7,
+    [2, 1, 5, 1, 3, 2]
   )}`
 );
 
