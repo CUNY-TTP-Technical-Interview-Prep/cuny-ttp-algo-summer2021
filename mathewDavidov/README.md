@@ -109,7 +109,7 @@ program containing the following:
   - [] Remove Duplicates (easy): LC #26
   - [] Squaring a Sorted Array (easy): LC #977
   - [] Triplet Sum to Zero (medium): LC #15
-  - [] Triplet Sum Close to Target (medium): LC #16
+  - [X] Triplet Sum Close to Target (medium): LC #16
 
 ### .
 ### /// Week Two ///
