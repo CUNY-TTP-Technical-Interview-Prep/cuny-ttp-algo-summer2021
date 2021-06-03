@@ -12,8 +12,9 @@ function smallest_subarray_with_given_sum(s, arr) {
   // let subLength: the length of the subarray
   // [1 ,3 ,4, 4, 7]     s=5
   // TODO: Write code here
-  let startWindow, i , arraySum, subLength = 0;
-  let minLength = 10000000;
+  let startWindow=0, i=0, arraySum=0, subLength=0;
+
+  let minLength =  Number.MAX_SAFE_INTEGER;
   const arrLength = arr.length;
  
   while( i < arrLength){
