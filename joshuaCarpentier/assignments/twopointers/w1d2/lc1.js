@@ -23,26 +23,43 @@
  *
  */
 
+
 function pair_with_target_sum(arr, targetSum) {
-  // attempt
-  if(arr.length == 0){
+  let map = new Map();
+    // attempt 2
+    let ListLength = arr.length
+
+    for(let start = 0; start < ListLength; start++){
+      let 
+
+    }
+
+
+
+
+  // attempt 1
+  // if(arr.length == 0){
       // console.log(arr.length)
-  return [];
-  }
+  // return [];
+  // }
 
   // while compares the end and start better use for questions including pointers
-  for(let start = 0; start < arr.length; start++){
-      let end = arr.length + 1;
+  // for(let start = 0; start < arr.length; start++){
+  //     let end = arr.length + 1;
 
-      if (arr[start] < end){
-        let currentSum = 0;
-        currentSum = arr[start] + end ;
-        end--;
+  //     if (arr[start] < end){
+  //       let currentSum = 0;
+  //       currentSum = arr[start] + end ;
+  //       end--;
 
-        console.log(currentSum);
+  //       console.log(currentSum);
 
-      }
-    }
+  //     }
+  //   }
+
+  
+
+
 
 }
 
