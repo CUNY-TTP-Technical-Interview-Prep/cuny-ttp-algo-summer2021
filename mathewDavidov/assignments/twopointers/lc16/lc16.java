@@ -72,7 +72,7 @@ public class lc16 {
                 } else if (Math.abs(target - currentSum) == Math.abs(target - closestSum)) {
                     // This will take the smaller element if the difference is the same
                     // e.g. target = 4, closest will be 3 instead of 5
-                    closestSum = closestSum < currentSum ? closestSum : currentSum;
+                    closestSum = Math.min(closestSum, currentSum);
                 }
             }
         }
