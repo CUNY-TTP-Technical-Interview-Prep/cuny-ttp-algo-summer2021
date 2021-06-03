@@ -1,14 +1,28 @@
-// Problem Statement #
-// Given an array of sorted numbers, remove all duplicates from it. You should not use any extra space; after removing the duplicates in-place return the length of the subarray that has no duplicate in it.
+//Given an unsorted array of numbers and a target ‘key’, remove all instances of ‘key’ in-place and return the new length of the array.
 
 function remove_element(arr, key) {
-  // TODO: Write code here
+	// TODO: Write code here
+	//find all instances of repeating target of key
+	//make a counter to keep track of the repeating instances of key
+	//subtract it from arr.length to find new length of arr without "key"
+
+	let keyCounter = 0;
+
+	if (!arr.length) {
+		return 0;
+	}
+
+	for (const element of arr) {
+		if (element === key) {
+			keyCounter++;
+		}
+	}
+	return arr.length - keyCounter;
 }
 
-console.log(
-  `Array new length: ${remove_element([3, 2, 3, 6, 3, 10, 9, 3], 3)}`
-);
-console.log(`Array new length: ${remove_element([2, 11, 2, 2, 1], 2)}`);
+console.log(`Array new length: ${remove_element([ 3, 2, 3, 6, 3, 10, 9, 3 ], 3)}`);
+console.log(`Array new length: ${remove_element([ 2, 11, 2, 2, 1 ], 2)}`);
+console.log(`Array new length: ${remove_element([ 2, 11, 2, 2, 1 ], 1100)}`);
 
 // Solution
 // -----

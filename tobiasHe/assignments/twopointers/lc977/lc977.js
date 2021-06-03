@@ -2,11 +2,14 @@
 // Given a sorted array, create a new array containing squares of all the numbers of the input array in the sorted order.
 
 function make_squares(arr) {
-  // TODO: Write code here
+	// TODO: Write code here
+	// given sorted, return a new array that is also sorted with sqaures of those numbers
+	//
 }
 
-console.log(`Squares: ${make_squares([-2, -1, 0, 2, 3])}`);
-console.log(`Squares: ${make_squares([-3, -1, 0, 1, 2])}`);
+console.log(`Squares: ${make_squares([ -2, -1, 0, 2, 3 ])}`);
+console.log(`Squares: ${make_squares([ -3, -1, 0, 1, 2 ])}`);
+console.log(`Squares: ${make_squares([ 1, 2, 3, 4, 5 ])}`);
 
 // Solution
 // -----
