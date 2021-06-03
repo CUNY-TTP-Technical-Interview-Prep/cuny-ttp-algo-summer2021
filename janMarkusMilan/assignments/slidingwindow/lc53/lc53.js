@@ -1,25 +1,29 @@
+// Problem Statement #
+
+// Given an array of positive numbers and a positive number ‘k,’ find the maximum sum of any contiguous subarray of size ‘k’.
+
 function max_subarray_size_k(k, arr) {
   // TODO: Write your code here
-  let max = 0;    
+  let max = 0;
   let sum = 0;
-  
+
   // Form a 'window' using two pointers over a portion of the data
   let leftPtr = 0;
   for (let rightPtr = 0; rightPtr < arr.length; rightPtr++) {
-      // Add current element to the sum (keep track of sum of values in window)
-      sum += arr[rightPtr];
-      
-      // Once the window reaches k size, we slide the window over by 1
-      if (rightPtr >= k - 1) {
-        // Keep track of the max of each window slide iteration
-        max = Math.max(max, sum);
+    // Add current element to the sum (keep track of sum of values in window)
+    sum += arr[rightPtr];
 
-        // Subtract the left-most value in the window from the sum (since we slide the window forward)
-        sum -= arr[leftPtr];
+    // Once the window reaches k size, we slide the window over by 1
+    if (rightPtr >= k - 1) {
+      // Keep track of the max of each window slide iteration
+      max = Math.max(max, sum);
 
-        // Increment the left pointer by 1 (update the beginning position of the window)
-        leftPtr++;
-      }
+      // Subtract the left-most value in the window from the sum (since we slide the window forward)
+      sum -= arr[leftPtr];
+
+      // Increment the left pointer by 1 (update the beginning position of the window)
+      leftPtr++;
+    }
   }
 
   return max;
