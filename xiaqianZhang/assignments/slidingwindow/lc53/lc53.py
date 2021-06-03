@@ -1,4 +1,34 @@
+# Given an integer array nums
+# find the contiguous subarray (containing at least one number) 
+# which has the largest sum and return its sum.
+
+#input: list of positive integer and a positive size k
+#output: largest sum of subarray that is the size of k
+
+#edge cases: empty array, array = null
+# startingIndex = 0, maxSum = 0, currentSum = 0
+# for loop go through all numbers in array
+#  we add the numbers in the array into the currentSum until it reach the size k
+#  if the numbers index at the array where the subarray reach to the size k
+#     we want to update the maxSum with the existing maxSum and the currentSum
+#     Then excluding the startingIndex from the currentSum and increment the index position of the startingIndex
+
 def max_sub_array_of_size_k(k, arr):
+  startIndex, maxSum, currentSum = 0, 0, 0
+  #edge cases
+  if (arr == [] or k == 0):
+    return 0
+  
+  for each in range(len(arr)):
+    currentSum += arr[each]
+    if each >= k-1:
+      maxSum = max(maxSum, currentSum)
+      currentSum -= arr[startIndex]
+      startIndex +=1
+  return maxSum
+
+
+
 
 
 def main():
