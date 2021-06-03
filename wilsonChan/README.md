@@ -92,12 +92,12 @@ program containing the following:
 - DSA Appendix Slides & Discussion
 - Initial HackerRank Assesment
 - Intro to "Sliding Window" Pattern: Lecture & Discussion
-	- [] Maximum Sum Subarray of Size K (easy) LC #53
+	- [x] Maximum Sum Subarray of Size K (easy) LC #53
 
 #### 06/02 (Wed):
 
 - "Sliding Window" Continued: P2P Mock Interview ( Each Pair Choose One! )
-  - [] Smallest Subarray with a given sum (easy): LC #209
+  - [x] Smallest Subarray with a given sum (easy): LC #209
   - [] Longest Substring with K Distinct Characters (medium): LC #340
   - [] Fruits into Baskets (medium): LC 904
 - Intro to "Two Pointers" Pattern: Lecture & Discussion
