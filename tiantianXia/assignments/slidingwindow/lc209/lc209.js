@@ -33,8 +33,8 @@ function smallest_subarray_with_given_sum(s, arr) {
   
   for (windowEnd; windowEnd < arr.length; windowEnd ++){
     sum += arr[windowEnd];
-    if(sum > s){
-      minLen = Math.min(minLen, windowEnd - windowStart);
+    while(sum >= s){
+      minLen = Math.min(minLen, windowEnd - windowStart + 1);
       sum -= arr[windowStart ++];
     }
   }
