@@ -91,7 +91,7 @@ public class lc1 {
         System.out.println(Arrays.toString(twoSum(new int[] { 1, 2, 3, 4, 6 }, 6)));
         System.out.println(Arrays.toString(twoSum(new int[] { 2, 5, 9, 11 }, 11)));
         System.out.println(Arrays.toString(twoSum(new int[] {}, 11)));
-        System.out.println(Arrays.toString(twoSumAlternate(new int[] { 1 }, 11)));
+        System.out.println(Arrays.toString(twoSum(new int[] { 1 }, 11)));
 
         System.out.println(Arrays.toString(twoSumAlternate(new int[] { 1, 2, 3, 4, 6 }, 6)));
         System.out.println(Arrays.toString(twoSumAlternate(new int[] { 2, 5, 9, 11 }, 11)));
