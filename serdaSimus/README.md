@@ -4,15 +4,15 @@ Class Days: Mon - Thur
 
 Class Times: 9am to 12pm EST 
 
-Dates: June 1st (Tue) to June 30th (Wed)    
+Dates: June 1st (Tue) to June 30th (Wed)  
 
-Lead Instructor: Christopher Linares - <cbluiux@gmail.com>
+Lead Instructor: Christopher Linares - [cbluiux@gmail.com][1]
 
-TA: Melissa Pastore - <melissa.pastore@gmail.com>
+TA: Melissa Pastore - [melissa.pastore@gmail.com][2]
 
-TA: Kirstie Rodriguez - <KirstieNRodriguez@gmail.com>
+TA: Kirstie Rodriguez - [KirstieNRodriguez@gmail.com][3]
 
-Slack Workspace: <https://cunyttp.slack.com/archives/C01433YF022> 
+Slack Workspace: [https://cunyttp.slack.com/archives/C01433YF022][4] 
 
 Office Hours : Wednesdays, 12pm - 1pm EST
 
@@ -28,19 +28,19 @@ We will start with a brief introduction of each pattern before jumping into the 
 ## Assignments
 
 - For any assignment where we ask you to solve a problem(s) or conduct mock technical interviews in class, please work in a code editor of choice and submit your work to github periodically throughout the day with descriptive comments
-- The `assignments` folder is where you find the assigned classwork & homework for each day. Assignments are broken down into 1 of 16 patterns, furthermore, you will find subfolders with the week and day designation (*for example w1d1 stands for "week 1 day 1")
+- The `assignments` folder is where you find the assigned classwork & homework for each day. Assignments are broken down into 1 of 16 patterns, furthermore, you will find subfolders with the week and day designation (\*for example w1d1 stands for "week 1 day 1")
 
 ## Submitting Work
 
 1. To get setup to submit homework & classwork, **fork & clone this repository**.
 2. Pull from the **cuny-ttp-algo-summer2021** repository into your fork often as files will be updated 2-3 times per week. 
-3. When you are ready to start comitting work to your fork, create a new folder with your name in camelCase (*example: christopherLinares) and copy the "assignments" folder and "README" file into your new folder. You can submit your solutions as Javascript, C++ OR Python files. Please don't change the base name of the file.
+3. When you are ready to start comitting work to your fork, create a new folder with your name in camelCase (\*example: christopherLinares) and copy the "assignments" folder and "README" file into your new folder. You can submit your solutions as Javascript, C++ OR Python files. Please don't change the base name of the file.
 4. Please double check to ensure that you did **NOT** "cut & paste" these files, but, instead made fresh copies into the folder with your name
 5. Please always make sure that you are working in your folder and not a classmates
 6. Please attempt to commit early and commit often
 7. We will strive for creating at minimum one PR to the CUNY-TTP-Technical-Interview-Prep Org on Github per day
 8. Be vigilent of feedback/comments/change requests/etc on GitHub. Github is just as important as checking slack or email threads...
-  
+	  
 ## Homework
 
 ### Expectations
@@ -55,17 +55,17 @@ We will start with a brief introduction of each pattern before jumping into the 
 program containing the following:
 
 	As comments:
-
+	
 	- a description of the approach(es) you thought of
 	- a description of where you got stuck on these approaches. For
-  		example:
-    	- Was there a flaw in the approach you found and you had to think
-      of a new one? What was the flaw? How did you try to get around
-      it?
-    	- Were you just unable to implement the approach? Which part(s)
-      were you unable to implement, and why?
+example:
+		- Was there a flaw in the approach you found and you had to think
+	  of a new one? What was the flaw? How did you try to get around
+	  it?
+		- Were you just unable to implement the approach? Which part(s)
+	  were you unable to implement, and why?
 
-2. If you get stuck reverse engineer the existing solution and take a few moments to digest it. (*a few moments may take longer for leetcode hard)
+2. If you get stuck reverse engineer the existing solution and take a few moments to digest it. (\*a few moments may take longer for leetcode hard)
 
 	As code:
 
@@ -76,7 +76,7 @@ program containing the following:
 		- If you prefer a certain implementation of a data-structure over another, please cater to your strengths
 
 3. Move on to the next problem.
-	
+		
 	As a mindset:
 	- Many will struggle with the common coding patterns for the first few times they encounter them, it is extremely important to learn how to move on with the intentions of revisiting said topic at a later date.
 		example:
@@ -149,7 +149,7 @@ program containing the following:
   - [] Find all Duplicate Numbers (easy): LC #442 
 - Intro to "In Place Reversal of a LL" Pattern: Lecture & Discussion
   - [] Reverse a LinkedList (easy): LC #206
-  
+	  
 ### .
 ### /// Week Three ///
 
@@ -189,7 +189,7 @@ program containing the following:
 #### 06/21 (Mon):
 - Intro to "Heaps" Pattern & Discussion
   - [] Find the Median of a Number Stream (medium): LC #295
-- "Heaps" Continued ( *No Luck This Time, Only One Problem To Choose From! )
+- "Heaps" Continued ( \*No Luck This Time, Only One Problem To Choose From! )
   - [] Sliding Window Median (hard): LC #480
 - Intro to "Subsets" Pattern & Discussion
   - [] Subsets (easy): LC #78
@@ -223,7 +223,7 @@ program containing the following:
 
 
 ### .
-### /// Week Five & Beyond /// --> Class is over, but, the work is just beginning!
+### /// Week Five & Beyond /// --\> Class is over, but, the work is just beginning!
 
 #### /// Sliding Window ///
 - [] No-repeat Substring (hard): LC #3
@@ -285,7 +285,7 @@ program containing the following:
 - [] Search in Rotated Array (medium): LC #33 & LC #81
 - [] Rotation Count (medium): LC #153 & LC #154
 
-#### /// Bitwise XOR /// --> Low Chances of
+#### /// Bitwise XOR /// --\> Low Chances of
 - [] Two Single Numbers (medium): LC #260 
 - [] Complement of Base 10 Number (medium): LC #476 
 - [] Problem Statement (hard): LC #832
@@ -325,3 +325,8 @@ program containing the following:
 - [] Alien Dictionary (hard): LC #269
 - [] Reconstructing a Sequence (hard): LC #444
 - [] Minimum Height Trees (hard): LC #310
+
+[1]:	mailto:cbluiux@gmail.com
+[2]:	mailto:melissa.pastore@gmail.com
+[3]:	mailto:KirstieNRodriguez@gmail.com
+[4]:	https://cunyttp.slack.com/archives/C01433YF022
