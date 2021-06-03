@@ -1,4 +1,3 @@
-
 /**
  * Problem Statement: Given an array of unsorted numbers and a target number,
  * find a triplet in the array whose sum is as close to the target number as
@@ -11,6 +10,7 @@
  * Explanation: The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
  * 
  * Edge cases:
+ * array null -> largest integer value
  * array size less than 3 -> sum elements and return (this is the closest you can get to the target)
  * target not found -> closest sum found so far
  * 
@@ -40,7 +40,11 @@ import java.util.stream.*;
 
 public class lc16 {
     public static int threeSumClosest(int[] nums, int target) {
-        // If the length is smaller than 3, return the sum of the elements in the array
+        if (nums == null) {
+            return Integer.MAX_VALUE;
+        }
+
+        // If the length is smaller than 3, return the sum of the elements in the array (stream syntax)
         if (nums.length <= 3) {
             return IntStream.of(nums).sum();
         }
@@ -81,5 +85,7 @@ public class lc16 {
         System.out.println(threeSumClosest(new int[] { -3, -1, 1, 2 }, 1));
         System.out.println(threeSumClosest(new int[] { 1, 0, 1, 1 }, 100));
         System.out.println(threeSumClosest(new int[] { 2, 1 }, 9));
+        System.out.println(threeSumClosest(new int[] { }, 9));
+        System.out.println(threeSumClosest(null, 9));
     }
 }
