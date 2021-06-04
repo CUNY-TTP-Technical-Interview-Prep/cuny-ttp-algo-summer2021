@@ -5,6 +5,7 @@
 function search_triplets(arr) {
   let triplets = [];
   let left = 0, right = arr.length - 1;
+  let half = Math.floor(arr.length/2) 
   while(left < right){
     let target_sum = -(arr[left] + arr[right])
     for(num in arr) {
@@ -12,8 +13,12 @@ function search_triplets(arr) {
       triplets.push([arr[left], arr[right], arr[num]])
       }
     }
+    if(left < half){
     left = left + 1;
+    }
+    else{
     right = right -1;
+    }
   }
 
   // TODO: Write your code here
