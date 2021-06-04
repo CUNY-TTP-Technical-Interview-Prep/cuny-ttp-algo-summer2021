@@ -3,6 +3,8 @@
 // find all unique triplets in it that add up to zero.
 /*
 
+my attempt is in lc15v1 so far. WIP.
+
 if length less than 3 return empty
 
 arr = [...]
@@ -13,7 +15,7 @@ sort the array
 /*arr is sorted*
 left =0 right =leng-1
 while(left < right){
-target_sum = -(arr[left] + arr[right])//-1 => 1
+target_sum = -(arr[left] + arr[right])
 for num in arr{
   if target_sum == num
     triplets.push(arr[left], arr[right], num)
@@ -23,12 +25,10 @@ right = right - 1
  
 
   }
-[-3,-2, -1, 0, 1, 1, 2]
+[-3,-2, -1, 0, 1, 1,]
+[-3, 0, 1, 2, -1, 1, -2]
   l
-                     r
-ts = -1
-
-
+                      r
 console.log(search_triplets([-3, 0, 1, 2, -1, 1, -2]));
 
 while(arr[i] <= target_sum){
