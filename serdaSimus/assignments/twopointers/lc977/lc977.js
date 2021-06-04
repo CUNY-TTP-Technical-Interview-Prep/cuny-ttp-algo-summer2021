@@ -1,8 +1,24 @@
 // Problem Statement #
 // Given a sorted array, create a new array containing squares of all the numbers of the input array in the sorted order.
 
+/*
+
+
+Solution:
+I was thinking of making use of JavaScript's built-in functional mechanisms. .map() and .sort()
+Using .map(), I would take it the array, and provide a mechanism to square it.
+this creates a new array with the squares of the previous array. O(n) space.
+
+.sort() will allow me to compare the values inside of the array, and sort at O(n log n) TC.
+
+overall, time and space complexity will TC O(n log n) where n is the arr.length
+Space complexity would be O(n) since we are creating a new array with all the values squared.
+
+*/
+
 function make_squares(arr) {
   // TODO: Write code here
+  return arr.map((item) => item * item).sort((a, b) => a - b);
 }
 
 console.log(`Squares: ${make_squares([-2, -1, 0, 2, 3])}`);
