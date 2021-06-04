@@ -1,5 +1,6 @@
 function smallest_subarray_with_given_sum(s, arr) {
   // TODO: Write code here
+  // going to attempt later my teamate attempted this
 // let windowSum = 0,
 // minLength = Infinity,
 // windowStart = 0;
