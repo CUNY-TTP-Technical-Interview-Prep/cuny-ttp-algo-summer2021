@@ -27,11 +27,21 @@
 function pair_with_target_sum(arr, targetSum) {
   let map = new Map();
     // attempt 2
-    let ListLength = arr.length
+    // let myMap = new Map()
+    // myMap.set(0, 'zero')
+    // myMap.set(1, 'one')
+    
+    // for (let [key, value] of myMap) {
+    //   console.log(key + ' = ' + value)
+    // }
 
-    for(let start = 0; start < ListLength; start++){
-      let 
+    let listLength = arr.length
 
+    for(let start = 0; start < listLength; start++){
+      if (map.has(targetSum - arr[start])){
+        return [map.get(targetSum - arr[start]), start]
+      }
+      map.set(arr[start], start);
     }
 
 
@@ -65,8 +75,8 @@ function pair_with_target_sum(arr, targetSum) {
 
 // edge case what if array has odd num of subarrays
 console.log(pair_with_target_sum([1, 2, 3, 4, 6], 6));
-//   console.log(pair_with_target_sum([2, 5, 9, 11], 11));
-//   console.log(pair_with_target_sum([-2, -1, -9, 3, 8], 2));
+  console.log(pair_with_target_sum([2, 5, 9, 11], 11));
+  console.log(pair_with_target_sum([-2, -1, -9, 3, 8], 2));
 //   console.log(pair_with_target_sum([], 2));
 
 //   console.log(pair_with_target_sum([2, 5, 9, 11], 11));
