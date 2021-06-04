@@ -15,6 +15,10 @@ overall, time and space complexity will TC O(n log n) where n is the arr.length
 Space complexity would be O(n) since we are creating a new array with all the values squared.
 
 */
+function functional_make_squares(arr) {
+  // TODO: Write code here
+  return arr.map((item) => item * item).sort((a, b) => a - b);
+}
 
 function make_squares(arr) {
   // TODO: Write code here
