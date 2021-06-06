@@ -111,8 +111,7 @@ We will start with a brief introduction of each pattern before jumping into the 
   - [] Squaring a Sorted Array (easy): LC #977
   - [] Triplet Sum to Zero (medium): LC #15
   - [] Triplet Sum Close to Target (medium): LC #16
-
-### .
+  -
 
 ### /// Week Two ///
 

@@ -22,7 +22,7 @@ Space complexity would be O(n) since we are creating a new array with all the va
 function functional_make_squares(arr) {
   // TODO: Write code here
   // Sc: O(n) because map creates a new array.
-  // Tc: O(n) iterates over each value onces,squares it, and returns the value to map()
+  // Tc: O(n logn + n)
   return arr.map((item) => item * item).sort((a, b) => a - b);
 }
 
