@@ -38,8 +38,7 @@ function max_subarray_size_k(k, arr) {
     if (counter >= k) {
       // comparing sum to largest, and storing larger of the two.
       // this works because our value will never be -negative.
-      // largest = sum > largest ? sum : largest;
-
+      largest = sum > largest ? sum : largest;
       sum -= arr[counter - k]; // removing the first item from the last window of k size.
     }
     counter++; // increasing counter, effectively moving the window forward.
