@@ -2,6 +2,10 @@
 // Given a sorted array, create a new array containing squares of all the numbers of the input array in the sorted order.
 
 /*
+input: an array.
+output: an array.
+
+edge: arr is empty => return null.
 
 
 Solution:
@@ -17,6 +21,8 @@ Space complexity would be O(n) since we are creating a new array with all the va
 */
 function functional_make_squares(arr) {
   // TODO: Write code here
+  // Sc: O(n) because map creates a new array.
+  // Tc: O(n) iterates over each value onces,squares it, and returns the value to map()
   return arr.map((item) => item * item).sort((a, b) => a - b);
 }
 
@@ -24,6 +30,9 @@ function make_squares(arr) {
   // TODO: Write code here
   return arr.map((item) => item * item).sort((a, b) => a - b);
 }
+
+console.log(`Squares: ${functional_make_squares([-2, -1, 0, 2, 3])}`);
+console.log(`Squares: ${functional_make_squares([-3, -1, 0, 1, 2])}`);
 
 console.log(`Squares: ${make_squares([-2, -1, 0, 2, 3])}`);
 console.log(`Squares: ${make_squares([-3, -1, 0, 1, 2])}`);
