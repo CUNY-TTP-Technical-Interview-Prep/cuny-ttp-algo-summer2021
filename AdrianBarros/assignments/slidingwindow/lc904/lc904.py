@@ -1,38 +1,56 @@
-# Problem Statement #
 
-# Given an array of characters where each character represents a fruit tree, you are given two baskets, and your goal is to put maximum number of fruits in each basket. The only restriction is that each basket can have only one type of fruit.
 
-# You can start with any tree, but you can’t skip a tree once you have started. You will pick one fruit from each tree until you cannot, i.e., you will stop when you have to pick from a third fruit type.
+# input: arr []
+# output: array of two values [int,int]
+# restriction: you cannot skip to the next fruit once you start with a particlar fruit
 
-# Write a function to return the maximum number of fruits in both baskets.
+# Step 1 loop Through the array with an extending window
+# Step 2 firts Conditional
+# If we've seen the fruit: continue
+# else add one to the counter, add it to a dic and we follow the next step
+# Step 3 extend the window with a conditional
+# IF current fruit == the fruit we looking for add counter 1
+# ELSE continue
+# Step 4 store the final number to an array
+# LAST Step: return largest 2 numbers
+
 
 def fruits_into_baskets(fruits):
+    dic = {}
+    fruit_nums = []
+    # Step1: loop through the array opening the window when necessary
+    for i in range(len(fruits)):
+        cur_fruit = fruits[i]
+        # Step 2 firts Conditional
+        # If we've seen the fruit: continue
+        if cur_fruit not in dic:
+            dic[fruits[i]] = i
+            cur_num = 1
+            # Step 3 extend the window from i+1
+            for j in range(i+1, len(fruits)):
+                if cur_fruit == fruits[j]:
+                    cur_num += 1
+                else:
+                    continue
+            # Step 4 store the final number to an array
+            # DISCLAIMER: array is not necessary but I am anticipating a follow up question to return the X bigger numbers
+            # the last step has to be change a bit to do that
+            fruit_nums.append(cur_num)
+    # FINAL STEP
+    first_max = max(fruit_nums)
+    fruit_nums.remove(first_max)
+    sec_max = max(fruit_nums)
+    return [first_max, sec_max]
 
 
 def main():
-  print("Maximum number of fruits: " + str(fruits_into_baskets(['A', 'B', 'C', 'A', 'C'])))
-  print("Maximum number of fruits: " + str(fruits_into_baskets(['A', 'B', 'C', 'B', 'B', 'C'])))
+    print("Maximum number of fruits: " +
+          str(fruits_into_baskets(['A', 'B', 'C', 'A', 'C'])))
+    print("Maximum number of fruits: " +
+          str(fruits_into_baskets(['A', 'B', 'C', 'B', 'B', 'C'])))
 
 
 main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # Solution
