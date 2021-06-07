@@ -1,3 +1,18 @@
+// Problem Statement #
+
+// Given an array of positive numbers and a positive number ‘k,’ find the maximum sum of any contiguous subarray of size ‘k’.
+
+/**
+ * So we are given an array that we loop through and as we iterate intially we add zero to the intial index 
+ * 
+ * then if the window intial end isnt greater then the target window -1  
+ * 
+ * set max Sum and ahead
+ * 
+ */
+
+
+
 function max_subarray_size_k(k, arr) {
   let maxSum = 0,
 windowSum = 0,
