@@ -3,6 +3,9 @@
 
 # Write a function to return the indices of the two numbers (i.e. the pair) such that they add up to the given target.
 
+# this is my second  to practice "muscle memory"
+
+
 def pair_with_targetsum(arr, target_sum):
   if arr == []:
     return []
