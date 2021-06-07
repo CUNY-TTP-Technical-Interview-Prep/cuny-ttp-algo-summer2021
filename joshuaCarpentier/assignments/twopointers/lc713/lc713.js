@@ -19,41 +19,38 @@
  * 10, 5 , 2 cant be in the array since it equal 100 we want everything less then that
  * not less then or equaled
  * 
+ * 
+ * could do nested loop but increase runtime
  */
 
 
 
 var numSubarrayProductLessThanK = function (nums, k) {
-//  let count = 0; 
+   let count = 0;
+// i and j are pointers 
+  let right = 0;
+  let left = 0;
+  let product = 1; // initial multiplication
 
-//  let j = 0;
-//  let arrayLoopCondition = 0;
+  if (k <= 1) return 0
 
-  let count = 0
-  let j = 0
-  let i = 0
-  let product = 1
-
-  while (i < nums.length && j < nums.length) {
-      if (product * nums[i] < k) {
-          product = product * nums[i]
-          count   = count + (i - j + 1)
-          i++
-      } else {
-          if (nums[j])  product = product / nums[j]
-          j++
+  while (right < nums.length) {
+      product *= nums[right];
+      while(product >= k){
+          product /= nums[left];
+          left++;
       }
+      count += right - left + 1;
+      right++;
+
   }
 
   return count
-
-
-
-
 };
 
 
 
+// console.log(numSubarrayProductLessThanK([10, 5, 2, 6], 100));
 
 console.log(numSubarrayProductLessThanK([2, 5, 3, 10], 30));
 // [2, 5, 3, 10,[10],[15], 30  ]
@@ -65,29 +62,16 @@ console.log(numSubarrayProductLessThanK([2, 5, 3, 10], 30));
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Solution
 // -----
 
 // var numSubarrayProductLessThanK = function(nums, k) {
-//   let count = 0
-//   let j = 0
-//   let i = 0
-//   let product = 1
+//   let count = 0;
+// i and j are pointers
+//   let j = 0;
+//   let i = 0;
+//   let product = 1; // initial multiplication
+
 
 //   while (i < nums.length && j < nums.length) {
 //       if (product * nums[i] < k) {
