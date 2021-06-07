@@ -2,6 +2,10 @@
 
 // Given the head of a Singly LinkedList, write a function to determine if the LinkedList has a cycle in it or not.
 
+/**
+ * 
+ */
+
 class Node {
   constructor(value, next=null){
     this.value = value;
@@ -11,6 +15,7 @@ class Node {
 
 const has_cycle = function(head) {
   // TODO: Write your code here
+
   return false
 }
 
