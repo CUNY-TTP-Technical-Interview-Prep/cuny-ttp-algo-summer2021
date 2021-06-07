@@ -6,6 +6,15 @@
 in: an array, an integer
 out: windowSize >= 0
 
+Solution:
+smallestWindowSize
+currentWindowSize
+windowStart
+windowEnd(current index)
+sum: as my running total
+
+
+I was thinking of m
 
 
 */
