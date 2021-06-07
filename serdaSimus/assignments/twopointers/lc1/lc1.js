@@ -3,33 +3,28 @@
 
 // Write a function to return the indices of the two numbers (i.e. the pair) such that they add up to the given target.
 
-// Problem Statement #
-// Given an array of sorted numbers and a target sum, find a pair in the array whose sum is equal to the given target.
-
-// Write a function to return the indices of the two numbers (i.e. the pair) such that they add up to the given target.
-
 /*
-in: array, integer
-out: array of the index
+  in: array, integer
+  out: array of the index
 
-[2,4,6,8] , 12
+  [2,4,6,8] , 12
 
-arrIndice, startptr, endptr, sum
+  arrIndice, startptr, endptr, sum
 
-while start less than end:
-	sum = value at start + value at end
-	
-	if(sum === targetValue)
-		add startPtr and endPtr to arrIndice
-		return arrIndice
-	else if(sum > target value)
-		move endPtr by -1.
-	else{
-		move startPtr by +1
-	}
-return [-1,-1] // we didn't find a pair.
-edge1: arr is empty return [-1,-1]
-edge2: if k is less than arr[0], return [-1,-1]
+  while start less than end:
+    sum = value at start + value at end
+    
+    if(sum === targetValue)
+      add startPtr and endPtr to arrIndice
+      return arrIndice
+    else if(sum > target value)
+      move endPtr by -1.
+    else{
+      move startPtr by +1
+    }
+  return [-1,-1] // we didn't find a pair.
+  edge1: arr is empty return [-1,-1]
+  edge2: if k is less than arr[0], return [-1,-1]
 
 */
 
