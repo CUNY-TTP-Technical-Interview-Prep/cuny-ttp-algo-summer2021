@@ -92,7 +92,7 @@ program containing the following:
 - DSA Appendix Slides & Discussion
 - Initial HackerRank Assesment
 - Intro to "Sliding Window" Pattern: Lecture & Discussion
-	- [] Maximum Sum Subarray of Size K (easy) LC #53
+	- [X] Maximum Sum Subarray of Size K (easy) LC #53
 
 #### 06/02 (Wed):
 
