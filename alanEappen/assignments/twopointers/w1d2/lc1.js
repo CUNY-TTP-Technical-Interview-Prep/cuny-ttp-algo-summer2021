@@ -6,7 +6,7 @@
 //arr is a sorted array 
 // targetSum is given 
 // We need to find two numbers in the array that would equal the targetSum
-//The function returns an array the indices of those two numbers.
+//The function returns an array the index of those two numbers.
 /*
  leftPtr -> first element index in the array
  rightPtr -> last element index in the array

@@ -3,7 +3,7 @@
 
 //arr is unsorted array
 // target 'key
-//Objective: to remove all instances of the key in the array
+//Goal: to remove all instances of the key in the array
 //return the length after removing the key of the new array
 //edge cases: 
 //if the array is empty return 0;
