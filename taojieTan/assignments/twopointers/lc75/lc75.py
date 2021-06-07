@@ -6,6 +6,34 @@
 
 def dutch_flag_sort(arr):
   # TODO: Write your code here
+
+# input: an unsorted integer array with only 0s, 1s, and 2s
+# output: the same array with sorted integers (ascending order)
+# edge case: empty array => return []
+
+# since we need to sort the array in-place, we are not allowed to use any extra space => not sort method.
+# we can apply two pointers to keep track of leftmost and rightmost indices in the array.
+# we can use while loop to traverse through the array, if the current value is 0, we swap it with the value of leftmost position; 
+# else if it is 2, we swap it with the value at the rightmost position, else if it is 1, we just skip it.
+# this way, we put all 0s at the left, and all 2s at the right, 1 will automatically be at the middle after the loop
+
+  left, right = 0, len(arr) - 1
+  index = right
+
+  while index >= left:
+    if arr[index] == 0:
+      temp = arr[left] 
+      arr[left] = arr[index]
+      arr[index] = temp
+      left += 1
+    elif arr[index] == 2:
+      temp = arr[right] 
+      arr[right] = arr[index]
+      arr[index] = temp
+      right -= 1
+      index -= 1
+    else:
+      index -= 1
   return
 
 def main():
@@ -17,6 +45,13 @@ def main():
   dutch_flag_sort(arr)
   print(arr)
 
+  arr = [2, 0, 2, 1, 0, 1, 1, 2, 2, 1, 0, 0, 0, 1, 1]
+  dutch_flag_sort(arr)
+  print(arr)
+
+  arr = []
+  dutch_flag_sort(arr)
+  print(arr)
 
 main()
 
