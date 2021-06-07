@@ -121,7 +121,7 @@ We will start with a brief introduction of each pattern before jumping into the 
   - [] Triplets with Smaller Sum (medium): LC #259
   - [] Subarrays with Product Less than a Target (medium): LC #713
   - [] Dutch National Flag Problem (medium): LC #75
-- Intro to "Fast & Slow Pointers" Pattern: Lecture & Discussion
+  - [] Intro to "Fast & Slow Pointers" Pattern: Lecture & Discussion
   - [] LinkedList Cycle (easy): LC #141
 
 #### 06/08 (Tues):
@@ -152,7 +152,7 @@ We will start with a brief introduction of each pattern before jumping into the 
 - Intro to "In Place Reversal of a LL" Pattern: Lecture & Discussion
   - [] Reverse a LinkedList (easy): LC #206
 
-### .
+###
 
 ### /// Week Three ///
 
@@ -168,9 +168,9 @@ We will start with a brief introduction of each pattern before jumping into the 
 #### 06/15 (Tues):
 
 - "Trees: BFS" Continued ( Each Pair Choose Two! )
-  - [] Reverse Level Order Traversal (easy): LC #107
-  - [] Zigzag Traversal (medium): LC #103
-  - [] Level Averages in a Binary Tree (easy): LC #637
+- [] Reverse Level Order Traversal (easy): LC #107
+- [] Zigzag Traversal (medium): LC #103
+- [] Level Averages in a Binary Tree (easy): LC #637
 
 #### 06/16 (Wed):
 
