@@ -1,5 +1,4 @@
 function max_subarray_size_k(k, arr) {
-  // TODO: Write your code here
   let maxSum = 0,
 windowSum = 0,
 windowStart = 0;
