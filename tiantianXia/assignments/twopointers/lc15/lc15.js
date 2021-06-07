@@ -17,6 +17,7 @@
  * 
  * compare if the arr[i] = arr[left] + arr [right]
  *  triplets push([arr[i], arr[left], arr[right]])
+ *  update left and right
  * if (arr[i] + left + right < 0)
  *  left ++
  * else if (arr[i] + left + right > 0)
