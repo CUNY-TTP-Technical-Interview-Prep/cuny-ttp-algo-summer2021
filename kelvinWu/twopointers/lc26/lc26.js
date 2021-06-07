@@ -1,6 +1,10 @@
 // Problem Statement #
 // Given an array of sorted numbers, remove all duplicates from it. You should not use any extra space; after removing the duplicates in-place return the length of the subarray that has no duplicate in it.
 
+//loop through array
+////go to element we haven't seen before and is greater than last element
+////switch element with the next spot it should be in the sorted array
+
 function remove_element(arr, key) {
   // TODO: Write code here
   if (nums.length == 0) return 0;
