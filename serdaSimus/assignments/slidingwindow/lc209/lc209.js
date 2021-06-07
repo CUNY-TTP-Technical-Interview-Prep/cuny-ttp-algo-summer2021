@@ -14,9 +14,12 @@ windowEnd(current index)
 sum: as my running total
 
 
-I was thinking of m
-
-
+visit every item, Keep a running sum of the items visited.
+    record where the windows started, and its current position.
+    windowSize is its current pos less its start pos + 1 because array start at 0.
+    each time we add a new value to sum, increase windowSize.
+    each time we remove a value from sum, shrink windowSize.
+    
 */
 
 function smallest_subarray_with_given_sum(s, arr) {
