@@ -3,6 +3,19 @@
 
 function remove_element(arr, key) {
   // TODO: Write code here
+  if (nums.length == 0) return 0;
+  let prevElement = nums[0];
+  let whereToSwitch = 1;
+  let i = 0;
+  while (i < nums.length) {
+    if (nums[i] <= prevElement) i++;
+    else {
+      nums[whereToSwitch] = nums[i];
+      prevElement = nums[i];
+      whereToSwitch++;
+    }
+  }
+  return whereToSwitch;
 }
 
 console.log(
