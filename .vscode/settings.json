@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    ".gitignore": "shellscript",
+    "iostream": "cpp",
+    "__locale": "cpp",
+    "locale": "cpp"
+  }
+}
