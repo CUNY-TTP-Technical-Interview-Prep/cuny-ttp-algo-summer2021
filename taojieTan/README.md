@@ -100,17 +100,17 @@ We will start with a brief introduction of each pattern before jumping into the 
 - "Sliding Window" Continued: P2P Mock Interview ( Each Pair Choose One! )
   - [x] Smallest Subarray with a given sum (easy): LC #209
   - [x] Longest Substring with K Distinct Characters (medium): LC #340
-  - [] Fruits into Baskets (medium): LC 904
+  - [x] Fruits into Baskets (medium): LC 904
 - Intro to "Two Pointers" Pattern: Lecture & Discussion
-  - [] Pair with Target Sum (easy): LC #1
+  - [x] Pair with Target Sum (easy): LC #1
 
 #### 06/03 (Thur):
 
 - "Two Pointers" Continued: P2P Mock Interview ( Each Pair Choose Two! )
-  - [] Remove Duplicates (easy): LC #26
-  - [] Squaring a Sorted Array (easy): LC #977
-  - [] Triplet Sum to Zero (medium): LC #15
-  - [] Triplet Sum Close to Target (medium): LC #16
+  - [x] Remove Duplicates (easy): LC #26
+  - [x] Squaring a Sorted Array (easy): LC #977
+  - [x] Triplet Sum to Zero (medium): LC #15
+  - [x] Triplet Sum Close to Target (medium): LC #16
 
 ### .
 

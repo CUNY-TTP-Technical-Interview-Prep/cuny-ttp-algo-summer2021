@@ -7,13 +7,54 @@
 # Write a function to return the maximum number of fruits in both baskets.
 
 def fruits_into_baskets(fruits):
+  #input: an array with only characters
+  #output: return an integer 
 
+  #edge cases: 1. empty array -> 0 
+
+  #initialize a dictionary to represent the basket and keep track of the frequency of distinct characters
+  basket = {}
+
+  #initialize two window pointers to keep track of the size of the sliding window
+  window_start = 0
+  window_end = 0
+
+  #initialize a max_fruits variable to keep track of the maximum number of fruits in the basket
+  max_fruits = 0
+
+  #loop through the array to store each character into basket
+  #if the length of basket is greater than 2 which means we just picked a third type of fruit, 
+  #we need to subtract the frequency of leftmost value (with window_start index) by one, 
+  #and in the meanwhile shifting the window_start index to right
+  #we keep subtracting until the length of basket is smaller or equal to two (use a while loop)
+  #after break out of the inner while loop, we compare larger length 
+  #after going through the entire array, we will get the final result of maximum length
+
+  while window_end < len(fruits):
+    rightmost_val = fruits[window_end]
+    if rightmost_val in basket:
+      basket[rightmost_val] += 1
+    else:
+      basket[rightmost_val] = 1
+
+    while len(basket) > 2:
+      leftmost_val = fruits[window_start]
+      basket[leftmost_val] -= 1
+      if basket[leftmost_val] == 0:
+        del basket[leftmost_val]
+      
+      window_start += 1 
+
+    max_fruits = max(max_fruits, window_end - window_start + 1)
+    window_end += 1
+
+  return max_fruits
 
 def main():
-  print("Maximum number of fruits: " + str(fruits_into_baskets(['A', 'B', 'C', 'A', 'C'])))
-  print("Maximum number of fruits: " + str(fruits_into_baskets(['A', 'B', 'C', 'B', 'B', 'C'])))
-
-
+  print("Maximum number of fruits: " + str(fruits_into_baskets(['A', 'B', 'C', 'A', 'C'])))  
+  print("Maximum number of fruits: " + str(fruits_into_baskets(['A', 'B', 'C', 'B', 'B', 'C']))) 
+  print("Maximum number of fruits: " + str(fruits_into_baskets(['C', 'C', 'B', 'C', 'A', 'C'])))
+  print("Maximum number of fruits: " + str(fruits_into_baskets([])))
 main()
 
 
