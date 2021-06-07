@@ -13,7 +13,7 @@
     // window condition if array[index] >= target return length of numbers in tha addition 
     
     or 
-    [prefered come because we want the smallest subarray]
+    [prefered outcome because we want the smallest subarray]
     if subarry is >=
     // target return length basically if one number meets condition return that subarray length without addition
     /
@@ -30,14 +30,25 @@
 
 
 
+
 function smallest_subarray_with_given_sum(s, arr) {
-  let targetSum = 0, 
-  windowSize = 0;
+  let winSum = 0, 
+  minLength = Infinity,
+  windowSizeStart = 0;
 
   for (let start = 0; start < arr.length; start++){
-    arr[start]
+    winSum += arr[start];
+    while (winSum >= s){
+      minLength = Math.min(minLength, start - windowSizeStart +1);
+      winSum -= arr[windowSizeStart];
+      windowSizeStart += 1;
+    }
+
   }
-  
+  if(minLength === Infinity){
+    return 0;
+  }
+return minLength;
 
 
 
@@ -62,23 +73,3 @@ console.log(
   )}\n`
 );
 
-// Solution
-// -----
-// let windowSum = 0,
-// minLength = Infinity,
-// windowStart = 0;
-
-// for (windowEnd = 0; windowEnd < arr.length; windowEnd++) {
-// windowSum += arr[windowEnd]; // add the next element
-// // shrink the window as small as possible until the 'window_sum' is smaller than 's'
-// while (windowSum >= s) {
-//   minLength = Math.min(minLength, windowEnd - windowStart + 1);
-//   windowSum -= arr[windowStart];
-//   windowStart += 1;
-// }
-// }
-
-// if (minLength === Infinity) {
-// return 0;
-// }
-// return minLength;
