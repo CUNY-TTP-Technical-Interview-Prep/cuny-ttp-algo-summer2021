@@ -13,7 +13,7 @@ function smallest_subarray_with_given_sum(s, arr) {
     tempSum += arr[windowEnd]; //add elements until temp is greater than given num
 
     while (tempSum >= s) {
-      minLen = Math.min(tempSum, windowEnd - windowStart + 1); // the temp sum or the subarr len
+      minLen = Math.min(minLen, windowEnd - windowStart + 1); // the temp sum or the subarr len
       tempSum -= arr[windowStart];
       windowStart += 1;
     }
@@ -38,7 +38,7 @@ function smallest_subarray_with_given_sum(s, arr) {
 
     while (tempSum >= s) {
       //set the min len to the sub arr len
-      minLen = Math.min(tempSum, windowEnd - windowStart + 1);
+      minLen = Math.min(minLen, windowEnd - windowStart + 1);
       // remove from the window until temp sum is no longer greater than s
       tempSum -= arr[windowStart];
       //slide up
