@@ -2,6 +2,26 @@
 
 // Given the head of a Singly LinkedList, write a function to determine if the LinkedList has a cycle in it or not.
 
+/**
+ * input: head: the head of the single linkedlist
+ * output: ture if the linkedlist has a cycle or false not
+ * 
+ * variables: fastPointer, slowPointer: to implement a fast and slow algorithm fastPointer go 2 node for each 
+ *            iteration while slow go 1. set both begin at head
+ * 
+ * use a while loop to traverse the linked list. end the loop if the fast pointer is null.
+ *  update slow pointer pass 1 node
+ *  update fast pointer pass 2 node
+ *  if the next node of faster pointer is slow pointer
+ *    return true for has cycle
+ * 
+ * return false for 
+ * 
+ * edge case head is null => false
+ * 
+ * Time complexity O(n) space complexity o(1)
+ */
+
 class Node {
   constructor(value, next=null){
     this.value = value;
@@ -11,6 +31,16 @@ class Node {
 
 const has_cycle = function(head) {
   // TODO: Write your code here
+  let fastPointer = head,
+      slowPointer = head;
+  
+  while(fastPointer !== null){
+      slowPointer = slowPointer.next;
+      fastPointer = fastPointer.next.next;
+
+      if(fastPointer === slowPointer)
+        return true;
+  }
   return false
 }
 
