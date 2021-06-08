@@ -28,7 +28,8 @@ function functional_make_squares(arr) {
 
 function make_squares(arr) {
   // TODO: Write code here
-  return arr.map((item) => item * item).sort((a, b) => a - b);
+  // Using TwoPointers Pattern(WIP)
+  // return arr.map((item) => item * item).sort((a, b) => a - b);
 }
 
 console.log(`Squares: ${functional_make_squares([-2, -1, 0, 2, 3])}`);
