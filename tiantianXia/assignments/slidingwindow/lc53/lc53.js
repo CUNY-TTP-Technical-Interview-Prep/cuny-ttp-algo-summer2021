@@ -1,5 +1,48 @@
+// Problem Statement #
+
+// Given an array of positive numbers and a positive number ‘k,’ find the maximum sum of any contiguous subarray of size ‘k’.
+
+/*
+inputs - an array of positive numbers, positive k for the subarray size
+outputs - the maximum sum of the subarrays
+
+variables  maxsum: a maxsum to compare with the current sum
+currentSum: that add up the current value to the current sum
+windowStart: since we use sliding window we need a window start pointer
+windoEnd: we also need a winodwEnd pointer
+
+impelemt a for loop to traverse all the element
+  add the current value to the currentSum
+
+  compare if the windowEnd is greater or equal to k size of the subarray
+    compare the currentSum and maxSum and find the greater one
+    update the currentSum that - the window start value so that we can have a new  winodw
+    update the window start
+
+return tha maxSum
+
+edge case: arr [] => []
+Time complexity O{n} space complexity O(1).
+
+*/
+
 function max_subarray_size_k(k, arr) {
   // TODO: Write your code here
+  let maxSum = 0,
+    currentSum = 0,
+    windowStart = 0;
+
+    for(let windowEnd = 0; windowEnd < arr.length; windowEnd ++){
+      currentSum += arr[windowEnd];
+
+      if(windowEnd >= k - 1){
+        maxSum = Math.max(maxSum, currentSum);
+        currentSum -= arr[windowStart];
+        windowStart += 1;
+      }
+    }
+
+    return maxSum;
 }
 
 console.log(
