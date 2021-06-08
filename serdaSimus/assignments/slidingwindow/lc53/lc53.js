@@ -38,8 +38,7 @@ function max_subarray_size_k(k, arr) {
     if (counter >= k) {
       // comparing sum to largest, and storing larger of the two.
       // this works because our value will never be -negative.
-      // largest = sum > largest ? sum : largest;
-
+      largest = sum > largest ? sum : largest;
       sum -= arr[counter - k]; // removing the first item from the last window of k size.
     }
     counter++; // increasing counter, effectively moving the window forward.
@@ -51,7 +50,6 @@ function max_subarray_size_k(k, arr) {
 Notes: 
 Keywords: contiguous, sub-array, substring
 Goal: attempt to complete it in O(n) but absolutely less than O(n^2) TC, O(1) space.
-
 */
 
 console.log(
@@ -60,12 +58,14 @@ console.log(
     [2, 1, 5, 1, 3, 2]
   )}`
 );
+
 console.log(
   `Maximum sum of a subarray of size K: ${max_subarray_size_k(
     2,
     [2, 3, 4, 1, 5]
   )}`
 );
+
 console.log(
   `Maximum sum of a subarray of size K: ${max_subarray_size_k(2, [])}`
 );
