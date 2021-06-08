@@ -118,11 +118,11 @@ We will start with a brief introduction of each pattern before jumping into the 
 #### 06/07 (Mon):
 
 - "Two Pointers" Continued: P2P Mock Interview ( Each Pair Choose One! )
-  - [] Triplets with Smaller Sum (medium): LC #259
+  - [wip] Triplets with Smaller Sum (medium): LC #259
   - [] Subarrays with Product Less than a Target (medium): LC #713
   - [] Dutch National Flag Problem (medium): LC #75
-  - [] Intro to "Fast & Slow Pointers" Pattern: Lecture & Discussion
-  - [] LinkedList Cycle (easy): LC #141
+- [] Intro to "Fast & Slow Pointers" Pattern: Lecture & Discussion
+  - [x] LinkedList Cycle (easy): LC #141
 
 #### 06/08 (Tues):
 
