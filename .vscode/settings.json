@@ -28,5 +28,6 @@
     "system_error": "cpp",
     "tuple": "cpp",
     "type_traits": "cpp"
-  }
+  },
+  "python.formatting.provider": "black"
 }
