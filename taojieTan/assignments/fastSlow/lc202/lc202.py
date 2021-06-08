@@ -2,16 +2,66 @@
 
 # Any number will be called a happy number if, after repeatedly replacing it with a number equal to the sum of the square of all of its digits, leads us to number ‘1’. All other (not-happy) numbers will never reach ‘1’. Instead, they will be stuck in a cycle of numbers which does not include ‘1’.
 
+# input: an integer (positive)
+# output: a boolean value (True if it is a happy number, False otherwise)
+# edge case: zero => False
+
+# 2^2 + 3^2 = 10
+# 1^2 + 0^2 = 1 => True
+
+# 1^2 + 2^2 = 5 
+# 5^2 = 25
+# 2^2 + 5^2 = 29
+# 2^2 + 9^2 = 85
+# 8^2 + 5^2 = 89 
+# 8^2 + 9^2 = 145 
+# 1^2 + 4^2 + 5^2 = 42
+# 4^2 + 2^2 = 20 
+# 2^2 + 0^2 = 4
+# 4^2 = 16
+# 1^2 + 6^2 = 38
+# 3^2 + 8^2 = 73
+# 7^2 + 3^2 = 58
+# 5^2 + 8^2 = 89 => reach the cycle and not equal 1 => False
+
+
+# Given the integer, we will split the integer into each digit and sum the square of these digits
+# We can apply the slow and fast pattern to check if there exists any cycle where sum is not equal 1.
+# Each step (we can use a while loop), we use the 'slow' variable to keep track of its sum of the square of these digits once,
+# at the same time, we also use 'fast' variable to keep track of its sum of the square of digits twice.
+# if slow and fast are equal at some point and don't equal 1, we can assume the integer stucks in a cycle that never reaches 1 (break out of the while loop), and we return False.
+# if slow equals 1, just return True.
+
 def find_happy_number(num):
   # TODO: Write your code here
-  return False
+  slow = sum_each_square_digit(num)
+  fast = sum_each_square_digit(slow)
 
+  while slow != fast:
+    if slow == 1:
+      return True
+    
+    slow = sum_each_square_digit(slow)
+    fast = sum_each_square_digit(fast)
+    fast = sum_each_square_digit(fast) 
+
+  return False if slow != 1 else True
+
+def sum_each_square_digit(num):
+  sum = 0
+  for i in str(num):
+    sum += int(i) ** 2
+  
+  return sum
 
 def main():
   print(find_happy_number(23))
   print(find_happy_number(12))
-
-
+  print(find_happy_number(19))
+  print(find_happy_number(100))
+  print(find_happy_number(0))
+  print(find_happy_number(1))
+  print(find_happy_number(2))
 main()
 
 
