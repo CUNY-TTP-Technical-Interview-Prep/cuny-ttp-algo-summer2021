@@ -101,7 +101,7 @@ program containing the following:
   - [] Longest Substring with K Distinct Characters (medium): LC #340
   - [] Fruits into Baskets (medium): LC 904
 - Intro to "Two Pointers" Pattern: Lecture & Discussion
-  - [] Pair with Target Sum (easy): LC #1
+  - [X] Pair with Target Sum (easy): LC #1
 
 #### 06/03 (Thur):
 
@@ -109,7 +109,7 @@ program containing the following:
   - [] Remove Duplicates (easy): LC #26
   - [] Squaring a Sorted Array (easy): LC #977
   - [] Triplet Sum to Zero (medium): LC #15
-  - [] Triplet Sum Close to Target (medium): LC #16
+  - [X] Triplet Sum Close to Target (medium): LC #16
 
 ### .
 ### /// Week Two ///
