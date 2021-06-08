@@ -5,27 +5,61 @@
 // You can assume that K is less than or equal to the length of the given string.
 
 function longest_substring_with_k_distinct(str, k) {
-  // TODO: Write code here
+	// TODO: Write code here
+	// given k distinc characters find longest continous string that has k distinct characters
+	// make object that holds the frequencies of chars in string
+
+	// araaci     2
+	// pointer left ,  pointer right
+	// object = {}  a = 1 ,
+	// increment right pointer
+	// object {} a = 1, r = 1  size : 2
+	// increment right pointer
+	// object{} a = 2 r = 1 size: 2
+	// increment right poitner
+	// object {} a =3 r = 1 size : 2  <= 2
+	// increment right pointer
+	// object a = 3 r = 1 c = 1 size : 3      keeping track of the size of the substring    (right - left + 1)  longest = Math.max(longest, (right - left + 1) )
+
+	// object[leftpointer]--
+	// increment left pointer
+
+	let frequencies = {};
+	let longest = 0;
+	let windowStart = 0;
+
+	for (let windowEnd = 0; windowEnd < str.length; windowEnd++) {
+		let char = str.charAt(windowEnd);
+		if (!frequencies[char]) {
+			frequencies[char] = 1;
+		} else {
+			frequencies[char]++;
+		}
+		while (Object.keys(frequencies).length > k) {
+			let previousChar = str[windowStart];
+			frequencies[previousChar]--;
+			if (frequencies[previousChar] === 0) {
+				delete frequencies[previousChar];
+			}
+			windowStart++;
+			longest = Math.max(longest, windowEnd - windowStart + 1);
+		}
+	}
+	longest = Math.max(str.length - windowStart, longest);
+	return longest;
 }
 
-console.log(
-  `Length of the longest substring: ${longest_substring_with_k_distinct(
-    'araaci',
-    2
-  )}`
-);
-console.log(
-  `Length of the longest substring: ${longest_substring_with_k_distinct(
-    'araaci',
-    1
-  )}`
-);
-console.log(
-  `Length of the longest substring: ${longest_substring_with_k_distinct(
-    'cbbebi',
-    3
-  )}`
-);
+// araa 4
+console.log(`Length of the longest substring: ${longest_substring_with_k_distinct('aaaaa', 2)}`);
+console.log(`Length of the longest substring: ${longest_substring_with_k_distinct('araaci', 2)}`);
+console.log(`Length of the longest substring: ${longest_substring_with_k_distinct('aaaaci', 2)}`);
+// aa 2
+console.log(`Length of the longest substring: ${longest_substring_with_k_distinct('araaci', 1)}`);
+
+//cbbeb 4
+console.log(`Length of the longest substring: ${longest_substring_with_k_distinct('cbbebi', 3)}`);
+console.log(`Length of the longest substring: ${longest_substring_with_k_distinct('bacc', 2)}`);
+console.log(`Length of the longest substring: ${longest_substring_with_k_distinct('abaccc', 2)}`);
 
 // Solution
 // -----
