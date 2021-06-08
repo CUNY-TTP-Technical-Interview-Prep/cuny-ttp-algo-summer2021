@@ -123,7 +123,7 @@ We will start with a brief introduction of each pattern before jumping into the 
   - [] Subarrays with Product Less than a Target (medium): LC #713
   - [x] Dutch National Flag Problem (medium): LC #75
 - Intro to "Fast & Slow Pointers" Pattern: Lecture & Discussion
-  - [] LinkedList Cycle (easy): LC #141
+  - [x] LinkedList Cycle (easy): LC #141
 
 #### 06/08 (Tues):
 

@@ -10,6 +10,26 @@ class Node:
 
 def has_cycle(head):
   # TODO: Write your code here
+
+# input: a singly linkedlist with integer values
+# output: boolean value 
+# edge cases: 1. empty array => return False
+#             2. 1 node => can be True if it points to itself; otherwise, False
+
+# we can apply slow and fast pointers pattern for this question
+# we set fast pointer two steps faster than slow pointer, so that if there is a cycle in the linkedlist, 
+# fast pointer will eventually catch the slow pointer.
+
+  fast, slow = head, head
+
+  while fast != None and fast.next != None:
+    if fast.next == slow:
+      return True
+    
+    fast = fast.next.next
+    slow = slow.next
+
+
   return False
 
 
@@ -28,6 +48,15 @@ def main():
   head.next.next.next.next.next.next = head.next.next.next
   print("LinkedList has cycle: " + str(has_cycle(head)))
 
+
+  # case where a node points to itself
+  head1 = Node(1)
+  head1.next = head1
+  print("LinkedList has cycle: " + str(has_cycle(head1)))
+
+  # case where the linkedlist is empty
+  head2 = None 
+  print("LinkedList has cycle: " + str(has_cycle(head2)))
 
 main()
 
