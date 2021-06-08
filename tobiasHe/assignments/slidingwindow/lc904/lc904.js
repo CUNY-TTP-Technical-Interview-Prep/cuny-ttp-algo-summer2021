@@ -7,22 +7,11 @@
 // Write a function to return the maximum number of fruits in both baskets.
 
 function fruits_into_baskets(fruits) {
-  // TODO: Write code here
+	// TODO: Write code here
 }
 
-console.log(
-  `Maximum number of fruits: ${fruits_into_baskets(['A', 'B', 'C', 'A', 'C'])}`
-);
-console.log(
-  `Maximum number of fruits: ${fruits_into_baskets([
-    'A',
-    'B',
-    'C',
-    'B',
-    'B',
-    'C',
-  ])}`
-);
+console.log(`Maximum number of fruits: ${fruits_into_baskets([ 'A', 'B', 'C', 'A', 'C' ])}`);
+console.log(`Maximum number of fruits: ${fruits_into_baskets([ 'A', 'B', 'C', 'B', 'B', 'C' ])}`);
 
 // Solution
 // -----

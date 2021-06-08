@@ -4,10 +4,26 @@
 function make_squares(arr) {
 	// TODO: Write code here
 	// given sorted, return a new array that is also sorted with sqaures of those numbers
-	//
+	// since it's sorted, the largest values after squared will be at the ends of each pole decreasing towards the middle
+	// using two pointer technique we can just loop through the array once
+	let squares = [];
+	let leftPointer = 0;
+	let rightPointer = arr.length - 1;
+
+	while (leftPointer <= rightPointer) {
+		if (arr[leftPointer] * arr[leftPointer] > arr[rightPointer] * arr[rightPointer]) {
+			squares.push(arr[leftPointer] * arr[leftPointer]);
+			leftPointer++;
+		} else {
+			squares.push(arr[rightPointer] * arr[rightPointer]);
+			rightPointer--;
+		}
+	}
+	return squares.reverse();
 }
 
 console.log(`Squares: ${make_squares([ -2, -1, 0, 2, 3 ])}`);
+4, 1, 0, 4, 3;
 console.log(`Squares: ${make_squares([ -3, -1, 0, 1, 2 ])}`);
 console.log(`Squares: ${make_squares([ 1, 2, 3, 4, 5 ])}`);
 
