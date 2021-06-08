@@ -2,6 +2,47 @@
 
 // Given the head of a Singly LinkedList that contains a cycle, write a function to find the starting node of the cycle.
 
+/**
+ * input head: head of the linked list
+ * 
+ * output reuturn the node of the starting cycle
+ * 
+ * varibles: fastPrt, slowPrt to impelement the fast  and slow algorithm
+ *          
+ * 
+ * step 1: find if cycle exist
+ * step 2: find the lenght of the cycle
+ * step 3: find the starting node based on the length 
+ * 
+ * while the fast is not null and the fast.next is not null
+ *  update the slowPrt = slow.next
+ *  update the fastPrt = fast.next.next
+ * 
+ *  if slow meet the fast pointer
+ *    countPrt = slow
+ *    lenght +=1
+ * 
+ *  if countPrt is not null and slow.next is the countPrt
+ *    length ++;
+ *    break;
+ * if the fastprt is null then return null;
+ *  
+ *  reset slowpinter and fastprt to the head
+ *  while the length is greater than 0
+ *      move the fast pointer to the fast.next
+ *      drecrement the lenght
+ * 
+ *  while fast is not null
+ *      move slowpointer to slow.next
+ *      move fastprt to fast .next
+ *      if fast and slow meet
+ *          return the node
+ * 
+ *    return head.
+ * 
+ * edge case if there is no cycle = > null
+ *  */
+
 class Node {
   constructor(value, next=null){
     this.value = value;
@@ -11,7 +52,24 @@ class Node {
 
 const find_cycle_start = function(head){
   // TODO: Write your code here
-  return head;
+  let fastPrt = head;
+  let slowPrt = head;
+
+  while(fastPrt && fastPrt.next){
+    slowPrt = slowPrt.next;
+    fastPrt = fastPrt.next.next;
+
+    if(slowPrt === fastPrt){
+      slowPrt = head;
+
+      while (fastPrt !== slowPrt){
+        slowPrt = slowPrt.next;
+        fastPrt = fastPrt.next;
+      }
+      return slowPrt;
+    }
+  }
+  return null;
 };
 
 
@@ -22,13 +80,14 @@ head.next.next.next = new Node(4)
 head.next.next.next.next = new Node(5)
 head.next.next.next.next.next = new Node(6)
 
-head.next.next.next.next.next.next = head.next.next
+head.next.next.next.next.next.next = head.next.next // 3
 console.log(`LinkedList cycle start: ${find_cycle_start(head).value}`)
 
-head.next.next.next.next.next.next = head.next.next.next
+head.next.next.next.next.next.next = head.next.next.next // 4
 console.log(`LinkedList cycle start: ${find_cycle_start(head).value}`)
 
-head.next.next.next.next.next.next = head
+head.next.next.next.next.next.next = head // 1
+console.log(`LinkedList cycle start: ${find_cycle_start(head).value}`)
 
 
 
