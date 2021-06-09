@@ -6,6 +6,23 @@
 inputs - an array of positive numbers, positive k for the subarray size
 outputs - the maximum sum of the subarrays
 
+variables  maxsum: a maxsum to compare with the current sum
+currentSum: that add up the current value to the current sum
+windowStart: since we use sliding window we need a window start pointer
+windoEnd: we also need a winodwEnd pointer
+
+impelemt a for loop to traverse all the element
+  add the current value to the currentSum
+
+  compare if the windowEnd is greater or equal to k size of the subarray
+    compare the currentSum and maxSum and find the greater one
+    update the currentSum that - the window start value so that we can have a new  winodw
+    update the window start
+
+return tha maxSum
+
+edge case: arr [] => []
+Time complexity O{n} space complexity O(1).
 
 */
 
