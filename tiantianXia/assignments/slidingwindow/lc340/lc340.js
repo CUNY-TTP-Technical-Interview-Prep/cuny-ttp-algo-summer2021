@@ -37,30 +37,13 @@ function longest_substring_with_k_distinct(str, k) {
 
   
   for(windowEnd; windowEnd < str.length; windowEnd++){
-    console.log(str[windowEnd]);
     if(!(str[windowEnd] in frequency)){
       frequency[str[windowEnd]] = 0;
     }
     frequency[str[windowEnd]] += 1;
-    if(frequency[str[windowEnd]] > k){
-      maxLen = Math.max(maxLen, windowEnd - windowStart);
-      if(str[windowStart] === str[windowEnd]){
-        windowStart ++;
-      }else{
-        let findLast = windowEnd;
-        let count = 0;
-        while(count <=k){
-          if(str[findLast] !== str[windowEnd] ){
-            findLast --;
-          }else{
-            windowStart = findLast;
-            count ++;
-          }
-        }
-      }
-      frequency[str[windowEnd]] -= 1;
-    }
+    // console.log(frequency[]);
   }
+  console.log(frequency['a']);
   maxLen = Math.max(maxLen, windowEnd - windowStart);
 
   return maxLen;
@@ -68,19 +51,19 @@ function longest_substring_with_k_distinct(str, k) {
 
 console.log(
   `Length of the longest substring: ${longest_substring_with_k_distinct(
-    'araaci',
+    'araaci', // araa
     2
   )}`
 );
 console.log(
   `Length of the longest substring: ${longest_substring_with_k_distinct(
-    'araaci',
+    'araaci', // aa
     1
   )}`
 );
 console.log(
   `Length of the longest substring: ${longest_substring_with_k_distinct(
-    'cbbebi',
+    'cbbebi', // cbbeb
     3
   )}`
 );
