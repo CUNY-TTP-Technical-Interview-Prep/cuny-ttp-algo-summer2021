@@ -1,48 +1,26 @@
-/*
+// Problem Statement #
 
+// Given an array of positive numbers and a positive number ‘k,’
+//find the maximum sum of any contiguous subarray of size ‘k’.
 
-This problem requires three variables:
-window_start
-current_max
-window_end(in for loop)
-window_sum will be keeping the current sum
-window_start will be keeping track of indexes in the front of the array.
-window_end will be keeping track of indexes throughout the array.
-
-Everytime k is reached(which is when window_end reaches k) then a new current_max will be determined(or keep the old one if it is 
-  still current max)
-
-  We will then subtract the index(window_start) from window_sum.
-  window_start moves one position over.
-
-
-  Since windows sum will be subtracting the first(relative) value of the array after reaching k then this process will continue until 
-  current max is determined 
-  current max will be returned
-*/
+//They are all positive!
 
 function max_subarray_size_k(k, arr) {
+  //k is the number of supposed values within the subarray
   let window_start = 0,
     window_sum = 0,
-    current_max = 0;
-
+    max_val = 0;
+  //window_start is the pointer of first part of the list
+  //window sum is the current accumlative sum of the subarray
   for (let window_end = 0; window_end < arr.length; window_end++) {
     window_sum += arr[window_end];
     if (window_end >= k - 1) {
-      current_max = Math.max(window_sum, current_max);
-
+      max_val = Math.max(max_val, window_sum);
       window_sum -= arr[window_start];
-
       window_start += 1;
     }
   }
-  return current_max;
-
-  /*
-  k = 3
-
-
-  */
+  return max_val;
 
   // TODO: Write your code here
 }
@@ -53,6 +31,7 @@ console.log(
     [2, 1, 5, 1, 3, 2]
   )}`
 );
+
 console.log(
   `Maximum sum of a subarray of size K: ${max_subarray_size_k(
     2,

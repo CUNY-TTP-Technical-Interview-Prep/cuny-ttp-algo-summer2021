@@ -22,27 +22,28 @@ Everytime k is reached(which is when window_end reaches k) then a new current_ma
 */
 
 function max_subarray_size_k(k, arr) {
-  let window_start = 0,
-    window_sum = 0,
-    current_max = 0;
+  let window_start = 0, window_sum = 0, current_max = 0;
 
-  for (let window_end = 0; window_end < arr.length; window_end++) {
-    window_sum += arr[window_end];
-    if (window_end >= k - 1) {
+  for(let window_end = 0; window_end < arr.length; window_end++){
+    window_sum += arr[window_end]
+    if(window_end >= k-1){
       current_max = Math.max(window_sum, current_max);
 
-      window_sum -= arr[window_start];
+      window_sum -= arr[window_start]
 
       window_start += 1;
-    }
-  }
-  return current_max;
 
+
+    }
+    return current_max;
+
+  }
   /*
   k = 3
 
 
   */
+
 
   // TODO: Write your code here
 }
