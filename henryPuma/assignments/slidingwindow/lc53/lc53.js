@@ -5,20 +5,20 @@
 // nums: non empty array of integers
 
 // Postcondition: 
-// maxSum: integer denoting the maximium sum possible of any sub array whose length >= k
+// maxSum: integer denoting the maximum sum possible of any sub array whose length >= k
 function max_subarray_size_k(k, arr) {
 
-  const arrLength = arr.length; // Since we're not mutating the array, we can store it's array size once and use everywhere
+  const arrLength = arr.length; // Since we're not mutating the array, we can store it's size once and use everywhere
 
   if (arrLength < k) return 0; // When the minimum sub array required is greater than the actual array length
 
-  let maxSum = Number.MIN_VALUE; // Store the max sum overall, we initialize it to lowest possible value
+  let maxSum = Number.MIN_VALUE; // Store the max sum overall, we initialize it to the lowest possible value
   let windowSum = 0; // Total sum of current window when window size is == k
 
   let startWindow = 0; // Left index of window, moves to the right when endWindow >= k
-  let endWindow = 0; // Right index of window  Iterates forward throughout the entire array
+  let endWindow = 0; // Right index of window iterates forward throughout the array
 
-  const minIndex = k-1; // Compute k-1 once and use it to compare with endWindow for every iteration in the while loop in line 22
+  const minIndex = k-1; // Compute k-1 once and use it to compare with endWindow for every iteration in the while loop on line 22
 
   while(endWindow < arrLength){
     windowSum += arr[endWindow]; // Accumulate the sum of our current window
@@ -32,11 +32,12 @@ function max_subarray_size_k(k, arr) {
     endWindow++; // Shift endWindow to the right
   }
 
-    // Simple run through:
+    // Run through:
     // [1 2 3 4 5 6] 
     // endWindow=2, windowSum=6, windowSum > maxSum => maxSum = windowSum = 6
     // endWindow=3, windowSum=9, windowSum > maxSum => maxSum = windowSum = 9
     // endWindow=4, windowSum=12, windowSum > maxSum => maxSum = windowSum = 12
+    // endWindow=5, windowSum=17, windowSum > maxSum => maxSum = windowSum = 17
   return maxSum;
 }
 
