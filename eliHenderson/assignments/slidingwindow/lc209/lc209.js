@@ -35,7 +35,6 @@ function smallest_subarray_with_given_sum(s, arr) {
   for (let windowEnd = 0; windowEnd < arr.length; windowEnd++) {
     //expand the window, until the temp sum reaches or surpasses 's'
     tempSum += arr[windowEnd];
-
     while (tempSum >= s) {
       //set the min len to the sub arr len
       minLen = Math.min(minLen, windowEnd - windowStart + 1);
@@ -45,12 +44,10 @@ function smallest_subarray_with_given_sum(s, arr) {
       windowStart += 1;
     }
   }
-
   //if nothing has changed, return 0
   if (minLen === Infinity) {
     return 0;
   }
-
   //return minLen
   return minLen;
 }
