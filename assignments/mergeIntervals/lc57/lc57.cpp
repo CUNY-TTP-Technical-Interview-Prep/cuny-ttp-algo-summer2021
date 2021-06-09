@@ -90,7 +90,7 @@ int main(int argc, char *argv[]) {
 // -----
 
 // Time complexity #
-// As we are iterating through all the intervals only once, the time complexity of the above algorithm is O(N)O(N), where ‘N’ is the total number of intervals.
+// As we are iterating through all the intervals only once, the time complexity of the above algorithm is O(N), where ‘N’ is the total number of intervals.
 
 // Space complexity #
-// The space complexity of the above algorithm will be O(N)O(N) as we need to return a list containing all the merged intervals.
+// The space complexity of the above algorithm will be O(N) as we need to return a list containing all the merged intervals.
