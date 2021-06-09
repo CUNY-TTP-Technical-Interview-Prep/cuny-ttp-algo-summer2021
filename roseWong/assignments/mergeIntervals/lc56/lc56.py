@@ -25,6 +25,16 @@ def merge(intervals):
   end = intervals[0].end
   for i in range(1, len(intervals)):
     interval = intervals[i]
+#     return intervals
+
+#   # sort the intervals on the start time
+#   intervals.sort(key=lambda x: x.start)
+
+#   mergedIntervals = []
+#   start = intervals[0].start
+#   end = intervals[0].end
+#   for i in range(1, len(intervals)):
+#     interval = intervals[i]
 #     if interval.start <= end:  # overlapping intervals, adjust the 'end'
 #       end = max(interval.end, end)
 #     else:  # non-overlapping interval, add the previous internval and reset
