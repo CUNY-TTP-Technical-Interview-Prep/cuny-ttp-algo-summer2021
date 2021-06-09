@@ -116,11 +116,11 @@ program containing the following:
 
 #### 06/07 (Mon):
 - "Two Pointers" Continued: P2P Mock Interview ( Each Pair Choose One! )
-  - [] Triplets with Smaller Sum (medium): LC #259
+  - [X] Triplets with Smaller Sum (medium): LC #259
   - [] Subarrays with Product Less than a Target (medium): LC #713 
-  - [] Dutch National Flag Problem (medium): LC #75
+  - [X] Dutch National Flag Problem (medium): LC #75
 - Intro to "Fast & Slow Pointers" Pattern: Lecture & Discussion
-  - [] LinkedList Cycle (easy): LC #141
+  - [X] LinkedList Cycle (easy): LC #141
 
 
 #### 06/08 (Tues):
