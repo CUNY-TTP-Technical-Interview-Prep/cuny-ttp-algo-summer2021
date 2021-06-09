@@ -35,17 +35,18 @@ class Node {
 
 const find_middle_of_linked_list = function (head) {
   // TODO: Write your code here
+  if (head === null) return null;
+  if (head.next === null) return null;
+
   let moveBy1Ptr = head,
     moveBy2Ptr = head;
 
-  console.log(moveBy2Ptr);
-
-  while (moveBy2Ptr !== null && moveBy2Ptr.next !== null) {
+  while (moveBy2Ptr.next !== null && moveBy2Ptr !== null) {
+    if (moveBy2Ptr.next === null) {
+      console.log(moveBy1Ptr);
+    }
     moveBy1Ptr = moveBy1Ptr.next;
     moveBy2Ptr = moveBy2Ptr.next.next;
-    console.log(moveBy2Ptr);
-
-    if (moveBy2Ptr.next === null) return moveBy1Ptr;
   }
 };
 
@@ -55,13 +56,13 @@ head.next.next = new Node(3);
 head.next.next.next = new Node(4);
 head.next.next.next.next = new Node(5);
 
-// console.log(`Middle Node: ${find_middle_of_linked_list(head).value}`);
+console.log(`Middle Node: ${find_middle_of_linked_list(head)}`);
 
 head.next.next.next.next.next = new Node(6);
-console.log(`Middle Node: ${find_middle_of_linked_list(head).value}`);
+console.log(`Middle Node: ${find_middle_of_linked_list(head)}`);
 
 head.next.next.next.next.next.next = new Node(7);
-console.log(`Middle Node: ${find_middle_of_linked_list(head).value}`);
+console.log(`Middle Node: ${find_middle_of_linked_list(head)}`);
 
 // Solution
 // -----
