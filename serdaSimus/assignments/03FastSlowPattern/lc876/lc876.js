@@ -41,14 +41,16 @@ const find_middle_of_linked_list = function (head) {
   let moveBy1Ptr = head,
     moveBy2Ptr = head;
 
-  while (moveBy2Ptr.next !== null && moveBy2Ptr !== null) {
-    if (moveBy2Ptr.next === null) {
-      console.log(moveBy1Ptr);
-    }
+  // I am not clear on why the while loop has to be AND instead of OR
+  while (moveBy2Ptr !== null && moveBy2Ptr.next !== null) {
     moveBy1Ptr = moveBy1Ptr.next;
     moveBy2Ptr = moveBy2Ptr.next.next;
   }
+
+  return moveBy1Ptr;
 };
+// let head = new Node();
+// console.log(`Middle Node: ${find_middle_of_linked_list(head)}`);
 
 head = new Node(1);
 head.next = new Node(2);
@@ -56,13 +58,13 @@ head.next.next = new Node(3);
 head.next.next.next = new Node(4);
 head.next.next.next.next = new Node(5);
 
-console.log(`Middle Node: ${find_middle_of_linked_list(head)}`);
+console.log(`Middle Node: ${find_middle_of_linked_list(head).value}`);
 
 head.next.next.next.next.next = new Node(6);
-console.log(`Middle Node: ${find_middle_of_linked_list(head)}`);
+console.log(`Middle Node: ${find_middle_of_linked_list(head).value}`);
 
 head.next.next.next.next.next.next = new Node(7);
-console.log(`Middle Node: ${find_middle_of_linked_list(head)}`);
+console.log(`Middle Node: ${find_middle_of_linked_list(head).value}`);
 
 // Solution
 // -----
