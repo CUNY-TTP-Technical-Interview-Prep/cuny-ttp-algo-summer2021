@@ -36,6 +36,21 @@ const find_middle_of_linked_list = function(head) {
   return slow;
 }
 
+// const find_middle_of_linked_list = function(head) {
+//   //TODO: Write your code here
+
+//   let slow = head;
+//   let fast = head;
+
+//   if(fast == null) return(slow);
+
+//   while(fast != null && fast.next != null) {      //while fast and fast.next do not equal null
+//     slow = slow.next;                             //increase slow by 1 and fast by 2
+//     fast = fast.next.next;
+//   }
+
+//   return(slow);
+// }
 
 head = new Node(1)
 head.next = new Node(2)
