@@ -11,6 +11,7 @@
 //fastPtr.next().next()
 //if(slowPtr == fastPtr)
 //return true
+//if not a cycle 
 //return false
 class Node {
   constructor(value, next = null) {
