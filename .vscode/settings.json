@@ -29,5 +29,4 @@
     "tuple": "cpp",
     "type_traits": "cpp"
   },
-  "python.formatting.provider": "black"
 }
