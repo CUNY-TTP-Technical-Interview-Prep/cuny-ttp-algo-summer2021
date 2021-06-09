@@ -39,24 +39,27 @@ class Interval {
 }
 
 const merge = function (intervals) {
+  //console.log("hi");
   if (intervals.length < 2) return intervals;
   merged = [];
 
   intervals.sort((a, b) => a.start - b.start);
-
-  //Input: intervals = [[1,3],[2,6],[8,10],[15,18]]
-  let curr_start = intervals[0][0]; //1
-  let curr_end = intervals[0][1]; //3
+  // console.log(intervals);
+  let curr_start = intervals[0].start; //1
+  let curr_end = intervals[0].end; //4
+  console.log(curr_end + " end " + curr_start + " start ");
 
   for (let i = 1; i < intervals.length; i++) {
-    //2
+    //2                      3
     if (intervals[i].start > curr_end) {
       // 2> 3
+      //   console.log("hi");
       merged.push(new Interval(curr_start, curr_end));
       curr_start = intervals[i].start;
       curr_end = intervals[i].end;
     }
-    //[1,4][2,3]
+    //[1,4][2,3][6,7]
+    /** [1,4] [2, 5] [7,9] */
     // [1,3][2,6]
     //ce=6 cs = 1
     else {

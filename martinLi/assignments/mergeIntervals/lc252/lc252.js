@@ -1,6 +1,12 @@
 // Problem Statement #
 
-// Given an array of intervals representing ‘N’ appointments, find out if a person can attend all the appointments.
+// Given an array of intervals representing ‘N’ appointments,
+//find out if a person can attend all the appointments.
+
+/**
+ * sort by start times
+ *
+ */
 
 class Interval {
   constructor(start, end) {
@@ -13,32 +19,70 @@ class Interval {
   }
 }
 
-const can_attend_all_appointments = function(intervals) {
-  // TODO: Write your code here
-  return false;
+const can_attend_all_appointments = function (intervals) {
+  if (intervals.length < 2) return true;
+
+  intervals.sort((a, b) => a.start - b.start);
+
+  //let curr_start = intervals[0].start;
+  //let curr_end = intervals[0].end;
+
+  for (let i = 0; i < intervals.length - 1; i++) {
+    if (intervals[i].end >= intervals[i + 1].start) {
+      //console.log(intervals[i].start);
+      // console.log(curr_end);
+
+      //curr_start = intervals[i].start;
+      //curr_end = intervals[i].end;
+      return false;
+    }
+  }
+
+  return true;
 };
 
+console.log(
+  `Can attend all appointments: ${can_attend_all_appointments([
+    new Interval(1, 4),
+    new Interval(2, 5),
+    new Interval(7, 9),
+  ])}`
+);
 
-console.log(`Can attend all appointments: ${can_attend_all_appointments([
-  new Interval(1, 4),
-  new Interval(2, 5),
-  new Interval(7, 9),
-])}`);
+console.log(
+  `Can attend all appointments: ${can_attend_all_appointments([
+    new Interval(6, 7),
+    new Interval(2, 4),
+    new Interval(8, 12),
+  ])}`
+);
 
-console.log(`Can attend all appointments: ${can_attend_all_appointments([
-  new Interval(6, 7),
-  new Interval(2, 4),
-  new Interval(8, 12),
-])}`);
+console.log(
+  `Can attend all appointments: ${can_attend_all_appointments([
+    new Interval(4, 5),
+    new Interval(2, 3),
+    new Interval(3, 6),
+  ])}`
+);
 
-console.log(`Can attend all appointments: ${can_attend_all_appointments([
-  new Interval(4, 5),
-  new Interval(2, 3),
-  new Interval(3, 6),
-])}`);
-
-
-
+console.log(
+  `Can attend all appointments: ${can_attend_all_appointments([
+    new Interval(1, 4),
+    new Interval(2, 5),
+    new Interval(3, 9),
+    new Interval(2, 7),
+    new Interval(3, 4),
+  ])}`
+);
+console.log(
+  `Can attend all appointments: ${can_attend_all_appointments([
+    new Interval(1, 4),
+    new Interval(20, 21),
+    new Interval(6, 9),
+    new Interval(10, 12),
+    new Interval(13, 14),
+  ])}`
+);
 
 // Solution
 // -----
