@@ -107,7 +107,7 @@ We will start with a brief introduction of each pattern before jumping into the 
 #### 06/03 (Thur):
 
 - "Two Pointers" Continued: P2P Mock Interview ( Each Pair Choose Two! )
-  - [X] Remove Duplicates (easy): LC #26
+  - [x] Remove Duplicates (easy): LC #26
   - [] Squaring a Sorted Array (easy): LC #977
   - [] Triplet Sum to Zero (medium): LC #15
   - [x] Triplet Sum Close to Target (medium): LC #16
@@ -128,9 +128,9 @@ We will start with a brief introduction of each pattern before jumping into the 
 #### 06/08 (Tues):
 
 - "Fast & Slow Pointers" Continued: P2P Mock Interview ( Each Pair Choose One! )
-  - [X] Start of LinkedList Cycle (medium): LC #142
+  - [x] Start of LinkedList Cycle (medium): LC #142
   - [] Happy Number (medium): LC #202
-  - [X] Middle of the LinkedList (easy): LC #876
+  - [x] Middle of the LinkedList (easy): LC #876
 - Intro to "Merge Intervals" Pattern: Lecture & Discussion
   - [] Merge Intervals (medium): LC #56
 
@@ -138,7 +138,7 @@ We will start with a brief introduction of each pattern before jumping into the 
 
 - "Merge Intervals" Continued ( Each Pair Choose One! )
   - [] Insert Interval (medium): LC #57
-  - [] Intervals Intersection (medium): LC #986
+  - [x] Intervals Intersection (medium): LC #986
   - [] Conflicting Appointments (medium): LC #252
 - Intro to "Cyclic Sort" Pattern: Lecture & Discussion
   - [] Cyclic Sort (easy)
