@@ -28,5 +28,8 @@
     "system_error": "cpp",
     "tuple": "cpp",
     "type_traits": "cpp"
+  },
+  "eslint.options": {
+  
   }
 }
