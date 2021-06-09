@@ -1,6 +1,26 @@
 // Problem Statement #
 
-// Given a list of intervals, merge all the overlapping intervals to produce a list that has only mutually exclusive intervals.
+// Given a list of intervals, merge all the overlapping intervals to produce a 
+// list that has only mutually exclusive intervals.
+
+/**
+ * Input: take in a array of objects 
+ * 
+ * before you loop sort the values 
+ * 
+ * loop through array of objects and check value range and compare
+ * to other index to see if ranges overlap and merge together 
+ * to create a new range
+ * 
+ * so for the first pair check which number is the lowest and highest
+ * and set them to start and end and as we iterate update the start and end
+ * if the lowest and highest value change
+ * 
+ * whats considered overlapping
+ Something like [1,4] and [4,5] are considered overlapping since 4 = 4
+ *  
+ * Output: return the new array with the merged range
+ */
 
 class Interval {
   constructor(start, end) {
@@ -15,13 +35,47 @@ class Interval {
 
 
 const merge = function(intervals) {
-  merged = []
-  // TODO: Write your code here
-  return merged;
+  //pre condition
+  if(intervals.length < 2){
+      return intervals;
+  }
+  // ?
+  intervals.sort((a, b) =>{
+    a.start - b.start
+  });
+
+  const mergedIntervals = [];
+
+  let start = intervals[0].start,
+  end =intervals[0].end ;
+
+  for (i = 1; i < intervals.length; i++) {
+    const interval = intervals[i];
+    // overlapping intervals, adjust the 'end
+    if (interval.start <= end){
+            end = Math.max(interval.end, end);
+
+    }
+     // non-overlapping interval, add the previous interval and reset
+     else {
+            mergedIntervals.push(new Interval(start, end));
+            start = interval.start;
+            end = interval.end;
+          }
+        }
+
+  // add the last interval
+  mergedIntervals.push(new Interval(start, end));
+
+  return mergedIntervals;
 };
 
+
+
 merged_intervals = merge([new Interval(1, 4), new Interval(2, 5), new Interval(7, 9)]);
+console.log([new Interval(1, 4), new Interval(2, 5), new Interval(7, 9)]); // array of objects
 result = "";
+
 for(i=0; i < merged_intervals.length; i++) {
   result += merged_intervals[i].get_interval() + " ";
 }
@@ -44,37 +98,6 @@ for(i=0; i < merged_intervals.length; i++) {
 console.log(`Merged intervals: ${result}`)
 
 
-
-
-
-// Solution
-// -----
-// function merge(intervals) {
-//   if (intervals.length < 2) {
-//     return intervals;
-//   }
-//   // sort the intervals on the start time
-//   intervals.sort((a, b) => a.start - b.start);
-
-//   const mergedIntervals = [];
-//   let start = intervals[0].start,
-//     end = intervals[0].end;
-//   for (i = 1; i < intervals.length; i++) {
-//     const interval = intervals[i];
-//     if (interval.start <= end) { // overlapping intervals, adjust the 'end'
-//       end = Math.max(interval.end, end);
-//     } else { // non-overlapping interval, add the previous interval and reset
-//       mergedIntervals.push(new Interval(start, end));
-//       start = interval.start;
-//       end = interval.end;
-//     }
-//   }
-//   // add the last interval
-//   mergedIntervals.push(new Interval(start, end));
-//   return mergedIntervals;
-// }
-
-// -----
 
 // Time complexity #
 // The time complexity of the above algorithm is O(N * logN), where ‘N’ is the total number of intervals. We are iterating the intervals only once which will take O(N), in the beginning though, since we need to sort the intervals, our algorithm will take O(N * logN).
