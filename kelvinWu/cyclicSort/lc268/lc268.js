@@ -2,14 +2,53 @@
 
 // We are given an array containing ‘n’ distinct numbers taken from the range 0 to ‘n’. Since the array has only ‘n’ numbers out of the total ‘n+1’ numbers, find the missing number.
 
-const find_missing_number = function(nums) {
-  // TODO: Write your code here
-  return -1;
+//find what n is
+//use mathematical formula n(n+1)/2
+//take the sum of the array
+//subtract n(n+1)/2 - sum of array
+
+//sort array
+//loop through array
+//check if index matches num at index
+///if not thats the missing number
+
+const find_missing_number = function (nums) {
+  let i = 0;
+  while (i < nums.length) {
+    if (nums[i] == i || nums[i] === nums.length) i++;
+    else {
+      let swapIndex = nums[i];
+      let temp = nums[i];
+      nums[i] = nums[swapIndex];
+      nums[swapIndex] = temp;
+    }
+  }
+  for (let j = 0; j < nums.length; j++) {
+    if (nums[j] !== j) return j;
+  }
+  return nums.length;
 };
+
+//keep pointer index = 0
+//while(index < nums.length)
+////if num currently here is in correct spot or it is equal to n, move on to next spot
+////else swap and move current number to its correct spot
+
+//loop through array again
+//check if the index matches the number
+//if it doesnt, thats the missing number return current index
+
+//if exited the loop without finding missing number, missing number is n return n
+// 4 0 3 1
+// 1 0 3 4
+// 0 1 3 4
+
+// 0 1 3 4
+// 0 1 4 3
 
 console.log(find_missing_number([4, 0, 3, 1]));
 console.log(find_missing_number([8, 3, 5, 2, 4, 6, 0, 1]));
-
+// console.log(find_missing_number([7, 3, 5, 2, 4, 6, 0, 1]));
 // Solution
 // -----
 // function find_missing_number(nums) {
