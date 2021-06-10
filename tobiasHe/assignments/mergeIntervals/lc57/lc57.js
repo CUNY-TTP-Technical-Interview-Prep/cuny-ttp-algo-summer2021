@@ -14,11 +14,39 @@ class Interval {
 }
 
 const insert = function(intervals, new_interval) {
-	let merged = [];
 	// TODO: Write your code here
-	console.log(intervals);
-	console.log(intervals.length);
-	console.log(new_interval.start);
+	// determine where the new interval will overlap
+	// since all the given intervals are not overlapping and sorted we can safely assume that if the start of new interval is greater than the end times
+	// then we can push the new interval after the ones that satisfy (new_interval.start > interval.end[...])
+	// find relevant intervals that the new interal affects it and insert it
+
+	let merged = [];
+	let i = 0;
+	let length = intervals.length;
+	//edge cases  if empty list of intervals just return newIntervals in the array
+	if (length < 1) {
+		merged.push(new_interval);
+		return merged;
+	}
+	//find the first place to insert our new_interval which is right before the interval it is overlapping with
+	while (i < length && intervals[i].end < new_interval.start) {
+		merged.push(intervals[i]);
+		i++;
+	}
+
+	//merging intervals
+	//all the first that is overlapping with second
+	while (i < length && intervals[i].start <= new_interval.end) {
+		new_interval[0] = Math.min(new_interval[0], intervals[i][0]);
+		new_interval[1] = Math.max(new_interval[1], intervals[i][1]);
+		i++;
+	}
+	merged.push(new_interval);
+
+	while (i < length) {
+		merged.push(intervals[i]);
+		i++;
+	}
 	return merged;
 };
 
