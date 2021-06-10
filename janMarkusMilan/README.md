@@ -102,13 +102,13 @@ We will start with a brief introduction of each pattern before jumping into the 
   - [x] Longest Substring with K Distinct Characters (medium): LC #340
   - [] Fruits into Baskets (medium): LC 904
 - Intro to "Two Pointers" Pattern: Lecture & Discussion
-  - [] Pair with Target Sum (easy): LC #1
+  - [x] Pair with Target Sum (easy): LC #1
 
 #### 06/03 (Thur):
 
 - "Two Pointers" Continued: P2P Mock Interview ( Each Pair Choose Two! )
   - [] Remove Duplicates (easy): LC #26
-  - [] Squaring a Sorted Array (easy): LC #977
+  - [x] Squaring a Sorted Array (easy): LC #977
   - [] Triplet Sum to Zero (medium): LC #15
   - [] Triplet Sum Close to Target (medium): LC #16
 
@@ -121,25 +121,25 @@ We will start with a brief introduction of each pattern before jumping into the 
 - "Two Pointers" Continued: P2P Mock Interview ( Each Pair Choose One! )
   - [] Triplets with Smaller Sum (medium): LC #259
   - [] Subarrays with Product Less than a Target (medium): LC #713
-  - [] Dutch National Flag Problem (medium): LC #75
+  - [x] Dutch National Flag Problem (medium): LC #75
 - Intro to "Fast & Slow Pointers" Pattern: Lecture & Discussion
-  - [] LinkedList Cycle (easy): LC #141
+  - [x] LinkedList Cycle (easy): LC #141
 
 #### 06/08 (Tues):
 
 - "Fast & Slow Pointers" Continued: P2P Mock Interview ( Each Pair Choose One! )
-  - [] Start of LinkedList Cycle (medium): LC #142
-  - [] Happy Number (medium): LC #202
-  - [] Middle of the LinkedList (easy): LC #876
+  - [x] Start of LinkedList Cycle (medium): LC #142
+  - [x] Happy Number (medium): LC #202
+  - [x] Middle of the LinkedList (easy): LC #876
 - Intro to "Merge Intervals" Pattern: Lecture & Discussion
-  - [] Merge Intervals (medium): LC #56
+  - [x] Merge Intervals (medium): LC #56
 
 #### 06/09 (Wed):
 
 - "Merge Intervals" Continued ( Each Pair Choose One! )
   - [] Insert Interval (medium): LC #57
   - [] Intervals Intersection (medium): LC #986
-  - [] Conflicting Appointments (medium): LC #252
+  - [x] Conflicting Appointments (medium): LC #252
 - Intro to "Cyclic Sort" Pattern: Lecture & Discussion
   - [] Cyclic Sort (easy)
 

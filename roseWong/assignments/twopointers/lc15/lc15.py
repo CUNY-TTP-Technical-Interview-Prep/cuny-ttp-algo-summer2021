@@ -7,7 +7,6 @@ think of some key elements like sorting the array and searching for the "third f
 to achieve a zero sum, I wasn't able to write out the full logic."""
 #Reverse - engineer of given solution:
 
-# if len(arr)<3, return [] - we added the edge case where the array has fewer than 3 elements
 # sort the given array to make it easier to navigate
 # initiate an empty array named "triplets". this will store the arrays of triplets that we find.
 # if there are consecutive figures of equal value, skip the first one since we don't want
