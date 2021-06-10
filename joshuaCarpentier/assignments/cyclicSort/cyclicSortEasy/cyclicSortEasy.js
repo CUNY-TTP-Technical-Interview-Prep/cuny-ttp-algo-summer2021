@@ -14,8 +14,13 @@
  * Output: Sorted array
  * 
  * while current index less then array length if 
- * current index 
- *
+ * current index not equal to index
+ * 
+ * next index  equals current index - 1
+ * 
+ * then inddex  equals next index
+ * 
+ * else iterate over array and return sorted array
  */
 
 // using pointers sort for when you no were things are espicially for a range of numbers
