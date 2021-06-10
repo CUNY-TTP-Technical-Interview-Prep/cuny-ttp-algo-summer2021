@@ -28,7 +28,8 @@
     "system_error": "cpp",
     "tuple": "cpp",
     "type_traits": "cpp",
-    "iosfwd": "cpp"
+    "iosfwd": "cpp",
+    "ios": "cpp"
   },
   "eslint.options": {
   
