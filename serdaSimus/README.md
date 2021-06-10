@@ -131,7 +131,7 @@ We will start with a brief introduction of each pattern before jumping into the 
   - [] Happy Number (medium): LC #202
   - [x] Middle of the LinkedList (easy): LC #876
 - Intro to "Merge Intervals" Pattern: Lecture & Discussion
-  - [] Merge Intervals (medium): LC #56
+  - [x] Merge Intervals (medium): LC #56
 
 #### 06/09 (Wed):
 
