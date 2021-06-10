@@ -14,8 +14,9 @@
 const find_duplicate = function (nums) {
   let i = 0;
   while (i < nums.length) {
-    if (nums[i] == i + 1) i++;
-    else {
+    if (nums[i] == i + 1) {
+      i++;
+    } else {
       let swapIndex = nums[i] - 1;
       if (nums[i] === nums[swapIndex]) return nums[i];
       else {

@@ -15,8 +15,9 @@
 const find_missing_number = function (nums) {
   let i = 0;
   while (i < nums.length) {
-    if (nums[i] == i || nums[i] === nums.length) i++;
-    else {
+    if (nums[i] == i || nums[i] === nums.length) {
+      i++;
+    } else {
       let swapIndex = nums[i];
       let temp = nums[i];
       nums[i] = nums[swapIndex];
