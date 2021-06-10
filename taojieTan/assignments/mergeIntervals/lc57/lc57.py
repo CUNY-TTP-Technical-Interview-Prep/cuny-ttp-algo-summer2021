@@ -19,7 +19,7 @@
 
 def insert(intervals, new_interval):
   if len(intervals) == 0:
-    return new_interval
+    return [new_interval]
 
   merged = []
   # TODO: Write your code here
@@ -31,17 +31,17 @@ def insert(intervals, new_interval):
   while index < len(intervals):
     if new_interval[start_index] > intervals[index][end_index]:
       merged.append(intervals[index])
+      index += 1
     else:
       break
-    index += 1
 
   while index < len(intervals):
     if new_interval[end_index] >= intervals[index][start_index]:
       new_interval[start_index] = min(new_interval[start_index], intervals[index][start_index])
+      new_interval[end_index] = max(new_interval[end_index], intervals[index][end_index])
       index += 1
       continue
     else:
-      new_interval[end_index] = max(new_interval[end_index], intervals[index-1][end_index])
       break
 
   merged.append(new_interval)
@@ -61,6 +61,8 @@ def main():
   print("Intervals after inserting the new interval: " + str(insert([], [6, 7])))
   print("Intervals after inserting the new interval: " + str(insert([[2, 3], [5, 7]], [10, 14])))
   print("Intervals after inserting the new interval: " + str(insert([[2, 3], [7, 9]], [4, 6])))
+  print("Intervals after inserting the new interval: " + str(insert([[1, 5]], [2, 3])))
+  print("Intervals after inserting the new interval: " + str(insert([[1,3],[6,9]], [2, 5])))
 
 main()
 
