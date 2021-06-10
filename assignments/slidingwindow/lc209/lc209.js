@@ -4,6 +4,29 @@
 
 function smallest_subarray_with_given_sum(s, arr) {
   // TODO: Write code here
+
+
+  let startWindow  = 0;
+  let windowSum = 0;
+  let minLength = Infinity;
+
+
+  for( let endWindow = 0; endWindow < arr.length; endWindow++)
+  {
+
+    windowSum += arr[endWindow];
+
+     while(windowSum >= s)
+     {
+      minLength = Math.min(minLength, endWindow - startWindow + 1)
+      windowSum -= arr[startWindow]
+      startWindow++;
+
+     }
+  }
+
+  return minLength;
+
 }
 
 console.log(
