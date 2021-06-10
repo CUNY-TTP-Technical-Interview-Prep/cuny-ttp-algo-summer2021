@@ -132,16 +132,16 @@ We will start with a brief introduction of each pattern before jumping into the 
   - [x] Happy Number (medium): LC #202
   - [] Middle of the LinkedList (easy): LC #876
 - Intro to "Merge Intervals" Pattern: Lecture & Discussion
-  - [] Merge Intervals (medium): LC #56
+  - [x] Merge Intervals (medium): LC #56
 
 #### 06/09 (Wed):
 
 - "Merge Intervals" Continued ( Each Pair Choose One! )
-  - [] Insert Interval (medium): LC #57
+  - [x] Insert Interval (medium): LC #57
   - [] Intervals Intersection (medium): LC #986
   - [] Conflicting Appointments (medium): LC #252
 - Intro to "Cyclic Sort" Pattern: Lecture & Discussion
-  - [] Cyclic Sort (easy)
+  - [x] Cyclic Sort (easy)
 
 #### 06/10 (Thur):
 

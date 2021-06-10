@@ -92,14 +92,14 @@ program containing the following:
 - DSA Appendix Slides & Discussion
 - Initial HackerRank Assesment
 - Intro to "Sliding Window" Pattern: Lecture & Discussion
-	- [] Maximum Sum Subarray of Size K (easy) LC #53
+	- [X] Maximum Sum Subarray of Size K (easy) LC #53
 
 #### 06/02 (Wed):
 
 - "Sliding Window" Continued: P2P Mock Interview ( Each Pair Choose One! )
-  - [] Smallest Subarray with a given sum (easy): LC #209
-  - [] Longest Substring with K Distinct Characters (medium): LC #340
-  - [] Fruits into Baskets (medium): LC 904
+  - [X] Smallest Subarray with a given sum (easy): LC #209
+  - [X] Longest Substring with K Distinct Characters (medium): LC #340
+  - [X] Fruits into Baskets (medium): LC #904
 - Intro to "Two Pointers" Pattern: Lecture & Discussion
   - [] Pair with Target Sum (easy): LC #1
 
@@ -127,7 +127,7 @@ program containing the following:
 - "Fast & Slow Pointers" Continued: P2P Mock Interview ( Each Pair Choose One! )
   - [] Start of LinkedList Cycle (medium): LC #142 
   - [] Happy Number (medium): LC #202
-  - [] Middle of the LinkedList (easy): LC #876 
+  - [X] Middle of the LinkedList (easy): LC #876 
 - Intro to "Merge Intervals" Pattern: Lecture & Discussion
   - [] Merge Intervals (medium): LC #56
 
