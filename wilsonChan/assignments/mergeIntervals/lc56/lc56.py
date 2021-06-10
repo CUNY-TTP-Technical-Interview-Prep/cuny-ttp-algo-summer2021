@@ -4,6 +4,13 @@
 
 '''
 
+***Works properly on leetcode***
+
+NameError: name 'merge' is not defined         
+    (test cases not working, unresolved syntax error)
+
+
+
 [Interval(6, 7), Interval(2, 4), Interval(5, 9)]
 2 3 4 5 6 7 8 9
         6 7 (ignore)
@@ -19,16 +26,27 @@ Output: [(2,4) (5, 9)]
 
 
 
+***I'm using 'pair' and 'interval' interchangeably***
+
 VARIABLES
--starting
--end
--overlap
--whole array
+-current start        (index 0 of the first pair in array) left
+-current end          (index 1 of the first pair in array) right
+-merged               (storing overlap)
+-final end            (index 1 of the last pair in array)
 
 
 APPROACH/STEPS:
 
-
+-Sort the intervals before proceeding
+-Initialize variable merged with empty array
+-Iterate through given array with for loop
+  -Create if statement that add intervals to the empty merged array
+  -Since the merged array is no longer empty, initialize 
+   current_start, current_end, and final_end
+  -if the final_end (right value of last pair in array) is greater than
+   the current_start (left value of first pair)    #overlap
+      -return the highest value between final_end and current_end
+          -return interval if no overlap
 
 '''
 
@@ -47,10 +65,27 @@ class Interval:
     print("[" + str(self.start) + ", " + str(self.end) + "]", end='')
 
 
-def merge(intervals):
-  merged = []
+  def merge(intervals):
   # TODO: Write your code here
-  return merged
+    merged = []
+
+    intervals.sort()        #sort method alone makes time complexity O(n log n)
+
+    for i in range(len(intervals)):
+      if merged == []:
+        merged.append(intervals[i])      #starts off by appending index 0 when array is empty
+      
+      else:
+        current_start = intervals [i][0]
+        current_end = intervals [i][1]
+        final_end = merged [-1][1]
+
+        if final_end >= current_start:
+          merged[-1][1] = max(final_end,current_end)       #takes highest value between the two variables
+        else:
+          merged.append(intervals[i])
+
+    return merged
 
 
 def main():
