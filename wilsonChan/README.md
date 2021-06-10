@@ -120,7 +120,7 @@ program containing the following:
   - [] Subarrays with Product Less than a Target (medium): LC #713 
   - [] Dutch National Flag Problem (medium): LC #75
 - Intro to "Fast & Slow Pointers" Pattern: Lecture & Discussion
-  - [] LinkedList Cycle (easy): LC #141
+  - [x] LinkedList Cycle (easy): LC #141
 
 
 #### 06/08 (Tues):
@@ -129,7 +129,7 @@ program containing the following:
   - [] Happy Number (medium): LC #202
   - [] Middle of the LinkedList (easy): LC #876 
 - Intro to "Merge Intervals" Pattern: Lecture & Discussion
-  - [] Merge Intervals (medium): LC #56
+  - [x] Merge Intervals (medium): LC #56
 
 #### 06/09 (Wed):
 - "Merge Intervals" Continued ( Each Pair Choose One! )

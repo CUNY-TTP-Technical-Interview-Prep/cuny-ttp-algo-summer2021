@@ -127,17 +127,17 @@ program containing the following:
 - "Fast & Slow Pointers" Continued: P2P Mock Interview ( Each Pair Choose One! )
   - [] Start of LinkedList Cycle (medium): LC #142 
   - [] Happy Number (medium): LC #202
-  - [] Middle of the LinkedList (easy): LC #876 
+  - [X] Middle of the LinkedList (easy): LC #876 
 - Intro to "Merge Intervals" Pattern: Lecture & Discussion
-  - [] Merge Intervals (medium): LC #56
+  - [X] Merge Intervals (medium): LC #56
 
 #### 06/09 (Wed):
 - "Merge Intervals" Continued ( Each Pair Choose One! )
-  - [] Insert Interval (medium): LC #57
+  - [X] Insert Interval (medium): LC #57
   - [] Intervals Intersection (medium): LC #986 
-  - [] Conflicting Appointments (medium): LC #252 
+  - [X] Conflicting Appointments (medium): LC #252 
 - Intro to "Cyclic Sort" Pattern: Lecture & Discussion
-  - [] Cyclic Sort (easy)
+  - [X] Cyclic Sort (easy)
 
 #### 06/10 (Thur):
 - "Cyclic Sort" Continued ( Each Pair Choose Two! )
