@@ -13,9 +13,31 @@ class Interval {
   }
 }
 
+// Precondition:
+// Intervals: an array of Intervals that represent appointment Times
+// Post condition:
+// canAttendAll: boolean -> The intervals array has no intersecting intervals and the person can attend all appointments
+
+// Sort the interval array by their start value
+// Iterate until the second to last element of the array
+// Make a comparison of the i and i+1 interval
+// Comparison: if intervals[i].end > intervals[i+1].start  RETURN false -> we found an intersecting interval
+// After loop-> we mad it to last interval, then we return true be default because we haven't found any intersecting interval
+
 const can_attend_all_appointments = function(intervals) {
-  // TODO: Write your code here
-  return false;
+
+  const arrLength = intervals.length;
+  if(arrLength === 1) return true;
+  intervals.sort((a, b) => a.start - b.start); // Sort all the intervals by their start value
+  const lastInterval = arrLength - 1; // Last interval that i will make it to
+  let currentIndex = 0; // our i index
+
+  while(currentIndex < lastInterval){
+    if (intervals[currentIndex].end > intervals[currentIndex+1].start) return false; // Checks if there are intersecting invervals
+    currentIndex++;
+  }
+  // No intersecting intervals if the while-loop terminates
+  return true;
 };
 
 
@@ -24,19 +46,21 @@ console.log(`Can attend all appointments: ${can_attend_all_appointments([
   new Interval(2, 5),
   new Interval(7, 9),
 ])}`);
+// [1,4] [2,5] [7,9]  arrLength: 3, lastInterval: 2, currentIndex : 0
+// [1,4] [2,5] [7,9]  4 ?> 2 yes -> FALSE
+// Expected: false, Output: false
 
 console.log(`Can attend all appointments: ${can_attend_all_appointments([
   new Interval(6, 7),
   new Interval(2, 4),
   new Interval(8, 12),
-])}`);
+])}`);// Expected: true, Output: true
 
 console.log(`Can attend all appointments: ${can_attend_all_appointments([
   new Interval(4, 5),
   new Interval(2, 3),
   new Interval(3, 6),
-])}`);
-
+])}`); // Expected: false, Output: false
 
 
 
