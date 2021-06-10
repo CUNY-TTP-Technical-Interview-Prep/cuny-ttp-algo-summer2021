@@ -13,12 +13,29 @@
  * Input: Unorder array
  * Output: Sorted array
  * 
- * 
+ * while current index less then array length if 
+ * current index 
  *
  */
 
-const cyclic_sort = function (nums) {
+// using pointers sort for when you no were things are espicially for a range of numbers
 
+const cyclic_sort = function (nums) {
+let index = 0;
+
+while (index < nums.length){
+  let y = nums[index] -1; 
+  if (y != index){
+    let nextIndex = nums[index] - 1;
+    let x = nums[index];
+
+    nums[index] = nums[nextIndex];
+    nums[nextIndex] = x;
+  } else{
+    index++;
+  }
+
+}
  
 
   return nums;
@@ -28,19 +45,14 @@ console.log(`${cyclic_sort([3, 1, 5, 4, 2])}`);
 console.log(`${cyclic_sort([2, 6, 4, 3, 1, 5])}`);
 console.log(`${cyclic_sort([1, 5, 6, 4, 3, 2])}`);
 
-
-
-
-
-
 // Solution
 // -----
 // function cyclic_sort(nums) {
 //   let i = 0;
 //   while (i < nums.length) {
 //     const j = nums[i] - 1;
-//     if (nums[i] !== nums[j]) {
-//       [nums[i], nums[j]] = [nums[j], nums[i]]; // swap
+    if (nums[i] !== nums[j]) {
+//       [nums[i], nums[j]] = [nums[j], nums[i]]; // swap array destructuring
 //     } else {
 //       i += 1;
 //     }

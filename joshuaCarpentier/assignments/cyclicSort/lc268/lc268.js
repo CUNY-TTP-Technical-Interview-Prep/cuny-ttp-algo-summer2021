@@ -1,10 +1,40 @@
 // Problem Statement #
 
-// We are given an array containing ‘n’ distinct numbers taken from the range 0 to ‘n’. Since the array has only ‘n’ numbers out of the total ‘n+1’ numbers, find the missing number.
+// We are given an array containing ‘n’ distinct numbers taken from the range 0 to ‘n’. Since the array has only 
+// ‘n’ numbers out of the total ‘n+1’ numbers, find the missing number.
+
+
+/**
+ * Input: array
+ * Output: return missing number in range 0 to n
+ * 
+ * sort before checking
+ * 
+ * array contains elements that are always in range starting of each other starting from 0 and ending in "n" 
+ * but the array is still unordered and contains no duplicates 
+ * so we need to find and return the missing number that is in the range but not in the array 
+ * 
+ * check array for lowest and highest number in array then find range between that and get sum of that range and compare 
+ * to the sum of the original array return the difference
+ * 
+ * 
+ * initialize variables
+ */
 
 const find_missing_number = function(nums) {
-  // TODO: Write your code here
-  return -1;
+  let CurrentIndex = nums.length; 
+  let i = 0;
+  let total = 0;
+  while (i < CurrentIndex){
+    if (CurrentIndex  ){
+       total += nums[i];
+      i++;
+    }
+
+  }
+
+
+  return total;
 };
 
 console.log(find_missing_number([4, 0, 3, 1]));
