@@ -137,7 +137,7 @@ program containing the following:
   - [] Intervals Intersection (medium): LC #986 
   - [] Conflicting Appointments (medium): LC #252 
 - Intro to "Cyclic Sort" Pattern: Lecture & Discussion
-  - [] Cyclic Sort (easy)
+  - [X] Cyclic Sort (easy)
 
 #### 06/10 (Thur):
 - "Cyclic Sort" Continued ( Each Pair Choose Two! )
