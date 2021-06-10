@@ -2,15 +2,47 @@
 
 # Given the head of a Singly LinkedList, write a function to determine if the LinkedList has a cycle in it or not.
 
+'''
+
+***Works on leetcode***
+
+NameError: name 'has_cycle' is not defined
+
+
+
+Variables:
+-slow pointer (hop once)
+-fast pointer (hop twice)
+
+
+Steps:
+-Initialize both slow pointer and fast pointer to head
+-Use while loop to increment slow by one and increment fast by two
+-When slow pointer = fast pointer, a loop has been made
+
+'''
+
+
+
 class Node:
   def __init__(self, value, next=None):
     self.value = value
     self.next = next
 
 
-def has_cycle(head):
+  def has_cycle(head):
   # TODO: Write your code here
-  return False
+
+    slow, fast = head, head
+
+    while(fast and fast.next):
+      slow = slow.next
+      fast = fast.next.next
+      
+      if(slow == fast):
+        return True
+
+    return False
 
 
 def main():
