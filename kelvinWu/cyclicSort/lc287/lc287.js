@@ -18,8 +18,10 @@ const find_duplicate = function (nums) {
       i++;
     } else {
       let swapIndex = nums[i] - 1;
-      if (nums[i] === nums[swapIndex]) return nums[i];
-      else {
+
+      if (nums[i] === nums[swapIndex]) {
+        return nums[i];
+      } else {
         let temp = nums[swapIndex];
         nums[swapIndex] = nums[i];
         nums[i] = temp;
