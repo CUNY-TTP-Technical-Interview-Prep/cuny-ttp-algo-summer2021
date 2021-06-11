@@ -99,7 +99,7 @@ program containing the following:
 - "Sliding Window" Continued: P2P Mock Interview ( Each Pair Choose One! )
   - [X] Smallest Subarray with a given sum (easy): LC #209
   - [X] Longest Substring with K Distinct Characters (medium): LC #340
-  - [] Fruits into Baskets (medium): LC 904
+  - [X] Fruits into Baskets (medium): LC 904
 - Intro to "Two Pointers" Pattern: Lecture & Discussion
   - [X] Pair with Target Sum (easy): LC #1
 
@@ -108,7 +108,7 @@ program containing the following:
 - "Two Pointers" Continued: P2P Mock Interview ( Each Pair Choose Two! )
   - [X] Remove Duplicates (easy): LC #26
   - [X] Squaring a Sorted Array (easy): LC #977
-  - [] Triplet Sum to Zero (medium): LC #15
+  - [X] Triplet Sum to Zero (medium): LC #15
   - [] Triplet Sum Close to Target (medium): LC #16
 
 ### .
@@ -120,7 +120,7 @@ program containing the following:
   - [] Subarrays with Product Less than a Target (medium): LC #713 
   - [] Dutch National Flag Problem (medium): LC #75
 - Intro to "Fast & Slow Pointers" Pattern: Lecture & Discussion
-  - [] LinkedList Cycle (easy): LC #141
+  - [X] LinkedList Cycle (easy): LC #141
 
 
 #### 06/08 (Tues):
@@ -133,7 +133,7 @@ program containing the following:
 
 #### 06/09 (Wed):
 - "Merge Intervals" Continued ( Each Pair Choose One! )
-  - [] Insert Interval (medium): LC #57
+  - [X] Insert Interval (medium): LC #57
   - [] Intervals Intersection (medium): LC #986 
   - [] Conflicting Appointments (medium): LC #252 
 - Intro to "Cyclic Sort" Pattern: Lecture & Discussion
