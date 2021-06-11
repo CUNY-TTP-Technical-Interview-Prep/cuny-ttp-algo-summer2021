@@ -2,6 +2,7 @@
 
 # Given a list of intervals, merge all the overlapping intervals to produce a list that has only mutually exclusive intervals.
 
+<<<<<<< HEAD
 # Edge case: if the list has only 1 or 0 intervals, we just return the list.
 # The list may not be sorted, so first step is to sort the list, using the
 # first element of each interval. 
@@ -13,6 +14,8 @@
 #
 
 
+=======
+>>>>>>> 712baac65da4f1e311468d7346b54f94067b6eae
 from __future__ import print_function
 
 
@@ -20,16 +23,25 @@ class Interval:
   def __init__(self, start, end):
     self.start = start
     self.end = end
+<<<<<<< HEAD
     
   def print_interval(self):
     print("[" + str(self.start) + ", " + str(self.end) + "]", end='')
 
+=======
+
+  def print_interval(self):
+    print("[" + str(self.start) + ", " + str(self.end) + "]", end='')
+
+
+>>>>>>> 712baac65da4f1e311468d7346b54f94067b6eae
 def merge(intervals):
   merged = []
   if len(intervals) < 2:
     return intervals
 # sort the intervals on the start time
   intervals.sort(key=lambda x: x.start)
+<<<<<<< HEAD
   merged = []
   start = intervals[0].start  # the element at start of first interval
   end = intervals[0].end      # the element at end of first interval
@@ -44,6 +56,23 @@ def merge(intervals):
       end = current.end
 # add the last interval
   merged.append(Interval(start, end))
+=======
+  mergedIntervals = []
+  start = intervals[0].start
+  end = intervals[0].end
+  for i in range(1, len(intervals)):
+    interval = intervals[i]
+#     if interval.start <= end:  # overlapping intervals, adjust the 'end'
+#       end = max(interval.end, end)
+#     else:  # non-overlapping interval, add the previous internval and reset
+#       mergedIntervals.append(Interval(start, end))
+#       start = interval.start
+#       end = interval.end
+
+#   # add the last interval
+#   mergedIntervals.append(Interval(start, end))
+#   return mergedIntervals
+>>>>>>> 712baac65da4f1e311468d7346b54f94067b6eae
   return merged
 
 
