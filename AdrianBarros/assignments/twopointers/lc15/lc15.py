@@ -1,24 +1,19 @@
 # Problem Statement #
 # Given an array of unsorted numbers, find all unique triplets in it that add up to zero.
 
+
 def search_triplets(arr):
-  triplets = []
-  # TODO: Write your code here
-  return triplets
+    triplets = []
+    # TODO: Write your code here
+    return triplets
 
 
 def main():
-  print(search_triplets([-3, 0, 1, 2, -1, 1, -2]))
-  print(search_triplets([-5, 2, -1, -2, 3]))
+    print(search_triplets([-3, 0, 1, 2, -1, 1, -2]))
+    print(search_triplets([-5, 2, -1, -2, 3]))
 
 
 main()
-
-
-
-
-
-
 
 
 # Solution
