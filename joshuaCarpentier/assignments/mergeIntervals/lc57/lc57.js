@@ -3,10 +3,7 @@
 // Given a list of non-overlapping intervals sorted by their start time, insert a given interval at the correct position and merge 
 // all necessary intervals to produce a list that has only mutually exclusive intervals.
 
-/**
 
-
- */
 
 class Interval {
   constructor(start, end) {
@@ -21,31 +18,61 @@ class Interval {
 }
 
 
-
+/**
+ * Input: intervals Array and new inerval to insert
+ * Output: return new merged interval
+ * 
+ * Intialize array and index;
+ * Initialize while loop and set condition
+ * 
+ * condtion: while (index < intervals.length and Interval current position at the end is 
+ * less then the new interval start)
+ * 
+ * push to the array we Initialized and increment index by 1 position 
+ * 
+ * Then Initialize next loop to merge all the intervals that overlap
+ * 
+ * condition: while (index < intervals.length and Interval current position at the start is 
+ *   less then the new interval end)
+ * 
+ * we set the start of the interval and new interval to the minmum
+ * and the end of the interval and new interval to the maximum
+ * 
+ * increment index by 1 position 
+ * 
+ * then push the new interval in the array we intiallized
+ * 
+ * and initalize a third condition
+ * 
+ * condition: which iterates through the intervals length and pushes the 
+ * cureent interval index subarray in the array we intiallized and increment index by 1 position
+ * 
+ * and we return the array
+ */
 const insert = function (intervals, new_interval) {
   let merged = [],
-      i = 0;
+      index = 0;
   
     // skip and add to output) all intervals that come before the 'new_interval'
-    while (i < intervals.length && intervals[i].end < new_interval.start) {
-      merged.push(intervals[i]);
-      i += 1;
+    while (index < intervals.length && intervals[index].end < new_interval.start) {
+      merged.push(intervals[index]);
+      index++;
     }
   
     // merge all intervals that overlap with 'new_interval'
-    while (i < intervals.length && intervals[i].start <= new_interval.end) {
-      new_interval.start = Math.min(intervals[i].start, new_interval.start);
-      new_interval.end = Math.max(intervals[i].end, new_interval.end);
-      i += 1;
+    while (index < intervals.length && intervals[index].start <= new_interval.end) {
+      new_interval.start = Math.min(intervals[index].start, new_interval.start);
+      new_interval.end = Math.max(intervals[index].end, new_interval.end);
+      index++;
     }
   
     // insert the new_interval
     merged.push(new_interval);
   
     // add all the remaining intervals to the output
-    while (i < intervals.length) {
-      merged.push(intervals[i]);
-      i += 1;
+    while (index < intervals.length) {
+      merged.push(intervals[index]);
+      index++;
     }
   
     return merged;
