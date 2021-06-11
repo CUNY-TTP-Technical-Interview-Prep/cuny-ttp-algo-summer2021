@@ -20,41 +20,35 @@ class Interval {
   }
 }
 
+
+
 const insert = function (intervals, new_interval) {
-  let merged = [];
+  let merged = [],
+      i = 0;
   
-  // if(intervals < 0){
-  //   // merged = new_interval;
-  //   return console.log(new_interval)
-  // }
-
-  let start = 0, 
-  end= 0;
-
-  // for (let i = 0; i < intervals.length; i++){
-  //   if(intervals[i].start < new_interval.start){
-
-  //   }
-
-  // }
-
-  let i = 0;
-  while(intervals[i].start < new_interval.start){
-    i++;
-    if(new_interval.start < intervals[i].start ){
-      start += new_interval.start;
-      console.log(start);
-
-      merged.push([start,end]);
-      end += new_interval.end - 1; 
-      console.log(`The end is near  ${intervals.end}`)
-
+    // skip and add to output) all intervals that come before the 'new_interval'
+    while (i < intervals.length && intervals[i].end < new_interval.start) {
+      merged.push(intervals[i]);
+      i += 1;
     }
-  }
-
-
-
-  return console.log(merged);
+  
+    // merge all intervals that overlap with 'new_interval'
+    while (i < intervals.length && intervals[i].start <= new_interval.end) {
+      new_interval.start = Math.min(intervals[i].start, new_interval.start);
+      new_interval.end = Math.max(intervals[i].end, new_interval.end);
+      i += 1;
+    }
+  
+    // insert the new_interval
+    merged.push(new_interval);
+  
+    // add all the remaining intervals to the output
+    while (i < intervals.length) {
+      merged.push(intervals[i]);
+      i += 1;
+    }
+  
+    return merged;
 };
 
 // process.stdout.write('Intervals after inserting the new interval: ');
@@ -132,3 +126,41 @@ console.log();
 
 // Space complexity #
 // The space complexity of the above algorithm will be O(N) as we need to return a list containing all the merged intervals.
+
+
+// const min = Math.min;
+// const max = Math.max;
+
+// const insert = function (intervals, new_interval) {
+//   let inputLength = intervals.length;
+//   let merged = [];
+//   let startIdx; // store index value
+
+//   // find merge start index
+//   for (let i = 0; i < inputLength; i++) {
+//     if(new_interval[0] <= intervals[i][1]){
+//       startIdx = i;
+//       break;
+//     }
+//   }
+
+//   let left = intervals.slice(0, startIdx);
+//   let endIdx = inputLength;
+//   let [ll, rr] = [new_interval[0], new_interval[1]];
+
+//   // merge process
+//   for (let i = startIdx; i < inputLength; i++) {
+//     let [el, er ] = [intervals[i][0], intervals[i][1]];
+//     if(new_interval[1] < el){
+//       // if target right < interval left merge ends
+//       endIdx = i;
+//       break;
+//     }
+//     ll = mi(ll, el); // each time merge left with min, right with max
+//     rr = mx(rr, er);
+//   }
+//   let right = intervals.slice(endIdx);
+//   merged = [...left, ...[[ll, rr]], ...right];
+
+//   return merged;
+// };
