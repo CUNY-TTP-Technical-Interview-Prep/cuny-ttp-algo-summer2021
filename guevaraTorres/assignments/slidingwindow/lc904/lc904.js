@@ -15,34 +15,64 @@
 
 function fruits_into_baskets(fruits) {
   // TODO: Write code here
+  
+  let windowStart = 0,
+  maxLength = 0,
+  fruitFrequency = {};
 
-  let windowStart = 0;
-  let baskets = new Map();
-  let maxTree = new Map();
+  //try to extend the  [ windowStart, windowEnd]
+  for (let windowEnd = 0; windowEnd < fruits.length; windowEnd++) {
+    const rightFruit = fruits[windowEnd];    //the fruit at the end of the window
 
-  if(fruits.length < 1) return 0;
-
-  for(let windowEnd = 0; windowEnd < fruits.length; windowEnd++){
-    
-    if(!baskets.has(fruits[windowEnd])){
-    baskets[fruits[windowEnd]] = 1}
-
-    else baskets[fruits[windowEnd]]++
-
-    if(baskets.size == 2) maxTree = Math.max(maxTree, baskets)    
-    
-    if(baskets.size > 2) {              //check if more than 2 fruits
-
-    if(baskets[fruits[windowStart]] == 0) baskets.delete(fruits[windowStart])
-
-    else baskets[fruits[windowStart]]--
+    if (!(rightFruit in fruitFrequency)) {   //if the fruit is not previously recorded
+      fruitFrequency[rightFruit] = 0;        //record fruit type
     }
+    
+    fruitFrequency[rightFruit] ++;           //record fruit type occurence
+
+    //shrink the sliding window until there only 2 fruit types in the fruit frequency dictionary
+    while(Object.keys(fruitFrequency).length > 2) {
+
+      const leftFruit = fruits[windowStart]; //fruit at the start of the window
+      fruitFrequency[leftFruit]--;     
+            //decrement fruit occurence
+      if(fruitFrequency[leftFruit] === 0 ) {  //check if any occurences of starting fruit in frequency dictionary
+        delete fruitFrequency[leftFruit];     //if not, remove fruit type
+      }
+
+      windowStart++;                          //move window up
+    }
+    maxLength = Math.max(maxLength, windowEnd - windowStart + 1); //determine max length
   }
-
-  return(maxTree.size);
-
-
+  return maxLength;
 }
+  // let windowStart = 0,
+// maxLength = 0,
+// fruitFrequency = {};
+
+// // try to extend the range [windowStart, windowEnd]
+// for (let windowEnd = 0; windowEnd < fruits.length; windowEnd++) {
+// const rightFruit = fruits[windowEnd];
+// if (!(rightFruit in fruitFrequency)) {
+//   fruitFrequency[rightFruit] = 0;
+// }
+// fruitFrequency[rightFruit] += 1;
+
+// // shrink the sliding window, until we are left with '2' fruits in the fruit frequency dictionary
+// while (Object.keys(fruitFrequency).length > 2) {
+//   const leftFruit = fruits[windowStart];
+//   fruitFrequency[leftFruit] -= 1;
+//   if (fruitFrequency[leftFruit] === 0) {
+//     delete fruitFrequency[leftFruit];
+//   }
+//   windowStart += 1; // shrink the window
+// }
+// maxLength = Math.max(maxLength, windowEnd - windowStart + 1);
+// }
+
+// return maxLength;
+
+
 
 console.log(
   `Maximum number of fruits: ${fruits_into_baskets(['A', 'B', 'C', 'A', 'C'])}`
