@@ -2,6 +2,19 @@
 
 # Given the head of a Singly LinkedList, reverse the LinkedList. Write a function to return the new head of the reversed LinkedList.
 
+# input: a singly LinkedList 
+# output: the LinkedList with reversed order
+# edge case: 1. empty LinkedList => return None
+#            2. 1 node => return the head
+
+'''
+ We first declare three pointers to keep track of the previous node, current node, and next node.
+ Then initialize previous pointer to be None, and current and next pointers to point to the head and traverse through the LinkedList to reverse all nodes. 
+ When we reverse two nodes, we need to make sure before making the node pointing to the previous node, we first use next pointer to keep track of original node pointed by current node,
+ and then we make the current node pointing to the node pointed by pre pointer, after that, we update the pre pointer to be cur pointer and cur pointer to be next pointer.
+ We keep looping the LinkedList until we hit the end of the list.
+'''
+
 from __future__ import print_function
 
 
@@ -20,7 +33,18 @@ class Node:
 
 def reverse(head):
   # TODO: Write your code here
-  return head
+  if head == None:
+    return None
+
+  pre, cur, next = None, head, head
+
+  while cur != None:
+    next = cur.next
+    cur.next = pre
+    pre = cur
+    cur = next
+
+  return pre
 
 
 def main():
@@ -36,6 +60,14 @@ def main():
   print("Nodes of reversed LinkedList are: ", end='')
   result.print_list()
 
+
+  head = Node(2)
+
+  print("Nodes of original LinkedList are: ", end='')
+  head.print_list()
+  result = reverse(head)
+  print("Nodes of reversed LinkedList are: ", end='')
+  result.print_list()
 
 main()
 
