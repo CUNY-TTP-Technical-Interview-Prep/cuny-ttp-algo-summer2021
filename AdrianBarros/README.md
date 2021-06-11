@@ -108,8 +108,8 @@ program containing the following:
 - "Two Pointers" Continued: P2P Mock Interview ( Each Pair Choose Two! )
   - [X] Remove Duplicates (easy): LC #26
   - [X] Squaring a Sorted Array (easy): LC #977
-  - [] Triplet Sum to Zero (medium): LC #15
-  - [] Triplet Sum Close to Target (medium): LC #16
+  - [X] Triplet Sum to Zero (medium): LC #15
+  - [X] Triplet Sum Close to Target (medium): LC #16
 
 ### .
 ### /// Week Two ///
@@ -129,11 +129,11 @@ program containing the following:
   - [] Happy Number (medium): LC #202
   - [] Middle of the LinkedList (easy): LC #876 
 - Intro to "Merge Intervals" Pattern: Lecture & Discussion
-  - [] Merge Intervals (medium): LC #56
+  - [X] Merge Intervals (medium): LC #56
 
 #### 06/09 (Wed):
 - "Merge Intervals" Continued ( Each Pair Choose One! )
-  - [] Insert Interval (medium): LC #57
+  - [X] Insert Interval (medium): LC #57
   - [] Intervals Intersection (medium): LC #986 
   - [] Conflicting Appointments (medium): LC #252 
 - Intro to "Cyclic Sort" Pattern: Lecture & Discussion
@@ -141,7 +141,7 @@ program containing the following:
 
 #### 06/10 (Thur):
 - "Cyclic Sort" Continued ( Each Pair Choose Two! )
-  - [] Find the Missing Number (easy): LC #268 
+  - [X] Find the Missing Number (easy): LC #268 
   - [] Find all Missing Numbers (easy): LC #448 
   - [] Find the Duplicate Number (easy): LC #287 
   - [] Find all Duplicate Numbers (easy): LC #442 
