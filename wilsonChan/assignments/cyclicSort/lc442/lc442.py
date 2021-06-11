@@ -6,7 +6,7 @@
 
 '''
 Misc. Notes
--"without using extra space" (possible space constraint)          space O(n)?
+-"without using extra space" (space constraint)          space O(n)
 -range 1 to ‘n’       (focus on actual value inside array, not index)
 
 
@@ -30,6 +30,8 @@ Steps:
     -comparing the starting position with the next index/             ignore value
       -take the value from that index and subtract by 1
         -send to its index position
+
+
 
 '''
 

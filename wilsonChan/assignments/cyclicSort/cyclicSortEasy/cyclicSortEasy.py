@@ -23,11 +23,14 @@ EXAMPLE:
 
 
 STEPS:
-1) Initialize start variable
+1) Initialize current_value variable
 2) While loop with the condition of start < length of array
-3) j represents the start value - 1 (this will be the next index position)
-4) If starting index != next index position
-  -swap starting index and j
+3) j represents the value from current_value - 1 
+    -this will match current_value to appropriate index in array
+        ex: [2, 6, 4, 3, 1, 5]       
+        element with value 4 would be on index 3 (4-1 =3)
+4) If value in current_value index != next index position
+    -swap value of current_value to and j
 5) Otherwise increment to next index
 
 
@@ -42,14 +45,14 @@ Space: O(1) since the size of the array doesn't change
 def cyclic_sort(nums):
   # TODO: Write your code here
 
-  start = 0
+  current_value = 0
 
-  while start < len(nums):
-    j = nums[start] - 1               #value on starting index - 1 = next swap location
-    if nums[start] != nums[j]:
-      nums[start], nums[j] = nums[j], nums[start]    #swapping values
+  while current_value < len(nums):
+    j = nums[current_value] - 1               #value on starting index - 1 = next swap location
+    if nums[current_value] != nums[j]:
+      nums[current_value], nums[j] = nums[j], nums[current_value]    #swap values when the value of current_value doesn't match correct index
     else:
-      start += 1
+      current_value += 1           #continues if the value matches correct index
 
   return nums
 
