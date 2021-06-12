@@ -9,6 +9,7 @@
  * Properties:
  * 
  * Conditions:
+ * 
  */
 
 class Node {
