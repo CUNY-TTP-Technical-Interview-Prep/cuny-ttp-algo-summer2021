@@ -18,19 +18,29 @@ OUTPUT:
 
 
 Variables
--have an array that stores duplicate values
+-i = 0       (starting value and its value will change throughout)
+    -The approach doesn't necessarily require initialization
 
 
 Steps:
-0) Initalize starting , end , current
-1) Iterate through the array for loop
+0) Manipulate the given input values
+1) Iterate through the array with for loop
+    -No need to initialize variable for this approach
+    -In this approach, sorting the values isn't necessary since the problem
+     is asking to return the duplicate values
+2) The goal is to make the values negative
+    -Easier to identify that there is a duplicate
+      -If multiple negative values are discovered, it indicates that the
+       value has already been seen
+          -The duplicate values will share the same index reference and will
+           be appended into duplicateNumbers empty array
+
+
+
+QUESTION/ASSUMPTION:
+-Will there be an empty array?
     -if statement to check if there is anything within the array
       -return []
-
-    -comparing the starting position with the next index/             ignore value
-      -take the value from that index and subtract by 1
-        -send to its index position
-
 
 
 '''
@@ -38,14 +48,18 @@ Steps:
 
 
 def find_all_duplicates(nums):
-  duplicateNumbers = []
   # TODO: Write your code here
-
+  duplicateNumbers = []
+  for n in nums:
+    if nums[abs(n)-1] > 0:                 #Use absolute value to ensure positive value before becoming negative
+      nums[abs(n)-1] = -nums[abs(n)-1]     #Convert to negative
+    else:
+      duplicateNumbers.append(abs(n)) 
   return duplicateNumbers
 
 def main():
   print(find_all_duplicates([3, 4, 4, 5, 5]))             #[4,5]
-  print(find_all_duplicates([5, 4, 7, 2, 3, 5, 3]))       #[3]
+  print(find_all_duplicates([5, 4, 7, 2, 3, 5, 3]))       #[5,3]
 
 
 main()

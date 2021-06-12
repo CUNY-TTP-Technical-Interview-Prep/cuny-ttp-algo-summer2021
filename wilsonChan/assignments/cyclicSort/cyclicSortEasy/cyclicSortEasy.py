@@ -25,7 +25,7 @@ EXAMPLE:
 STEPS:
 1) Initialize current_value variable
 2) While loop with the condition of start < length of array
-3) j represents the value from current_value - 1 
+3) j represents the value from current_value - 1      (gives you the correct index to reference)
     -this will match current_value to appropriate index in array
         ex: [2, 6, 4, 3, 1, 5]       
         element with value 4 would be on index 3 (4-1 =3)
@@ -48,7 +48,7 @@ def cyclic_sort(nums):
   current_value = 0
 
   while current_value < len(nums):
-    j = nums[current_value] - 1               #value on starting index - 1 = next swap location
+    j = nums[current_value] - 1               #value on starting index - 1 = gives you the proper index to reference
     if nums[current_value] != nums[j]:
       nums[current_value], nums[j] = nums[j], nums[current_value]    #swap values when the value of current_value doesn't match correct index
     else:
