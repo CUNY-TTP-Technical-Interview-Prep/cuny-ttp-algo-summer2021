@@ -2,6 +2,16 @@
 
 // Given the head of a Singly LinkedList, reverse the LinkedList. Write a function to return the new head of the reversed LinkedList.
 
+/**
+ * Input:
+ * Output:
+ * 
+ * Properties:
+ * 
+ * Conditions:
+ * 
+ */
+
 class Node {
   constructor(value, next=null){
     this.value = value;
@@ -21,7 +31,9 @@ class Node {
 
 
 const reverse = function(head) {
-  // TODO: Write your code here
+
+
+
   return head;
 };
 
