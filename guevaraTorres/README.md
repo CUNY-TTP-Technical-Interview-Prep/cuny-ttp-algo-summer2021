@@ -101,7 +101,7 @@ program containing the following:
   - [X] Longest Substring with K Distinct Characters (medium): LC #340
   - [X] Fruits into Baskets (medium): LC #904
 - Intro to "Two Pointers" Pattern: Lecture & Discussion
-  - [] Pair with Target Sum (easy): LC #1
+  - [X] Pair with Target Sum (easy): LC #1
 
 #### 06/03 (Thur):
 
@@ -143,7 +143,7 @@ program containing the following:
 - "Cyclic Sort" Continued ( Each Pair Choose Two! )
   - [] Find the Missing Number (easy): LC #268 
   - [] Find all Missing Numbers (easy): LC #448 
-  - [] Find the Duplicate Number (easy): LC #287 
+  - [X] Find the Duplicate Number (easy): LC #287 
   - [] Find all Duplicate Numbers (easy): LC #442 
 - Intro to "In Place Reversal of a LL" Pattern: Lecture & Discussion
   - [] Reverse a LinkedList (easy): LC #206
