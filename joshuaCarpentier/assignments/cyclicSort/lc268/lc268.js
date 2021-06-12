@@ -1,40 +1,60 @@
 // Problem Statement #
 
-// We are given an array containing ‘n’ distinct numbers taken from the range 0 to ‘n’. Since the array has only 
+// We are given an array containing ‘n’ distinct numbers taken from the range 0 to ‘n’. Since the array has only
 // ‘n’ numbers out of the total ‘n+1’ numbers, find the missing number.
 
-
 /**
+ * My Approach(Not Sure how to implement and not sure on the runtime)
  * Input: array
  * Output: return missing number in range 0 to n
- * 
+ *
+ * sort before checking
+ *
+ * array contains elements that are always in range starting of each other starting from 0 and ending in "n"
+ * but the array is still unordered and contains no duplicates
+ * so we need to find and return the missing number that is in the range but not in the array
+ *
+ * check array for lowest and highest number in array then find range between that and get sum of that range and compare
+ * to the sum of the original array return the difference
+ *
+ *
+ *
+ * Input: array
+ * Output: return missing number in range 0 to n
+ *
  * sort before checking
  * 
- * array contains elements that are always in range starting of each other starting from 0 and ending in "n" 
- * but the array is still unordered and contains no duplicates 
- * so we need to find and return the missing number that is in the range but not in the array 
+ * initialize index and array length and while loop
  * 
- * check array for lowest and highest number in array then find range between that and get sum of that range and compare 
- * to the sum of the original array return the difference
+ * Conditon: while index less then array length then
  * 
+ * if nums array current index less then array length && array current index not 
+ * equal to current index
  * 
- * initialize variables
+ * swap values else increment index
+ * and find missing number
+ * 
  */
 
-const find_missing_number = function(nums) {
-  let CurrentIndex = nums.length; 
-  let i = 0;
-  let total = 0;
-  while (i < CurrentIndex){
-    if (CurrentIndex  ){
-       total += nums[i];
-      i++;
+const find_missing_number = function (nums) {
+  let index = 0;
+  const CurrentIndex = nums.length;
+  while (index < CurrentIndex) {
+    let j = nums[index];
+    if (nums[index] < CurrentIndex && nums[index] !== nums[j]) {
+      [nums[index], nums[j]] = [nums[j], nums[index]]; 
+    } else {
+      index++;
     }
-
   }
 
+  for (index = 0; index < CurrentIndex; index++) {
+    if (nums[index] !== index) {
+      return index;
+    }
+  }
 
-  return total;
+  return CurrentIndex;
 };
 
 console.log(find_missing_number([4, 0, 3, 1]));
