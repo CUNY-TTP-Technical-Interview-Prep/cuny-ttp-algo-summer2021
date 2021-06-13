@@ -144,7 +144,7 @@ program containing the following:
   - [X] Find the Missing Number (easy): LC #268 
   - [X] Find all Missing Numbers (easy): LC #448 
   - [X] Find the Duplicate Number (easy): LC #287 
-  - [] Find all Duplicate Numbers (easy): LC #442 
+  - [X] Find all Duplicate Numbers (easy): LC #442 
 - Intro to "In Place Reversal of a LL" Pattern: Lecture & Discussion
   - [] Reverse a LinkedList (easy): LC #206
   
