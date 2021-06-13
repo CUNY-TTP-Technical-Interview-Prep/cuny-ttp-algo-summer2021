@@ -4,25 +4,82 @@
 
 // You can assume that K is less than or equal to the length of the given string.
 
+/*
+
+input: string
+output: integer
+
+Solution:
+create a hashmap, we will store new distinct values in it.
+windowSize: integer
+maxWindowSize: integer
+
+
+looop through the given array:
+	is hashmap.length < K:
+		if this char is in the hash map, increase its value by 1.
+			increase the window size by 1.
+		if it is not, insert it into the hash map, set its value to 1.
+			increase the windowSize by 1.
+	else:
+		while(hashmap.length > K)
+
+
+
+*/
+
 function longest_substring_with_k_distinct(str, k) {
   // TODO: Write code here
+  if (str === "" || k > str.length || !str.length) return -1;
+
+  const myHashMap = {};
+  let windowStart = 0;
+  let maxWindowSize = -Infinity;
+
+  for (let windowEnd = 0; windowEnd < str.length; windowEnd++) {
+    myHashMap.hasOwnProperty(str[windowEnd])
+      ? (myHashMap[str[windowEnd]] += 1)
+      : (myHashMap[str[windowEnd]] = 1); //insert new item.
+    let myHashMapLength = Object.keys(myHashMap).length;
+    let windowSize = 0;
+
+    windowSize = windowEnd - windowStart + 1; // widen window size.
+
+    if (myHashMapLength <= k) {
+      maxWindowSize = windowSize > maxWindowSize ? windowSize : maxWindowSize; // update maxWindowSize
+      continue;
+    }
+
+    while (myHashMapLength > k) {
+      if (myHashMap[str[windowStart]] > 1) {
+        myHashMap[str[windowStart]] -= 1;
+      } else {
+        delete myHashMap[str[windowStart]];
+      }
+      myHashMapLength = Object.keys(myHashMap).length;
+      windowStart++;
+      windowSize = windowEnd - windowStart + 1; // widen window size.
+    }
+  }
+
+  return maxWindowSize > -1 ? maxWindowSize : -1;
 }
 
 console.log(
   `Length of the longest substring: ${longest_substring_with_k_distinct(
-    'araaci',
+    "araaci",
     2
   )}`
 );
 console.log(
   `Length of the longest substring: ${longest_substring_with_k_distinct(
-    'araaci',
+    "araaci",
     1
   )}`
 );
 console.log(
   `Length of the longest substring: ${longest_substring_with_k_distinct(
-    'cbbebi',
+    "cbbebi",
     3
   )}`
 );
