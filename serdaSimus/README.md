@@ -99,8 +99,8 @@ We will start with a brief introduction of each pattern before jumping into the 
 
 - "Sliding Window" Continued: P2P Mock Interview ( Each Pair Choose One! )
   - [x] Smallest Subarray with a given sum (easy): LC #209
-  - [] Longest Substring with K Distinct Characters (medium): LC #340
-  - [] Fruits into Baskets (medium): LC 904
+  - [x] Longest Substring with K Distinct Characters (medium): LC #340
+  - [x] Fruits into Baskets (medium): LC 904
 - Intro to "Two Pointers" Pattern: Lecture & Discussion
   - [] Pair with Target Sum (easy): LC #1
 

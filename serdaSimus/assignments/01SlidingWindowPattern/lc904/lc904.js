@@ -6,22 +6,96 @@
 
 // Write a function to return the maximum number of fruits in both baskets.
 
+/*
+input: array of char.
+known: max types is 2.
+
+Solution:
+visit each element once:
+    check if the element exist in item table
+        if it is, increase its value.
+        if it is not:
+            check that the length of hash table is less than 2.
+                yes: add the new item.
+                no: while the length is more:
+                    remove 
+
+*/
+
 function fruits_into_baskets(fruits) {
   // TODO: Write code here
+  let windowStart = 0,
+    items = {};
+  let total = 0; // maximum window size
+
+  //visiting every item in the given array.
+  for (let windowEnd = 0; windowEnd < fruits.length; windowEnd++) {
+    //add the new item to frequency counter hash talble. key:str, value: int
+    items[fruits[windowEnd]] >= 1
+      ? (items[fruits[windowEnd]] += 1)
+      : (items[fruits[windowEnd]] = 1);
+    // checking the items list has less than 3 items in it.
+    if (Object.keys(items).length <= 2) {
+      // calculate the new window size;
+      windowSize = windowEnd - windowStart + 1;
+
+      // update total
+      //  total = Math.max(total, windowSize);
+    }
+
+    // When the size of the frequency counter passes 2,
+    // I need to shrink the window and reduce the number
+    // of items inside frequency counter.
+    while (Object.keys(items).length > 2) {
+      items[fruits[windowStart]] > 1
+        ? (items[fruits[windowStart]] -= 1)
+        : delete items[fruits[windowStart]];
+      windowStart++;
+      windowSize = windowEnd - windowStart + 1;
+    }
+    total = Math.max(total, windowSize);
+  }
+  return total;
 }
 
 console.log(
-  `Maximum number of fruits: ${fruits_into_baskets(['A', 'B', 'C', 'A', 'C'])}`
+  `Maximum number of fruits: ${fruits_into_baskets([
+    "A",
+    "B",
+    "C",
+    "A",
+    "C",
+    "D",
+    "E",
+    "E",
+    "E",
+  ])}, expected: 4`
 );
+
 console.log(
   `Maximum number of fruits: ${fruits_into_baskets([
-    'A',
-    'B',
-    'C',
-    'B',
-    'B',
-    'C',
-  ])}`
+    "A",
+    "B",
+    "C",
+    "B",
+    "B",
+    "C",
+  ])}, expected: 5`
+);
+
+console.log(
+  `Maximum number of fruits: ${fruits_into_baskets([
+    "A",
+    "B",
+    "B",
+    "A",
+    "A",
+    "B",
+  ])}, expected: 6`
+);
+
+console.log(
+  `Maximum number of fruits: ${fruits_into_baskets([])}, expected: 0`
 );
 
 // Solution
