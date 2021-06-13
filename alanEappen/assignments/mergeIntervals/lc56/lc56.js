@@ -11,11 +11,14 @@
 //put end pointing to end pointer
 
 //initiate a for loop to traverse thorugh each element
-// we compare the current element witht the end element if it's greater update
+// we compare the current element with the end element if it's greater update
 // greater element
 //
 // else there is no overlapping so push the interval to merged
 // 
+//edge cases:
+// if there is only one interval return that interval
+// if the interval length is 0 return null;
 
 
 class Interval {
@@ -29,10 +32,32 @@ class Interval {
   }
 }
 
-
 const merge = function (intervals) {
-  merged = []
+  if (intervals.length < 2) {
+    return intervals;
+  }
+  if (intervals.length == 0) {
+    return null
+  }
+  let merged = [];
 
+  intervals.sort((a, b) => a.start - b.start);
+
+  let startPtr = intervals[0].start
+  let endPtr = intervals[0].end;
+
+  for (let i = 1; i < intervals.length; i++) {
+    const interval = intervals[i];
+    if (endPtr >= intervals[i].start) {
+      endPtr = Math.max(interval.end, endPtr);
+    } else {
+      merged.push(new Interval(startPtr, endPtr));
+      startPtr = interval.start;
+      endPtr = interval.end;
+    }
+  }
+
+  merged.push(new Interval(startPtr, endPtr));
   return merged;
 };
 
