@@ -11,24 +11,28 @@ class Node {
 
 const find_cycle_start = function(head) {
 	// TODO: Write your code here
+	// give that singly linked list with a cycle, find start of the cycle
+	// create a slow and fast pointer
+	// fast is twice as fast
+	// when fast === slow, that means a cycle has been found
+	// we can find the beginning of the cycle by setting one of the pointers to the head
+	// then we increment both one step at a time till they meet again, which would be the start of the cycle
+
 	let slow = head;
 	let fast = head;
-
-	while (fast && fast.next) {
+	while (fast && fast.next && fast.next.next) {
 		slow = slow.next;
 		fast = fast.next.next;
-
-		if (fast === slow) {
+		if (slow === fast) {
+			//cycle found
 			slow = head;
+			while (slow !== fast) {
+				slow = slow.next;
+				fast = fast.next;
+			}
+			return slow;
 		}
-
-		while (fast !== slow) {
-			slow = slow.next;
-			fast = fast.next;
-		}
-		return slow;
 	}
-
 	return null;
 };
 
