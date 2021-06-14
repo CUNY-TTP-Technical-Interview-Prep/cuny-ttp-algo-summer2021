@@ -2,6 +2,15 @@
 
 // Given the head of a Singly LinkedList, write a function to determine if the LinkedList has a cycle in it or not.
 
+/*
+The fast slow pattern can help determine where the cycle begins.
+When fast is behind or equal to slow, it becomes clear that fast has started going through the cycle.
+
+variables = fast, slow
+
+
+*/
+
 class Node {
   constructor(value, next=null){
     this.value = value;
@@ -11,6 +20,24 @@ class Node {
 
 const has_cycle = function(head) {
   // TODO: Write your code here
+
+  let slow = head,
+  fast = head;
+
+  while(fast !== null || fast.next !== null ){
+    if(fast.next == slow) return true;
+    slow = slow.next;
+    fast = fast.next.next;
+  }
+
+  // let slow = head,
+  // fast = head;
+
+  // while(fast !== null || fast.next !== null){
+  //   if(fast.next == slow) return true;
+  //   slow = slow.next;
+  //   fast = fast.next.next;
+  // }
   return false
 }
 
