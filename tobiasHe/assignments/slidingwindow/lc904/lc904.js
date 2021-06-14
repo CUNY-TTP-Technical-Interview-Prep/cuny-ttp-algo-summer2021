@@ -8,6 +8,34 @@
 
 function fruits_into_baskets(fruits) {
 	// TODO: Write code here
+	// the problem is essentially asking for find the longest substring with at most two distinct letters
+	// make an object to hold the frequency of the letters
+	// keep track of the length
+	// loop through the array, keep track of the frequency of each letter
+	// shrink the window when # of distinct letters is > 2
+	let longest = 0;
+	let frequency = {};
+	let windowStart = 0;
+
+	for (let windowEnd = 0; windowEnd < fruits.length; windowEnd++) {
+		let rightFruit = fruits[windowEnd];
+		if (!frequency[rightFruit]) {
+			frequency[rightFruit] = 1;
+		} else {
+			frequency[rightFruit]++;
+		}
+
+		while (Object.keys(frequency).length > 2) {
+			let previousFruit = fruits[windowStart];
+			frequency[previousFruit]--;
+			if (frequency[previousFruit] === 0) {
+				delete frequency[previousFruit];
+			}
+			windowStart++;
+		}
+		longest = Math.max(windowEnd - windowStart + 1, longest);
+	}
+	return longest;
 }
 
 console.log(`Maximum number of fruits: ${fruits_into_baskets([ 'A', 'B', 'C', 'A', 'C' ])}`);
