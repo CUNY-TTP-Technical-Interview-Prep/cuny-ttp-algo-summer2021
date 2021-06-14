@@ -99,10 +99,10 @@ We will start with a brief introduction of each pattern before jumping into the 
 
 - "Sliding Window" Continued: P2P Mock Interview ( Each Pair Choose One! )
   - [x] Smallest Subarray with a given sum (easy): LC #209
-  - [] Longest Substring with K Distinct Characters (medium): LC #340
-  - [] Fruits into Baskets (medium): LC 904
+  - [x] Longest Substring with K Distinct Characters (medium): LC #340
+  - [x] Fruits into Baskets (medium): LC 904
 - Intro to "Two Pointers" Pattern: Lecture & Discussion
-  - [] Pair with Target Sum (easy): LC #1
+  - [x] Pair with Target Sum (easy): LC #1
 
 #### 06/03 (Thur):
 
@@ -111,14 +111,13 @@ We will start with a brief introduction of each pattern before jumping into the 
   - [x] Squaring a Sorted Array (easy): LC #977
   - [] Triplet Sum to Zero (medium): LC #15
   - [] Triplet Sum Close to Target (medium): LC #16
-  -
 
 ### /// Week Two ///
 
 #### 06/07 (Mon):
 
 - "Two Pointers" Continued: P2P Mock Interview ( Each Pair Choose One! )
-  - [wip] Triplets with Smaller Sum (medium): LC #259
+  - [] Triplets with Smaller Sum (medium): LC #259
   - [] Subarrays with Product Less than a Target (medium): LC #713
   - [] Dutch National Flag Problem (medium): LC #75
 - [] Intro to "Fast & Slow Pointers" Pattern: Lecture & Discussion
@@ -127,30 +126,28 @@ We will start with a brief introduction of each pattern before jumping into the 
 #### 06/08 (Tues):
 
 - "Fast & Slow Pointers" Continued: P2P Mock Interview ( Each Pair Choose One! )
-  - [] Start of LinkedList Cycle (medium): LC #142
+  - [x] Start of LinkedList Cycle (medium): LC #142
   - [] Happy Number (medium): LC #202
-  - [] Middle of the LinkedList (easy): LC #876
+  - [x] Middle of the LinkedList (easy): LC #876
 - Intro to "Merge Intervals" Pattern: Lecture & Discussion
-  - [] Merge Intervals (medium): LC #56
+  - [x] Merge Intervals (medium): LC #56
 
 #### 06/09 (Wed):
 
 - "Merge Intervals" Continued ( Each Pair Choose One! )
-  - [] Insert Interval (medium): LC #57
-  - [] Intervals Intersection (medium): LC #986
-  - [] Conflicting Appointments (medium): LC #252
+  - [wip] Insert Interval (medium): LC #57
+  - [-] Intervals Intersection (medium): LC #986
+  - [-] Conflicting Appointments (medium): LC #252
 - Intro to "Cyclic Sort" Pattern: Lecture & Discussion
-  - [] Cyclic Sort (easy)
+  - [x] Cyclic Sort (easy)
 
 #### 06/10 (Thur):
 
 - "Cyclic Sort" Continued ( Each Pair Choose Two! )
   - [] Find the Missing Number (easy): LC #268
   - [] Find all Missing Numbers (easy): LC #448
-  - [] Find the Duplicate Number (easy): LC #287
+  - [x] Find the Duplicate Number (easy): LC #287
   - [] Find all Duplicate Numbers (easy): LC #442
-- Intro to "In Place Reversal of a LL" Pattern: Lecture & Discussion
-  - [] Reverse a LinkedList (easy): LC #206
 
 ###
 

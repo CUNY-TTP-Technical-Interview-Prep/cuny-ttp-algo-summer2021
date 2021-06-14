@@ -119,8 +119,8 @@ We will start with a brief introduction of each pattern before jumping into the 
 #### 06/07 (Mon):
 
 - "Two Pointers" Continued: P2P Mock Interview ( Each Pair Choose One! )
-  - [] Triplets with Smaller Sum (medium): LC #259
-  - [] Subarrays with Product Less than a Target (medium): LC #713
+  - [x] Triplets with Smaller Sum (medium): LC #259
+  - [x] Subarrays with Product Less than a Target (medium): LC #713
   - [x] Dutch National Flag Problem (medium): LC #75
 - Intro to "Fast & Slow Pointers" Pattern: Lecture & Discussion
   - [x] LinkedList Cycle (easy): LC #141
@@ -137,21 +137,21 @@ We will start with a brief introduction of each pattern before jumping into the 
 #### 06/09 (Wed):
 
 - "Merge Intervals" Continued ( Each Pair Choose One! )
-  - [] Insert Interval (medium): LC #57
+  - [x] Insert Interval (medium): LC #57
   - [] Intervals Intersection (medium): LC #986
   - [] Conflicting Appointments (medium): LC #252
 - Intro to "Cyclic Sort" Pattern: Lecture & Discussion
-  - [] Cyclic Sort (easy)
+  - [x] Cyclic Sort (easy)
 
 #### 06/10 (Thur):
 
 - "Cyclic Sort" Continued ( Each Pair Choose Two! )
-  - [] Find the Missing Number (easy): LC #268
+  - [x] Find the Missing Number (easy): LC #268
   - [] Find all Missing Numbers (easy): LC #448
-  - [] Find the Duplicate Number (easy): LC #287
+  - [x] Find the Duplicate Number (easy): LC #287
   - [] Find all Duplicate Numbers (easy): LC #442
 - Intro to "In Place Reversal of a LL" Pattern: Lecture & Discussion
-  - [] Reverse a LinkedList (easy): LC #206
+  - [x] Reverse a LinkedList (easy): LC #206
 
 ### .
 
