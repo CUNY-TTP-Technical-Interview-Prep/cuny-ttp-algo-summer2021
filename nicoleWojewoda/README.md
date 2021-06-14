@@ -141,7 +141,7 @@ We will start with a brief introduction of each pattern before jumping into the 
   - [] Intervals Intersection (medium): LC #986
   - [x] Conflicting Appointments (medium): LC #252
 - Intro to "Cyclic Sort" Pattern: Lecture & Discussion
-  - [] Cyclic Sort (easy)
+  - [x] Cyclic Sort (easy)
 
 #### 06/10 (Thur):
 
