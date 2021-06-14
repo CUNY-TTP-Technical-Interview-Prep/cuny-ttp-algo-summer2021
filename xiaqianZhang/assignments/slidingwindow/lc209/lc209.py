@@ -12,19 +12,54 @@ import math
 #  excluding the startingIndex's varible from the currentSum and increment the startingIndex by 1
 
 # edge case, if s is infinite
+# def smallest_subarray_with_given_sum(s, arr):
+#   startIndex, currentSum = 0, 0
+#   minLen = math.inf
+#   for each in range(len(arr)):
+#     currentSum += arr[each]
+#     while currentSum >= s:
+#       minLen = min(minLen, each - startIndex + 1) #index 2 - index 0 + 1 = len of 3
+#       currentSum -= arr[startIndex]
+#       startIndex += 1
+
+#   if minLen == math.inf:
+#     return 0
+#   return minLen
+
+#Attempt 2:
+# Given an array of positive integers nums and a positive integer target, 
+# return the minimal length of a contiguous subarray [numsl, numsl+1, ..., numsr-1, numsr] 
+# of which the sum is greater than or equal to target. If there is no such subarray, return 0 instead.
+# Input: List of positive integers and positive target number
+# Output: shortest length of continoues subarray that is >= than the target sum
+# Edge case: array is empty: return 0
+
+# initialize the windowStart = 0, and the currentSum = 0, constant update the currentSum to see if it's closer to the targetSum
+# initialize the shortestLength = math.inf, we want to initialize as large as possible
+# loop through each value in the array:
+#  update the currentSum += arr[each]
+#  if currentSum >= targetSum:
+#     update the shortestLength = min(shortestLength, currentIndex - windowStart + 1) 
+#   currentSum -= arr[each]
+#   windowStart+=1
+
+
 def smallest_subarray_with_given_sum(s, arr):
-  startIndex, currentSum = 0, 0
-  minLen = math.inf
+  if arr == []:
+    return 0
+
+  windowStart = 0
+  currentSum = 0
+  shortestLength = math.inf
+
   for each in range(len(arr)):
     currentSum += arr[each]
     while currentSum >= s:
-      minLen = min(minLen, each - startIndex + 1) #index 2 - index 0 + 1 = len of 3
-      currentSum -= arr[startIndex]
-      startIndex += 1
+      shortestLength = min(shortestLength, each - windowStart + 1)
+      currentSum -= arr[windowStart]
+      windowStart +=1
 
-  if minLen == math.inf:
-    return 0
-  return minLen
+  return shortestLength
 
 
 
