@@ -125,9 +125,9 @@ program containing the following:
 
 #### 06/08 (Tues):
 - "Fast & Slow Pointers" Continued: P2P Mock Interview ( Each Pair Choose One! )
-  - [] Start of LinkedList Cycle (medium): LC #142 
-  - [] Happy Number (medium): LC #202
-  - [] Middle of the LinkedList (easy): LC #876 
+  - [X] Start of LinkedList Cycle (medium): LC #142 
+  - [X] Happy Number (medium): LC #202
+  - [X] Middle of the LinkedList (easy): LC #876 
 - Intro to "Merge Intervals" Pattern: Lecture & Discussion
   - [X] Merge Intervals (medium): LC #56
 
@@ -137,7 +137,7 @@ program containing the following:
   - [] Intervals Intersection (medium): LC #986 
   - [] Conflicting Appointments (medium): LC #252 
 - Intro to "Cyclic Sort" Pattern: Lecture & Discussion
-  - [] Cyclic Sort (easy)
+  - [X] Cyclic Sort (easy)
 
 #### 06/10 (Thur):
 - "Cyclic Sort" Continued ( Each Pair Choose Two! )
@@ -146,7 +146,7 @@ program containing the following:
   - [] Find the Duplicate Number (easy): LC #287 
   - [] Find all Duplicate Numbers (easy): LC #442 
 - Intro to "In Place Reversal of a LL" Pattern: Lecture & Discussion
-  - [] Reverse a LinkedList (easy): LC #206
+  - [X] Reverse a LinkedList (easy): LC #206
   
 ### .
 ### /// Week Three ///
