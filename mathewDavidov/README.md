@@ -141,12 +141,12 @@ program containing the following:
 
 #### 06/10 (Thur):
 - "Cyclic Sort" Continued ( Each Pair Choose Two! )
-  - [] Find the Missing Number (easy): LC #268 
+  - [X] Find the Missing Number (easy): LC #268 
   - [] Find all Missing Numbers (easy): LC #448 
-  - [] Find the Duplicate Number (easy): LC #287 
+  - [X] Find the Duplicate Number (easy): LC #287 
   - [] Find all Duplicate Numbers (easy): LC #442 
 - Intro to "In Place Reversal of a LL" Pattern: Lecture & Discussion
-  - [] Reverse a LinkedList (easy): LC #206
+  - [X] Reverse a LinkedList (easy): LC #206
   
 ### .
 ### /// Week Three ///
