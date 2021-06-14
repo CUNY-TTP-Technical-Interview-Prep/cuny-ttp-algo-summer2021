@@ -133,18 +133,18 @@ program containing the following:
 
 #### 06/09 (Wed):
 - "Merge Intervals" Continued ( Each Pair Choose One! )
-  - [] Insert Interval (medium): LC #57
+  - [x] Insert Interval (medium): LC #57
   - [] Intervals Intersection (medium): LC #986 
   - [] Conflicting Appointments (medium): LC #252 
 - Intro to "Cyclic Sort" Pattern: Lecture & Discussion
-  - [] Cyclic Sort (easy)
+  - [x] Cyclic Sort (easy)
 
 #### 06/10 (Thur):
 - "Cyclic Sort" Continued ( Each Pair Choose Two! )
   - [] Find the Missing Number (easy): LC #268 
-  - [] Find all Missing Numbers (easy): LC #448 
+  - [x] Find all Missing Numbers (easy): LC #448 
   - [] Find the Duplicate Number (easy): LC #287 
-  - [] Find all Duplicate Numbers (easy): LC #442 
+  - [x] Find all Duplicate Numbers (easy): LC #442 
 - Intro to "In Place Reversal of a LL" Pattern: Lecture & Discussion
   - [] Reverse a LinkedList (easy): LC #206
   
