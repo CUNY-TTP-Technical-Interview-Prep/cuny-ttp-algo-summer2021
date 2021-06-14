@@ -2,14 +2,39 @@
 
 # We are given an array containing ‘n’ distinct numbers taken from the range 0 to ‘n’. Since the array has only ‘n’ numbers out of the total ‘n+1’ numbers, find the missing number.
 
+# input: an unsorted list with integers ranging from 0 to n and length of n
+# output: an integer
+# edge case: empty list => return -1
+
+'''
+ We can use a while loop swap each integer into its correct position (integer 1 will be on index 0, 2 will be on index 1, and so on)
+ and we need to skip the integer zero. 
+ After the while loop, the position where integer zero sits will be the missing integer (index + 1)
+ We can use the for loop to traverse through the list to check the zero integer.
+'''
+
+
 def find_missing_number(nums):
   # TODO: Write your code here
+  index = 0 
+
+  while index < len(nums):
+    if nums[index] != index + 1 and nums[index] != 0:
+      correct_pos = nums[index] - 1
+      nums[correct_pos], nums[index] = nums[index], nums[correct_pos]
+    else:
+      index += 1
+
+  for i in range(len(nums)):
+    if nums[i] == 0:
+      return i+1
+
   return -1
 
- def main():
-  print(find_missing_number([4, 0, 3, 1]))
+def main():
+  print(find_missing_number([4, 0, 3, 1])) 
   print(find_missing_number([8, 3, 5, 2, 4, 6, 0, 1]))
-
+  print(find_missing_number([0, 1]))
 
 main()
 

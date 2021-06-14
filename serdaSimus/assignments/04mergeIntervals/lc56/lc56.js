@@ -13,39 +13,78 @@ class Interval {
   }
 }
 
-
-const merge = function(intervals) {
-  merged = []
+const merge = function (intervals) {
+  merged = [];
   // TODO: Write your code here
+  //edge: 1 item, no item.
+  if (intervals.length == 1 || !intervals.length) return intervals;
+
+  // O(nlogn) sort
+  intervals.sort((a, b) => a.start - b.start);
+
+  // assign the first interval as previous:
+  merged.push(intervals[0]);
+
+  // visit all subsequent intervals to find/merge overlapping intervals.
+  for (let index = 1; index < intervals.length; index++) {
+    let previousPtr = merged.pop();
+
+    // point the currentPtr to the element of intervals at the current index of the loop.
+    let currentPtr = intervals[index];
+
+    //comparisons: is previous last index, more than current's first index.
+    if (previousPtr.end < currentPtr.start) {
+      merged.push(previousPtr);
+      merged.push(currentPtr);
+      // inserting the last item
+
+      continue;
+    } else {
+      if (previousPtr.end < currentPtr.end) {
+        // push into merge [prv.start, current.end]
+        merged.push(new Interval(previousPtr.start, currentPtr.end));
+      } else {
+        // meaning previous end is more than current.end, previous starts earlier, ends later.
+        merged.push(previousPtr);
+        continue;
+      }
+    }
+  }
   return merged;
 };
 
-merged_intervals = merge([new Interval(1, 4), new Interval(2, 5), new Interval(7, 9)]);
+merged_intervals = merge([
+  new Interval(1, 4),
+  new Interval(2, 5),
+  new Interval(7, 9),
+]);
 result = "";
-for(i=0; i < merged_intervals.length; i++) {
+for (i = 0; i < merged_intervals.length; i++) {
   result += merged_intervals[i].get_interval() + " ";
 }
-console.log(`Merged intervals: ${result}`)
+console.log(`Merged intervals: ${result}`);
 
-
-merged_intervals = merge([new Interval(6, 7), new Interval(2, 4), new Interval(5, 9)]);
+merged_intervals = merge([
+  new Interval(6, 7),
+  new Interval(2, 4),
+  new Interval(5, 9),
+]);
 result = "";
-for(i=0; i < merged_intervals.length; i++) {
+for (i = 0; i < merged_intervals.length; i++) {
   result += merged_intervals[i].get_interval() + " ";
 }
-console.log(`Merged intervals: ${result}`)
+console.log(`Merged intervals: ${result}`);
 
-
-merged_intervals = merge([new Interval(1, 4), new Interval(2, 6), new Interval(3, 5)]);
+merged_intervals = merge([
+  new Interval(1, 4),
+  new Interval(2, 6),
+  new Interval(3, 5),
+]);
 result = "";
-for(i=0; i < merged_intervals.length; i++) {
+for (i = 0; i < merged_intervals.length; i++) {
   result += merged_intervals[i].get_interval() + " ";
 }
-console.log(`Merged intervals: ${result}`)
-
-
-
-
+console.log(`Merged intervals: ${result}`);
 
 // Solution
 // -----
