@@ -11,7 +11,7 @@
  * 
  * Edge cases:
  * null head / one element -> return
- * p comes after q / p is equal to q -> return head
+ * p comes after q -> return head
  * 
  * initialize a dummy node to before the beginning of the list (to have a reference at the end to return)
  * loop from 0 to p - 1
@@ -28,6 +28,10 @@
  *   point the previous' next next to current
  *   point the previous next to reverse
  *   return the head
+ * 
+ * Runtime:
+ * Time: O(n)
+ * Space: O(1)
  */
 
 public class lc92 {
