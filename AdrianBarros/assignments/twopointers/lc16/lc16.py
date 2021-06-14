@@ -1,25 +1,52 @@
-# Problem Statement #
+# Problem Statement #/
 # Given an array of unsorted numbers and a target number, find a triplet in the array whose sum is as close to the target number as possible, return the sum of the triplet. If there are more than one such triplet, return the sum of the triplet with the smallest sum.
+'''
+input: unsorted array
+output: the min diff
+
+step1: sort the array
+step 2: loop the array and for each number we substract it from the target
+
+step 3: like last question use two pointers alongside the selected value
+
+Step 4: add them and compare saving the lesser diff
+
+step 5: return the min diff
+
+and 
+'''
+
 
 def triplet_sum_close_to_target(arr, target_sum):
-  # TODO: Write your code here
-  return -1
+    # TODO: Write your code here
+    min_diff = float('inf')
+    res_sum = -1  # response
+    for i in range(len(arr)-2):
+        start = arr[i+1]
+        end = arr[len(arr)-1]
+        while start < end:
+            curr_sum = arr[i] + start + end
+            curr_diff = abs(target_sum - curr_sum)
+            if curr_diff < min_diff:
+                res_sum = curr_sum
+                min_diff = curr_diff
+            if curr_sum < target_sum:
+                start += 1
+            if curr_sum > target_sum:
+                end -= 1
+            if curr_sum == target_sum:
+                break
+
+    return res_sum
 
 
 def main():
-  print(triplet_sum_close_to_target([-2, 0, 1, 2], 2))
-  print(triplet_sum_close_to_target([-3, -1, 1, 2], 1))
-  print(triplet_sum_close_to_target([1, 0, 1, 1], 100))
+    print(triplet_sum_close_to_target([-2, 0, 1, 2], 2))
+    print(triplet_sum_close_to_target([-3, -1, 1, 2], 1))
+    print(triplet_sum_close_to_target([1, 0, 1, 1], 100))
 
 
 main()
-
-
-
-
-
-
-
 
 
 # Solution
@@ -47,8 +74,4 @@ main()
 
 # -----
 
-# Time complexity #
-# Sorting the array will take O(N* logN). Overall, the function will take O(N * logN + N^2), which is asymptotically equivalent to O(N^2).
-
-# Space complexity #
-# The above algorithm’s space complexity will be O(N), which is required for sorting.
+#
