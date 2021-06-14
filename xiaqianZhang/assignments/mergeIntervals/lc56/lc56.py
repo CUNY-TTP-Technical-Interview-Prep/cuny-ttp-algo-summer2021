@@ -32,6 +32,19 @@
 #      Merge them with the start and end
 #      update the start and end
 
+
+#attempt 3: Given a list of intervals, merge all the overlapping intervals to produce a list that has only mutually exclusive intervals.
+# input: list of intervals that each contains two integers
+# output: return the list of intervals without overlapping
+# edge case: if the len(intervals) < 2: we don't really need to do anything, just return the intervals
+# First taken the input intervals, we sort the intervals of its start where intervals looks like [start, end]
+# initialize start = intervals[0].start, end = intervals[0].end
+# loop through the entire list of intervals
+#   then initialize interval = intervals[i], while we loop through it, we want to compare intervals[i].end with intervals[i+1].start
+#   if intervals[i+1].start <= intervals[i].end ex: [1, 3] [2, 4] 2<3, it is overlapping
+#     update the end by taking the maximum from the intervals[i].end (end) with intervals[i+1].end (interval.end)
+#   else: merge the intervals and update the start and end
+
 from __future__ import print_function
 
 
@@ -43,18 +56,21 @@ class Interval:
   def print_interval(self):
     print("[" + str(self.start) + ", " + str(self.end) + "]", end='')
 
+#Attempt 3
 def merge(intervals):
   merged = []
+
   if len(intervals) < 2:
     return intervals
   
   intervals.sort(key = lambda x: x.start)
   start = intervals[0].start
   end = intervals[0].end
+
   for i in range(1, len(intervals)):
     interval = intervals[i]
     if interval.start <= end:
-      end = max(end, interval.end)
+      end = max(interval.end, end)
     else:
       merged.append(Interval(start, end))
       start = interval.start
@@ -64,6 +80,28 @@ def merge(intervals):
 
 
 
+# Attempt 2
+# def merge(intervals):
+#   merged = []
+#   if len(intervals) < 2:
+#     return intervals
+  
+#   intervals.sort(key = lambda x: x.start)
+#   start = intervals[0].start
+#   end = intervals[0].end
+#   for i in range(1, len(intervals)):
+#     interval = intervals[i]
+#     if interval.start <= end:
+#       end = max(end, interval.end)
+#     else:
+#       merged.append(Interval(start, end))
+#       start = interval.start
+#       end = interval.end
+#   merged.append(Interval(start, end))
+#   return merged
+
+
+# Attempt 1
 # def merge(intervals):
 #   merged = []
   
@@ -100,6 +138,11 @@ def main():
 
   print("Merged intervals: ", end='')
   for i in merge([Interval(1, 4), Interval(2, 6), Interval(3, 5)]):
+    i.print_interval()
+  print()
+
+  print("Merged intervals: ", end='')
+  for i in merge([Interval(1, 4)]):
     i.print_interval()
   print()
 
