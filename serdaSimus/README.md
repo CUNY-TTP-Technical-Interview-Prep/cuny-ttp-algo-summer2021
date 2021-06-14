@@ -109,25 +109,25 @@ We will start with a brief introduction of each pattern before jumping into the 
 - "Two Pointers" Continued: P2P Mock Interview ( Each Pair Choose Two! )
   - [x] Remove Duplicates (easy): LC #26
   - [x] Squaring a Sorted Array (easy): LC #977
-  - [] Triplet Sum to Zero (medium): LC #15
-  - [] Triplet Sum Close to Target (medium): LC #16
+  - [x] Triplet Sum to Zero (medium): LC #15
+  - [x] Triplet Sum Close to Target (medium): LC #16
 
 ### /// Week Two ///
 
 #### 06/07 (Mon):
 
 - "Two Pointers" Continued: P2P Mock Interview ( Each Pair Choose One! )
-  - [wip] Triplets with Smaller Sum (medium): LC #259
-  - [] Subarrays with Product Less than a Target (medium): LC #713
-  - [] Dutch National Flag Problem (medium): LC #75
+  - [x] Triplets with Smaller Sum (medium): LC #259
+  - [x] Subarrays with Product Less than a Target (medium): LC #713
+  - [x] Dutch National Flag Problem (medium): LC #75
 - [] Intro to "Fast & Slow Pointers" Pattern: Lecture & Discussion
   - [x] LinkedList Cycle (easy): LC #141
 
 #### 06/08 (Tues):
 
 - "Fast & Slow Pointers" Continued: P2P Mock Interview ( Each Pair Choose One! )
-  - [] Start of LinkedList Cycle (medium): LC #142
-  - [] Happy Number (medium): LC #202
+  - [x] Start of LinkedList Cycle (medium): LC #142
+  - [x] Happy Number (medium): LC #202
   - [x] Middle of the LinkedList (easy): LC #876
 - Intro to "Merge Intervals" Pattern: Lecture & Discussion
   - [x] Merge Intervals (medium): LC #56
