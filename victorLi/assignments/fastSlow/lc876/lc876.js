@@ -13,7 +13,16 @@ class Node {
 
 const find_middle_of_linked_list = function(head) {
   // TODO: Write your code here
-  return head;
+
+  let slow = head;
+  let fast = head;
+
+  while( fast != null && fast.next != null)
+  {
+    slow = slow.next;
+    fast = fast.next.next;
+  }
+  return slow;
 }
 
 
