@@ -15,10 +15,24 @@ class TreeNode {
 
 const traverse = function(root) {
   levels = [];
-  // TODO: Write your code here
+
+
   return levels;
 };
 
+/**
+ *     12
+ *   /    \
+ *  7       1
+ * / \     / \
+  9  null  10 5 
+
+Input: root = [12,7,1,9,null,10,5]
+Output: [[12],[7,1],[9,],[10,5]]
+
+
+
+*/
 
 
 var root = new TreeNode(12);
@@ -27,6 +41,7 @@ root.right = new TreeNode(1);
 root.left.left = new TreeNode(9);
 root.right.left = new TreeNode(10);
 root.right.right = new TreeNode(5);
+console.log(root)
 console.log(`Level order traversal: ${traverse(root)}`);
 
 
