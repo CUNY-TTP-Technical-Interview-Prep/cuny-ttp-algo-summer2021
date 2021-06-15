@@ -106,7 +106,7 @@ program containing the following:
 #### 06/03 (Thur):
 
 - "Two Pointers" Continued: P2P Mock Interview ( Each Pair Choose Two! )
-  - [] Remove Duplicates (easy): LC #26
+  - [x] Remove Duplicates (easy): LC #26
   - [] Squaring a Sorted Array (easy): LC #977
   - [] Triplet Sum to Zero (medium): LC #15
   - [] Triplet Sum Close to Target (medium): LC #16
@@ -126,34 +126,34 @@ program containing the following:
 #### 06/08 (Tues):
 - "Fast & Slow Pointers" Continued: P2P Mock Interview ( Each Pair Choose One! )
   - [] Start of LinkedList Cycle (medium): LC #142 
-  - [] Happy Number (medium): LC #202
+  - [x] Happy Number (medium): LC #202
   - [] Middle of the LinkedList (easy): LC #876 
 - Intro to "Merge Intervals" Pattern: Lecture & Discussion
   - [x] Merge Intervals (medium): LC #56
 
 #### 06/09 (Wed):
 - "Merge Intervals" Continued ( Each Pair Choose One! )
-  - [] Insert Interval (medium): LC #57
+  - [x] Insert Interval (medium): LC #57
   - [] Intervals Intersection (medium): LC #986 
   - [] Conflicting Appointments (medium): LC #252 
 - Intro to "Cyclic Sort" Pattern: Lecture & Discussion
-  - [] Cyclic Sort (easy)
+  - [x] Cyclic Sort (easy)
 
 #### 06/10 (Thur):
 - "Cyclic Sort" Continued ( Each Pair Choose Two! )
-  - [] Find the Missing Number (easy): LC #268 
+  - [x] Find the Missing Number (easy): LC #268 
   - [] Find all Missing Numbers (easy): LC #448 
   - [] Find the Duplicate Number (easy): LC #287 
   - [] Find all Duplicate Numbers (easy): LC #442 
 - Intro to "In Place Reversal of a LL" Pattern: Lecture & Discussion
-  - [] Reverse a LinkedList (easy): LC #206
+  - [x] Reverse a LinkedList (easy): LC #206
   
 ### .
 ### /// Week Three ///
 
 #### 06/14 (Mon):
 - "In Place Reversal of a LL" Continued ( Each Pair Choose One! )
-  - [] Reverse a LinkedList (easy): LC #206
+  - [x] Reverse a LinkedList (easy): LC #206
   - [] Reverse a Sub-list (medium): LC #92
   - [] Reverse every K-element Sub-list (medium): LC #25 
 - Intro to "Trees: BFS" Pattern & Discussion

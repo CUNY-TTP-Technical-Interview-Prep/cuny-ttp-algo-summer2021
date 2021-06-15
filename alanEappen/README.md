@@ -129,13 +129,13 @@ program containing the following:
   - [] Happy Number (medium): LC #202
   - [] Middle of the LinkedList (easy): LC #876 
 - Intro to "Merge Intervals" Pattern: Lecture & Discussion
-  - [] Merge Intervals (medium): LC #56
+  - [x] Merge Intervals (medium): LC #56
 
 #### 06/09 (Wed):
 - "Merge Intervals" Continued ( Each Pair Choose One! )
   - [] Insert Interval (medium): LC #57
   - [] Intervals Intersection (medium): LC #986 
-  - [] Conflicting Appointments (medium): LC #252 
+  - [x] Conflicting Appointments (medium): LC #252 
 - Intro to "Cyclic Sort" Pattern: Lecture & Discussion
   - [] Cyclic Sort (easy)
 
@@ -143,7 +143,7 @@ program containing the following:
 - "Cyclic Sort" Continued ( Each Pair Choose Two! )
   - [] Find the Missing Number (easy): LC #268 
   - [] Find all Missing Numbers (easy): LC #448 
-  - [] Find the Duplicate Number (easy): LC #287 
+  - [x] Find the Duplicate Number (easy): LC #287 
   - [] Find all Duplicate Numbers (easy): LC #442 
 - Intro to "In Place Reversal of a LL" Pattern: Lecture & Discussion
   - [] Reverse a LinkedList (easy): LC #206
