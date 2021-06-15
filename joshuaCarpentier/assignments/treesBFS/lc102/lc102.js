@@ -12,16 +12,8 @@ class TreeNode {
   }
 };
 
-
-const traverse = function(root) {
-  levels = [];
-
-
-  return levels;
-};
-
 /**
- *     12
+ *     12 bfs vist each level
  *   /    \
  *  7       1
  * / \     / \
@@ -30,9 +22,18 @@ const traverse = function(root) {
 Input: root = [12,7,1,9,null,10,5]
 Output: [[12],[7,1],[9,],[10,5]]
 
+dfs vist each side completley before other side
 
 
 */
+const traverse = function(root) {
+  levels = [];
+
+
+  return levels;
+};
+
+
 
 
 var root = new TreeNode(12);
