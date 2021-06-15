@@ -1,7 +1,9 @@
 // Problem Statement #
 
-// Given a binary tree, populate an array to represent its level-by-level traversal. 
-// You should populate the values of all nodes of each level from left to right in separate sub-arrays.
+// Given a binary tree, populate an array to represent its 
+// level-by-level traversal. 
+// You should populate the values of all nodes of each 
+// level from left to right in separate sub-arrays.
 
 class TreeNode {
 
@@ -17,17 +19,25 @@ class TreeNode {
  *   /    \
  *  7       1
  * / \     / \
-  9  null  10 5 
-
+  9  null 10  5 
+ / \      / \ / \
+ null--------null
 Input: root = [12,7,1,9,null,10,5]
-Output: [[12],[7,1],[9,],[10,5]]
+Output: [[12],[7,1],[9,10,5]]
 
 dfs vist each side completley before other side
 
 
 */
 const traverse = function(root) {
-  levels = [];
+
+  if(!root) return [];
+  const queue = [root];
+  const levels = [];
+
+  while(queue.length !== 0){
+    console.log(queue)
+  }
 
 
   return levels;
