@@ -2,6 +2,33 @@
 
 // Given the head of a Singly LinkedList, reverse the LinkedList. Write a function to return the new head of the reversed LinkedList.
 
+/*
+input: head ptr to a linked-list.
+output: head ptr, to the same linked-list reversed.
+
+
+        h
+null <- 1 -> 2 -> 3 -> 4 -> 5->null
+
+
+inital:
+    current: head
+    prv: null
+
+while: nex.next ISNOT null
+
+0:
+    next: current.next
+    current.next: prev
+    prv: current
+    curr: nextptr
+    
+head = next
+
+return head
+
+*/
+
 class Node {
   constructor(value, next = null) {
     this.value = value;
