@@ -3,27 +3,47 @@
 // Given a binary tree, populate an array to represent its level-by-level traversal in reverse order, i.e., the lowest level comes first. You should populate the values of all nodes in each level from left to right in separate sub-arrays.
 
 class TreeNode {
-
   constructor(value) {
     this.value = value;
     this.left = null;
     this.right = null;
   }
-};
-
-const traverse = function(root) {
+}
+//go through tree level by level
+//add nodes from left to right on each level to a subarray
+//add subarray to beginning of result of array
+const traverse = function (root) {
+  if (root === null) return [];
   result = [];
   // TODO: Write your code here
+  let queue = [root];
+  while (queue.length > 0) {
+    let levelSize = queue.length;
+    let levelArray = [];
+    for (let i = 0; i < levelSize; i++) {
+      let currentNode = queue.shift();
+      levelArray.push(currentNode.value);
+      if (currentNode.left !== null) queue.push(currentNode.left);
+      if (currentNode.right !== null) queue.push(currentNode.right);
+    }
+    result.unshift(levelArray);
+  }
   return result;
-}
+};
 
-var root = new TreeNode(12)
-root.left = new TreeNode(7)
-root.right = new TreeNode(1)
-root.left.left = new TreeNode(9)
-root.right.left = new TreeNode(10)
-root.right.right = new TreeNode(5)
-console.log(`Reverse level order traversal: ${traverse(root)}`)
+//     12
+//   7    1
+// 9     10  5
+
+// [[9 10 5] [7 1] [12]]
+
+var root = new TreeNode(12);
+root.left = new TreeNode(7);
+root.right = new TreeNode(1);
+root.left.left = new TreeNode(9);
+root.right.left = new TreeNode(10);
+root.right.right = new TreeNode(5);
+console.log(`Reverse level order traversal: ${traverse(root)}`);
 
 // Solution
 // -----
