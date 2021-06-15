@@ -162,7 +162,7 @@ We will start with a brief introduction of each pattern before jumping into the 
 - "In Place Reversal of a LL" Continued ( Each Pair Choose One! )
   - [] Reverse a LinkedList (easy): LC #206
   - [] Reverse a Sub-list (medium): LC #92
-  - [] Reverse every K-element Sub-list (medium): LC #25
+  - [X] Reverse every K-element Sub-list (medium): LC #25
 - Intro to "Trees: BFS" Pattern & Discussion
   - [] Binary Tree Level Order Traversal (easy): LC #102
 
