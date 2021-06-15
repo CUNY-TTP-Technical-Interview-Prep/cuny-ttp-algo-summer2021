@@ -128,7 +128,7 @@ We will start with a brief introduction of each pattern before jumping into the 
 #### 06/08 (Tues):
 
 - "Fast & Slow Pointers" Continued: P2P Mock Interview ( Each Pair Choose One! )
-  - [] Start of LinkedList Cycle (medium): LC #142
+  - [x] Start of LinkedList Cycle (medium): LC #142
   - [x] Happy Number (medium): LC #202
   - [x] Middle of the LinkedList (easy): LC #876
 - Intro to "Merge Intervals" Pattern: Lecture & Discussion
