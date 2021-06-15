@@ -157,7 +157,7 @@ program containing the following:
   - [X] Reverse a Sub-list (medium): LC #92
   - [] Reverse every K-element Sub-list (medium): LC #25 
 - Intro to "Trees: BFS" Pattern & Discussion
-  - [] Binary Tree Level Order Traversal (easy): LC #102
+  - [X] Binary Tree Level Order Traversal (easy): LC #102
 
 
 #### 06/15 (Tues):
