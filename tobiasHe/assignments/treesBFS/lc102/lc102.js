@@ -9,6 +9,16 @@ class TreeNode {
 		this.right = null;
 	}
 }
+/* 
+  using BFS to traverse the tree, while keeping the values of each level
+  initialize a queue with root
+  keep track of queueLength, to move on to next levels
+  shift out the queue and check if current.value has any left and right children
+  if there are any, add them to the queue 
+  then push the value of that level into levels
+  return levels 
+
+*/
 
 const traverse = function(root) {
 	levels = [];
