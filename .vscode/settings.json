@@ -29,7 +29,8 @@
     "tuple": "cpp",
     "type_traits": "cpp",
     "iosfwd": "cpp",
-    "ios": "cpp"
+    "ios": "cpp",
+    "queue": "cpp"
   },
   "eslint.options": {
   
