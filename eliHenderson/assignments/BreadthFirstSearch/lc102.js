@@ -2,6 +2,43 @@
 
 // Given a binary tree, populate an array to represent its level-by-level traversal. You should populate the values of all nodes of each level from left to right in separate sub-arrays.
 
+/**
+ * Overview:
+ *  we can create a queue using a list
+ *  insert the root into the queue by unshifting
+ *  while queue is not empty
+ *  capture the lvl size
+ *  create an array that holds the current levels nodes
+ *  loop through the queue lvl amounts of times
+ *  save the shifted queue node
+ *   push the node in to the temp list
+ *    check for children
+ *    unshift the children if they exist
+ *  unshift the current level into the results list
+ *
+ * return the results list
+ *
+ *  queue(root)
+ *  while(queue not empty)
+ *    queue size
+ *    current lvl list
+ *    for(0 - queue size)
+ *      node = queue.shift()
+ *      currentlvl.push(node.val)
+ *
+ *      if(left or right child) queue.push( child)
+ *
+ *  result.push(currentlvl)
+ *
+ * return result
+ *
+ * time: O(N)
+ * space: O(1)
+ *
+ * edge:
+ *  what if the root is null
+ *  what if the root value is null
+ */
 class TreeNode {
   constructor(value) {
     this.value = value;
@@ -11,6 +48,7 @@ class TreeNode {
 }
 
 const traverse = function (root) {
+  if (!root) return [];
   result = [];
   // TODO: Write your code here
   //create a queue

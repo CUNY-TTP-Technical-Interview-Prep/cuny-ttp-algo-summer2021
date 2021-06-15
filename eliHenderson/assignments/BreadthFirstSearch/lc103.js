@@ -34,6 +34,9 @@
  * Time: O(N)
  * Space: O(1)
  *
+ *  * edge:
+ *  what if the root is null
+ *  what if the root value is null
  *
  */
 
@@ -46,6 +49,43 @@ class TreeNode {
 }
 
 const traverse = function (root) {
+  if (!root) return [];
+  result = [];
+  let queue = []; //init the queue
+  queue.push(root); // store the root
+
+  //create the toggle value
+  let zigZag = true;
+
+  while (queue.length > 0) {
+    // loop while queue is not empty
+    //create the current level array
+    let currLvl = [];
+    //store the queue length
+    let lvlSize = queue.length;
+
+    //loop queue lengths amount of times
+    for (let i = 0; i < lvlSize; i++) {
+      //collect the shifted queue value
+      let currentNode = queue.shift();
+      //insert the current node into the current level array (push if toggle is true, unshift if false)
+      zigZag
+        ? currLvl.push(currentNode.value)
+        : currLvl.unshift(currentNode.value);
+
+      //check if the current Node has children
+      if (currentNode.left) queue.push(currentNode.left);
+      if (currentNode.right) queue.push(currentNode.right);
+    }
+
+    result.push(currLvl);
+    zigZag = !zigZag;
+  }
+
+  return result;
+};
+
+const traverse = (root) => {
   result = [];
   let queue = []; //init the queue
   queue.push(root); // store the root
