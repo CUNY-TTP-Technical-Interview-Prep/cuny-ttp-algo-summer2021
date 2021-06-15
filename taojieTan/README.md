@@ -171,7 +171,7 @@ We will start with a brief introduction of each pattern before jumping into the 
 - "Trees: BFS" Continued ( Each Pair Choose Two! )
   - [] Reverse Level Order Traversal (easy): LC #107
   - [] Zigzag Traversal (medium): LC #103
-  - [] Level Averages in a Binary Tree (easy): LC #637
+  - [x] Level Averages in a Binary Tree (easy): LC #637
 
 #### 06/16 (Wed):
 
