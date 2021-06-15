@@ -151,7 +151,7 @@ We will start with a brief introduction of each pattern before jumping into the 
   - [] Find the Duplicate Number (easy): LC #287
   - [x] Find all Duplicate Numbers (medium): LC #442
 - Intro to "In Place Reversal of a LL" Pattern: Lecture & Discussion
-  - [] Reverse a LinkedList (easy): LC #206
+  - [x] Reverse a LinkedList (easy): LC #206
 
 ### .
 
@@ -160,9 +160,9 @@ We will start with a brief introduction of each pattern before jumping into the 
 #### 06/14 (Mon):
 
 - "In Place Reversal of a LL" Continued ( Each Pair Choose One! )
-  - [] Reverse a LinkedList (easy): LC #206
-  - [] Reverse a Sub-list (medium): LC #92
-  - [] Reverse every K-element Sub-list (medium): LC #25
+  - [x] Reverse a LinkedList (easy): LC #206
+  - [x] Reverse a Sub-list (medium): LC #92
+  - [] Reverse every K-element Sub-list (hard): LC #25
 - Intro to "Trees: BFS" Pattern & Discussion
   - [] Binary Tree Level Order Traversal (easy): LC #102
 
