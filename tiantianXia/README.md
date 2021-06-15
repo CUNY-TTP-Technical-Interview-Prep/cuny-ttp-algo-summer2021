@@ -146,7 +146,7 @@ program containing the following:
   - [] Find the Duplicate Number (easy): LC #287 
   - [] Find all Duplicate Numbers (easy): LC #442 
 - Intro to "In Place Reversal of a LL" Pattern: Lecture & Discussion
-  - [] Reverse a LinkedList (easy): LC #206
+  - [x] Reverse a LinkedList (easy): LC #206
   
 ### .
 ### /// Week Three ///
