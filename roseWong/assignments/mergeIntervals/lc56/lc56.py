@@ -2,6 +2,19 @@
 
 # Given a list of intervals, merge all the overlapping intervals to produce a list that has only mutually exclusive intervals.
 
+
+# Edge case: if the list has only 1 or 0 intervals, we just return the list.
+# The list may not be sorted, so first step is to sort the list, using the
+# first element of each interval. 
+# Initialize an array of merged intervals which is what the function will return.
+# Initialize a start pointer which will point to the first element of the first interval'
+# in the sorted list.
+# Initialize and end pointer which will point to the second/last element of the first
+# interval in the sorted list
+#
+
+
+
 from __future__ import print_function
 
 
@@ -9,6 +22,15 @@ class Interval:
   def __init__(self, start, end):
     self.start = start
     self.end = end
+
+    
+  def print_interval(self):
+    print("[" + str(self.start) + ", " + str(self.end) + "]", end='')
+
+
+  def print_interval(self):
+    print("[" + str(self.start) + ", " + str(self.end) + "]", end='')
+
 
   def print_interval(self):
     print("[" + str(self.start) + ", " + str(self.end) + "]", end='')
@@ -20,6 +42,22 @@ def merge(intervals):
     return intervals
 # sort the intervals on the start time
   intervals.sort(key=lambda x: x.start)
+
+  merged = []
+  start = intervals[0].start  # the element at start of first interval
+  end = intervals[0].end      # the element at end of first interval
+# print (start, '', end)
+  for i in range(1, len(intervals)): #range - final number (len(intervals)) not included
+    current = intervals[i]
+    if current.start <= end:  # overlapping intervals, adjust the 'end'
+      end = max(current.end, end)
+    else:  # non-overlapping interval, add the previous internval and reset
+      merged.append(Interval(start, end))
+      start = current.start
+      end = current.end
+# add the last interval
+  merged.append(Interval(start, end))
+
   mergedIntervals = []
   start = intervals[0].start
   end = intervals[0].end
@@ -35,6 +73,7 @@ def merge(intervals):
 #   # add the last interval
 #   mergedIntervals.append(Interval(start, end))
 #   return mergedIntervals
+
   return merged
 
 
