@@ -1,22 +1,9 @@
 // Problem Statement #
 
-// Given the head of a LinkedList and two positions ‘p’ and ‘q’,
+// Given the head of a LinkedList and two positions ‘p’ and ‘q’, reverse the LinkedList from position ‘p’ to ‘q’.
 
-//reverse the LinkedList from position ‘p’ to ‘q’.
-
-//    [2] -> [4] -> [6] -> [8] -> [10]
-//-> null
-//   traverse the nodes to p
-
-//   while (currentnode isnt q node)
-/*
-      currentnode = currentnodenext
-  */
-//
-
-//      p = 2, q = 4
 class Node {
-  constructor(value, next = null) {
+  constructor(value, next=null){
     this.value = value;
     this.next = next;
   }
@@ -30,55 +17,22 @@ class Node {
     }
     return result;
   }
-}
+};
 
-const reverse_sub_list = function (head, p, q) {
-  if (p === q) {
-    return head;
-  }
-
-  let current = head,
-    previous = null;
-  // I think prev gets to the node right before p and current
-  //is on p
-  while (current !== null && i < p - 1) {
-    previous = current;
-    current = current.next;
-    i += 1;
-  }
-  const last_node_of_first_part = previous;
-  const last_node_of_sub_list = current;
-  let next = null;
-
-  i = 0;
-  while (current !== null && i < q - p + 1) {
-    next = current.next;
-    current.next = previous;
-    previous = current;
-    current = next;
-    i += 1;
-  }
-  if (last_node_of_first_part !== null) {
-    last_node_of_first_part = previous;
-  } else {
-    head = previous;
-  }
-
-  last_node_of_sub_list = current;
+const reverse_sub_list = function(head, p, q) {
   // TODO: Write your code here
   return head;
 };
 
-head = new Node(1);
-head.next = new Node(2);
-head.next.next = new Node(3);
-head.next.next.next = new Node(4);
-head.next.next.next.next = new Node(5);
 
-console.log(`Nodes of original LinkedList are: ${head.get_list()}`);
-console.log(
-  `Nodes of reversed LinkedList are: ${reverse_sub_list(head, 2, 4).get_list()}`
-);
+head = new Node(1)
+head.next = new Node(2)
+head.next.next = new Node(3)
+head.next.next.next = new Node(4)
+head.next.next.next.next = new Node(5)
+
+console.log(`Nodes of original LinkedList are: ${head.get_list()}`)
+console.log(`Nodes of reversed LinkedList are: ${reverse_sub_list(head, 2, 4).get_list()}`)
 
 // Solution
 // -----
