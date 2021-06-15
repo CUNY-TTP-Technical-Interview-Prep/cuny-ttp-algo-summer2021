@@ -22,8 +22,8 @@ class Node {
   }
 
   get_list() {
-    result = "";
-    temp = this;
+    let result = "";
+    let temp = this;
     while (temp !== null) {
       result += temp.value + " ";
       temp = temp.next;
@@ -39,6 +39,7 @@ const reverse_sub_list = function (head, p, q) {
 
   let current = head,
     previous = null;
+  let i = 0;
   // I think prev gets to the node right before p and current
   //is on p
   while (current !== null && i < p - 1) {
@@ -59,12 +60,12 @@ const reverse_sub_list = function (head, p, q) {
     i += 1;
   }
   if (last_node_of_first_part !== null) {
-    last_node_of_first_part = previous;
+    last_node_of_first_part.next = previous;
   } else {
     head = previous;
   }
 
-  last_node_of_sub_list = current;
+  last_node_of_sub_list.next = current;
   // TODO: Write your code here
   return head;
 };
