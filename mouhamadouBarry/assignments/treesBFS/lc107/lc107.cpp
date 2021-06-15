@@ -1,9 +1,10 @@
 // Problem Statement #
 
-// Given a binary tree, populate an array to represent its level-by-level traversal. You should populate the values of all nodes of each level from left to right in separate sub-arrays.
+// Given a binary tree, populate an array to represent its level-by-level traversal in reverse order, i.e., the lowest level comes first. You should populate the values of all nodes in each level from left to right in separate sub-arrays.
 
 using namespace std;
 
+#include <deque>
 #include <iostream>
 #include <queue>
 
@@ -19,15 +20,14 @@ class TreeNode {
   }
 };
 
-class LevelOrderTraversal {
+class ReverseLevelOrderTraversal {
  public:
-  static vector<vector<int>> traverse(TreeNode *root) {
-    vector<vector<int>> result;
+  static deque<vector<int>> traverse(TreeNode *root) {
+    deque<vector<int>> result = deque<vector<int>>();
     // TODO: Write your code here
     return result;
   }
 };
-
 int main(int argc, char *argv[]) {
   TreeNode *root = new TreeNode(12);
   root->left = new TreeNode(7);
@@ -35,10 +35,11 @@ int main(int argc, char *argv[]) {
   root->left->left = new TreeNode(9);
   root->right->left = new TreeNode(10);
   root->right->right = new TreeNode(5);
-  vector<vector<int>> result = LevelOrderTraversal::traverse(root);
-  cout << "Level order traversal: ";
-  for (auto vec : result) {
-    for (auto num : vec) {
+  auto result = ReverseLevelOrderTraversal::traverse(root);
+
+  cout << "Reverse level order traversal: ";
+  for (auto que : result) {
+    for (auto num : que) {
       cout << num << " ";
     }
     cout << endl;
@@ -47,13 +48,12 @@ int main(int argc, char *argv[]) {
 
 
 
-
 // Solution
 // -----
-// class LevelOrderTraversal {
+// class ReverseLevelOrderTraversal {
 //  public:
-//   static vector<vector<int>> traverse(TreeNode *root) {
-//     vector<vector<int>> result;
+//   static deque<vector<int>> traverse(TreeNode *root) {
+//     deque<vector<int>> result = deque<vector<int>>();
 //     if (root == nullptr) {
 //       return result;
 //     }
@@ -68,7 +68,7 @@ int main(int argc, char *argv[]) {
 //         queue.pop();
 //         // add the node to the current level
 //         currentLevel.push_back(currentNode->val);
-//         // insert the children of current node in the queue
+//         // insert the children of current node to the queue
 //         if (currentNode->left != nullptr) {
 //           queue.push(currentNode->left);
 //         }
@@ -76,7 +76,8 @@ int main(int argc, char *argv[]) {
 //           queue.push(currentNode->right);
 //         }
 //       }
-//       result.push_back(currentLevel);
+//       // append the current level at the beginning
+//       result.push_front(currentLevel);
 //     }
 
 //     return result;

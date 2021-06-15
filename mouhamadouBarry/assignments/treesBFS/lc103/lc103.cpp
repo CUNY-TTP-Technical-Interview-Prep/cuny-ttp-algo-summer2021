@@ -1,11 +1,12 @@
 // Problem Statement #
 
-// Given a binary tree, populate an array to represent its level-by-level traversal. You should populate the values of all nodes of each level from left to right in separate sub-arrays.
+// Given a binary tree, populate an array to represent its zigzag level order traversal. You should populate the values of all nodes of the first level from left to right, then right to left for the next level and keep alternating in the same manner for the following levels.
 
 using namespace std;
 
 #include <iostream>
 #include <queue>
+#include <vector>
 
 class TreeNode {
  public:
@@ -19,7 +20,7 @@ class TreeNode {
   }
 };
 
-class LevelOrderTraversal {
+class ZigzagTraversal {
  public:
   static vector<vector<int>> traverse(TreeNode *root) {
     vector<vector<int>> result;
@@ -35,13 +36,14 @@ int main(int argc, char *argv[]) {
   root->left->left = new TreeNode(9);
   root->right->left = new TreeNode(10);
   root->right->right = new TreeNode(5);
-  vector<vector<int>> result = LevelOrderTraversal::traverse(root);
-  cout << "Level order traversal: ";
+  root->right->left->left = new TreeNode(20);
+  root->right->left->right = new TreeNode(17);
+  vector<vector<int>> result = ZigzagTraversal::traverse(root);
+  cout << "Zigzag traversal: ";
   for (auto vec : result) {
     for (auto num : vec) {
       cout << num << " ";
     }
-    cout << endl;
   }
 }
 
@@ -50,7 +52,7 @@ int main(int argc, char *argv[]) {
 
 // Solution
 // -----
-// class LevelOrderTraversal {
+// class ZigzagTraversal {
 //  public:
 //   static vector<vector<int>> traverse(TreeNode *root) {
 //     vector<vector<int>> result;
@@ -60,14 +62,21 @@ int main(int argc, char *argv[]) {
 
 //     queue<TreeNode *> queue;
 //     queue.push(root);
+//     bool leftToRight = true;
 //     while (!queue.empty()) {
 //       int levelSize = queue.size();
-//       vector<int> currentLevel;
+//       vector<int> currentLevel(levelSize);
 //       for (int i = 0; i < levelSize; i++) {
 //         TreeNode *currentNode = queue.front();
 //         queue.pop();
-//         // add the node to the current level
-//         currentLevel.push_back(currentNode->val);
+
+//         // add the node to the current level based on the traverse direction
+//         if (leftToRight) {
+//           currentLevel[i] = currentNode->val;
+//         } else {
+//           currentLevel[levelSize - 1 - i] = currentNode->val;
+//         }
+
 //         // insert the children of current node in the queue
 //         if (currentNode->left != nullptr) {
 //           queue.push(currentNode->left);
@@ -77,6 +86,8 @@ int main(int argc, char *argv[]) {
 //         }
 //       }
 //       result.push_back(currentLevel);
+//       // reverse the traversal direction
+//       leftToRight = !leftToRight;
 //     }
 
 //     return result;
