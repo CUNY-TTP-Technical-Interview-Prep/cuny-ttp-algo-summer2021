@@ -3,7 +3,30 @@
 // Given the head of a LinkedList and a number ‘k’, reverse every ‘k’ sized sub-list starting from the head.
 
 // If, in the end, you are left with a sub-list with less than ‘k’ elements, reverse it too.
+/*
+  Input: 
+    -A linked list
+    -A k integer
+  Output:
+    Every k sub-list of the linked list should reversed
 
+  Variables:
+    Count - A counter
+    head - points to the 
+    size -  size of the linked list
+
+  Logic:
+    use the for loop to iterate through the linked list 
+
+    The head pointer assigned to the end of the linked
+    Then go in reverse order
+
+[[3,2,1],[4,5,6],[7,8]]
+head = 7
+decrease the pointer 
+
+[8,7],6,5,4,3,2,1
+*/
 class Node {
   constructor(value, next=null){
     this.value = value;
@@ -11,8 +34,8 @@ class Node {
   }
 
   get_list() {
-    result = "";
-    temp = this;
+    let result = "";
+    let temp = this;
     while (temp !== null) {
       result += temp.value + " ";
       temp = temp.next;
@@ -21,10 +44,27 @@ class Node {
   }
 };
 
-
-
 const reverse_every_k_elements = function(head, k) {
   // TODO: Write your code here
+
+  if (k <= 1 || head === null) {
+    return head;
+  }
+
+  let current = head
+  let previous = null
+  while (current != null) {
+    let next = null; // will be used to temporarily store the next node
+    let i = 0;
+    while (i < k) { // reverse 'k' nodes
+      next = current.next;
+      current.next = previous;
+      previous = current;
+      current = next;
+      i ++;
+    }
+    
+  }
   return head;
 }
 
@@ -40,6 +80,25 @@ head.next.next.next.next.next.next.next = new Node(8)
 
 console.log(`Nodes of original LinkedList are: ${head.get_list()}`)
 console.log(`Nodes of reversed LinkedList are: ${reverse_every_k_elements(head, 3).get_list()}`)
+
+//---------------------------My initial work-------------------------------------------------------------
+  //This is to reverse the list   
+
+  // while (current !== null) {
+  //   next = current.next;
+  //   current.next = previous;
+  //   previous = current;
+  //   current = next;
+  // }
+//THIS DOES NOT WORK. I have to section them off first and then reverse the order. NOT THE OTHER WAY AROUND
+  //---------------------The next thing I should do is---
+  //next is slpit them up
+  //if the list is odd we take the mod/reminder of the size and w.e we are left with is the first sub-list
+  // return previous; 
+    //There can only be one
+  // return head;
+
+//-------------------------------END OF MY INITIAL WORK--------------------------------------------------
 
 // Solution
 // -----
