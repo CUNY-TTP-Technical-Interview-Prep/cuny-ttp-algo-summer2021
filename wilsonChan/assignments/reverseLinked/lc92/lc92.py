@@ -4,30 +4,6 @@
 
 '''
 
-EXAMPLE:
-[1] [2] [3] [4] [5] [6] [7] [8] [9] [10]
-         p               q
-
- H
-
-         7  6  5  4  3
-p = q
-7 = 3
-6 = 4
-5 = 5
-
-
-
-
-(head, 2, 4)
-[1] [2] [3] [4] [5]
- H   p       q
-
-
-if next node is null = done
-
-
-
 Given:
 -p and q positions
 -head node
@@ -37,20 +13,45 @@ Result:
 
 
 
+EXAMPLE # 1:
+[1] [2] [3] [4] [5] [6] [7] [8] [9] [10]
+         p               q
+ H
+        [7] [6] [5] [4] [3]
+            Swapping
+            p <=> q
+            3 <=> 7
+            4 <=> 6
+            5 <=> 5
+
+EXAMPLE # 2
+(head, 2, 4)
+[1] [2] [3] [4] [5]
+ H   p       q
+    [4] [3] [2]
+      Swapping
+      p <=> q
+      2 <=> 4
+      3 <=> 3
+
+Misc. Notes
+-If next node is null = done
+
+
+
 Variables:
--head (start)
--current (what position we're on)
--p
--q
--
+-head (starting node)
+-current (what node position we're on)
+-p (left node position)
+-q (right node position)
 
 
 
 
 [1] [2] [3] [4] [5] [6] [7] [8] [9] [10]
          p               q
-
  H
+ C
 
 
 STEPS:
@@ -104,20 +105,37 @@ def reverse_sub_list(head, p, q):
 
 #  H
 
-  start, current = head, head
-  i = 1
+  #Initialize Variables
+  prev = None
+  current = head
+  pos = 1
+
 
   #while loop 1 (traverse between starting node and p)
-  while i < p:
-    start = current
+  while pos < p and current:
+    prev = current
     current = current.next
-    i += 1
-  print("testing 1 lolololo" + str(current.value))
-
-  #while loop 2 (traverse between p and p)
-  while p <= q:
-
+    pos += 1
+  
+  start = current
+  end = None
+  
+  #while loop 2 (traverse between p and q)
+  while pos <= q and current:
     next = current.next
+    current.next = end
+    end = current
+    current = next
+    pos += 1
+
+  start.next = current
+
+  if not prev:
+    head = end
+  else:
+    prev.next = end
+
+  return head
 
 
 
@@ -170,8 +188,22 @@ def main():
   print("Nodes of reversed LinkedList are: ", end='')
   result.print_list()
 
+#############################################
+#MY EXAMPLE
+  # head = Node(1)
+  # head.next = Node(2)
+  # head.next.next = Node(3)
+  # head.next.next.next = Node(4)
+  # head.next.next.next.next = Node(5)
+  # head.next.next.next.next.next = Node(6)
+  # head.next.next.next.next.next.next = Node(7)
 
-
+  # print("Nodes of original LinkedList are: ", end='')
+  # head.print_list()
+  # result = reverse_sub_list(head, 2, 6)
+  # print("Nodes of reversed LinkedList are: ", end='')
+  # result.print_list()
+#############################################
 
 
 
