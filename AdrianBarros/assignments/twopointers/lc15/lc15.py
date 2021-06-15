@@ -1,24 +1,64 @@
 # Problem Statement #
 # Given an array of unsorted numbers, find all unique triplets in it that add up to zero.
+'''
+input: array unsorted
+output a list of triplets
+
+Step 1: we sort the array
+Step 2: we loop the array and for each non reapeated value we will look for their other two
+Step 3: we will move this process to another funtion for simplisity
+Step 4: due to the nature of matematics to make a sum to 0 we can also calculate 1st + 2st = -(3rd)
+        so will apply the twp pointer approach to find the pair that equals -i or current number
+    we basically make this a two sum problem
+Step 5: add it to the array 
+Final: return 
+
+'''
+
 
 def search_triplets(arr):
-  triplets = []
-  # TODO: Write your code here
-  return triplets
+    triplets = []
+    # TODO: Write your code here
+    # Step 1: we sort the array
+    arr.sort()
+    # Step 2: we loop the array and for each non reapeated value we will look for their other two
+    for i in range(len(arr)):
+        # make sure that we do not use repeted numbers
+        if i > 0 and arr[i] == arr[i-1]:
+            continue
+        else:
+            # Step 3: we force this question into a sum of 2
+            findPair(arr, -arr[i], i+1, triplets)
+    return triplets
+
+
+def findPair(arr, target, start, triplets):
+    end = len(arr)-1
+    while start < end:  # make sure they do not touch
+        curr_sum = arr[start] + arr[end]
+        if curr_sum > target:
+            end -= 1
+        if curr_sum < target:
+            start += 1
+        if curr_sum == target:
+            # Step 5: add it to the array
+            triplets.append([-target, arr[start], arr[end]])
+            start += 1
+            end -= 1
+            # we move the first pointer and skipping repeats
+            while start < end and arr[start] == arr[start-1]:
+                start += 1
+            # same thing with sec ptr
+            while start < end and arr[end] == arr[end+1]:
+                end -= 1
 
 
 def main():
-  print(search_triplets([-3, 0, 1, 2, -1, 1, -2]))
-  print(search_triplets([-5, 2, -1, -2, 3]))
+    print(search_triplets([-3, 0, 1, 2, -1, 1, -2]))
+    print(search_triplets([-5, 2, -1, -2, 3]))
 
 
 main()
-
-
-
-
-
-
 
 
 # Solution

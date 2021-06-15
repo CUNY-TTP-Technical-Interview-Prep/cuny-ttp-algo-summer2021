@@ -108,45 +108,45 @@ program containing the following:
 - "Two Pointers" Continued: P2P Mock Interview ( Each Pair Choose Two! )
   - [X] Remove Duplicates (easy): LC #26
   - [X] Squaring a Sorted Array (easy): LC #977
-  - [] Triplet Sum to Zero (medium): LC #15
-  - [] Triplet Sum Close to Target (medium): LC #16
+  - [X] Triplet Sum to Zero (medium): LC #15
+  - [X] Triplet Sum Close to Target (medium): LC #16
 
 ### .
 ### /// Week Two ///
 
 #### 06/07 (Mon):
 - "Two Pointers" Continued: P2P Mock Interview ( Each Pair Choose One! )
-  - [] Triplets with Smaller Sum (medium): LC #259
-  - [] Subarrays with Product Less than a Target (medium): LC #713 
-  - [] Dutch National Flag Problem (medium): LC #75
+  - [X] Triplets with Smaller Sum (medium): LC #259
+  - [X] Subarrays with Product Less than a Target (medium): LC #713 
+  - [X] Dutch National Flag Problem (medium): LC #75
 - Intro to "Fast & Slow Pointers" Pattern: Lecture & Discussion
-  - [] LinkedList Cycle (easy): LC #141
+  - [X] LinkedList Cycle (easy): LC #141
 
 
 #### 06/08 (Tues):
 - "Fast & Slow Pointers" Continued: P2P Mock Interview ( Each Pair Choose One! )
-  - [] Start of LinkedList Cycle (medium): LC #142 
-  - [] Happy Number (medium): LC #202
-  - [] Middle of the LinkedList (easy): LC #876 
+  - [X] Start of LinkedList Cycle (medium): LC #142 
+  - [X] Happy Number (medium): LC #202
+  - [X] Middle of the LinkedList (easy): LC #876 
 - Intro to "Merge Intervals" Pattern: Lecture & Discussion
-  - [] Merge Intervals (medium): LC #56
+  - [X] Merge Intervals (medium): LC #56
 
 #### 06/09 (Wed):
 - "Merge Intervals" Continued ( Each Pair Choose One! )
-  - [] Insert Interval (medium): LC #57
+  - [X] Insert Interval (medium): LC #57
   - [] Intervals Intersection (medium): LC #986 
   - [] Conflicting Appointments (medium): LC #252 
 - Intro to "Cyclic Sort" Pattern: Lecture & Discussion
-  - [] Cyclic Sort (easy)
+  - [X] Cyclic Sort (easy)
 
 #### 06/10 (Thur):
 - "Cyclic Sort" Continued ( Each Pair Choose Two! )
-  - [] Find the Missing Number (easy): LC #268 
+  - [X] Find the Missing Number (easy): LC #268 
   - [] Find all Missing Numbers (easy): LC #448 
   - [] Find the Duplicate Number (easy): LC #287 
   - [] Find all Duplicate Numbers (easy): LC #442 
 - Intro to "In Place Reversal of a LL" Pattern: Lecture & Discussion
-  - [] Reverse a LinkedList (easy): LC #206
+  - [X] Reverse a LinkedList (easy): LC #206
   
 ### .
 ### /// Week Three ///
