@@ -2,8 +2,28 @@
 
 // We are given an unsorted array containing ‘n+1’ numbers taken from the range 1 to ‘n’. The array has only one duplicate but it can be repeated multiple times. Find that duplicate number without using any extra space. You are, however, allowed to modify the input array.
 
-const find_duplicate = function(nums) {
+function find_duplicate(nums){
   // TODO: Write your code here
+
+
+  let i  = 0;
+
+  while ( i < nums.length)
+  {
+  if( nums[i] !== i + 1)
+  {  
+    let j = nums[i]-1
+    
+    if( nums[i] !== nums[j])
+      [ nums[i], nums[j]] = [nums[j], nums[i]]
+    else
+     return nums[i];
+  }
+  else
+   i++
+
+  }
+
   return -1;
 };
 
