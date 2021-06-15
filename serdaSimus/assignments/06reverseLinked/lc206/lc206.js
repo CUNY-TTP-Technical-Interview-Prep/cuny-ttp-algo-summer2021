@@ -9,8 +9,8 @@ class Node {
   }
 
   get_list() {
-    result = "";
-    temp = this;
+    let result = "";
+    let temp = this;
     while (temp !== null) {
       result += temp.value + " ";
       temp = temp.next;
@@ -20,8 +20,24 @@ class Node {
 }
 
 const reverse = function (head) {
-  // TODO: Write your code here
-  return head;
+  if (head == null) return null;
+  if (head.next === null) return head;
+
+  // prv, current, next pointers
+  let current = head,
+    prev = null,
+    next = head;
+
+  while (current !== null) {
+    next = current.next; // hold a ptr, to the next value, so we can always be able to move forward as long as we haven't reached null.
+    current.next = prev; // to point current to the previous node, effectively flip the arrow.
+    prev = current; // the old current is
+    current = next; // the
+  }
+
+  // move head ptr to current. which was the previous last node.
+  // this is new the start of the reversed linked-list.
+  return prev;
 };
 
 head = new Node(2);
