@@ -171,12 +171,12 @@ We will start with a brief introduction of each pattern before jumping into the 
 - "Trees: BFS" Continued ( Each Pair Choose Two! )
   - [x] Reverse Level Order Traversal (easy): LC #107
   - [] Zigzag Traversal (medium): LC #103
-  - [] Level Averages in a Binary Tree (easy): LC #637
+  - [X] Level Averages in a Binary Tree (easy): LC #637
 
 #### 06/16 (Wed):
 
 - "Trees: BFS" Continued ( Each Pair Choose One! )
-  - [] Minimum Depth of a Binary Tree (easy): LC #111 & LC #104
+  - [X] Minimum Depth of a Binary Tree (easy): LC #111 & LC #104
   - [] Level Order Successor (easy)
   - [] Connect Level Order Siblings (medium): LC #117
 - Intro to "Trees: DFS" Pattern & Discussion
