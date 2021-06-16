@@ -26,8 +26,8 @@ function max_subarray_size_k(k, arr) {
     if(endWindow >= minIndex ){ // Check if endWindow is at index where index >= k-1
       // If true, then windowSum has the current sum of our window where windowLength == k
       maxSum = windowSum > maxSum ? windowSum : maxSum; // Update max sum
-      windowSum -= arr[startWindow]; // Remove value at startWindow from windowSum since we are shifting the startWindow index to the right
-      startWindow++; // Shift startWindow to the right
+      windowSum -= arr[startWindow++]; // Remove value at startWindow from windowSum since we are shifting the startWindow index to the right
+      // Also shifting startWindow to the right
     }
     endWindow++; // Shift endWindow to the right
   }
