@@ -5,7 +5,29 @@
 const find_missing_numbers = function(nums) {
   missingNumbers = [];
   // TODO: Write your code here
-  return missingNumbers;
+  let i =0;
+
+  //Sort
+  while( i < nums.length)
+  {
+    let j = nums[i]-1;
+
+    if(nums[i] !== nums[j])
+      [nums[i], nums[j]] = [ nums[j] , nums[i]]
+    else
+      i++;
+
+  }
+
+  missing = []
+  for(let i = 1; i < nums.length+1; i++)
+  {
+    if( i !== nums[i-1])
+      missing.push(i)
+  }
+
+
+  return missing;
 };
 
 console.log(find_missing_numbers([2, 3, 1, 8, 2, 3, 5, 1]));
