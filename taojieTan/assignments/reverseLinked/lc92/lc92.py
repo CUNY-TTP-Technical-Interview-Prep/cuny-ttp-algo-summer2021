@@ -58,7 +58,7 @@ def reverse_sub_list(head, p, q):
   next = curr
 
   i = 0
-  while next is not None and i < (q - p + 1):
+  while next is not None and i <= q - p:
     next = curr.next
     curr.next = prev
     prev = curr 
