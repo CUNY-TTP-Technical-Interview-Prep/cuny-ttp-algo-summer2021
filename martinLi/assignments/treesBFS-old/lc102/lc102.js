@@ -1,6 +1,10 @@
 // Problem Statement #
 
-// Given a binary tree, populate an array to represent its level-by-level traversal. You should populate the values of all nodes of each level from left to right in separate sub-arrays.
+// Given a binary tree, populate an array to
+//represent its level-by-level traversal.
+
+//You should populate the values of all nodes of each level
+//from left to right in separate sub-arrays.
 
 class TreeNode {
   constructor(value) {
@@ -11,15 +15,18 @@ class TreeNode {
 }
 
 const traverse = function (root) {
+  // If root is null return an empty array
   if (!root) return [];
 
-  const queue = [root];
-  const levels = [];
+  const queue = [root]; // initialize the queue with root
+  const levels = []; // declare output array
 
   while (queue.length !== 0) {
-    const queueLength = queue.length;
-    const currLevel = [];
+    const queueLength = queue.length; // Get the length prior to dequeueing
+    const currLevel = []; // Declare this level
+    // loop through to exhaust all options and only to include nodes at currLevel
     for (let i = 0; i < queueLength; i++) {
+      // Get next node
       const current = queue.shift();
 
       if (current.left) {
@@ -28,10 +35,10 @@ const traverse = function (root) {
       if (current.right) {
         queue.push(current.right);
       }
-
+      // After we add left and right for current, we add to currLevel
       currLevel.push(current.val);
     }
-
+    // Level has been finished. Push into output array
     levels.push(currLevel);
   }
   return levels;
