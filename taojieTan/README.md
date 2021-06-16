@@ -180,7 +180,7 @@ We will start with a brief introduction of each pattern before jumping into the 
   - [] Level Order Successor (easy)
   - [] Connect Level Order Siblings (medium): LC #117
 - Intro to "Trees: DFS" Pattern & Discussion
-  - [] Binary Tree Path Sum (easy): LC #112
+  - [x] Binary Tree Path Sum (easy): LC #112
 
 #### 06/17 (Thur):
 
