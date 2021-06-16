@@ -172,7 +172,7 @@ program containing the following:
   - [] Level Order Successor (easy)
   - [] Connect Level Order Siblings (medium): LC #117
 - Intro to "Trees: DFS" Pattern & Discussion
-  - [] Binary Tree Path Sum (easy): LC #112
+  - [X] Binary Tree Path Sum (easy): LC #112
 
 #### 06/17 (Thur):
 - "Trees: DFS" Continued ( Each Pair Choose Two! )
