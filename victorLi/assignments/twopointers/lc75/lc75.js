@@ -4,41 +4,62 @@
 
 // The flag of the Netherlands consists of three colors: red, white and blue; and since our input array also consists of three different numbers that is why it is called Dutch National Flag problem.
 
-const dutch_flag_sort = function (arr) {
-  // TODO: Write your code here
-};
+// const dutch_flag_sort = function (arr) {
+//   // TODO: Write your code here
+
+//   let nextIndex = 0;
+
+//   for(let i = 0; i < arr.length; i++)
+//   {
+
+//     if(arr[i] === 0)
+//     {
+//      [arr[nextIndex] , arr[i] ] =  [ arr[i] , arr[nextIndex]]
+//      nextIndex++; 
+//     }
+//   }
+
+//   for( let i = nextIndex; i < arr.length; i++)
+//   {
+//     if(arr[i] === 1)
+//     {
+//      [arr[nextIndex] , arr[i] ] =  [ arr[i] , arr[nextIndex]]
+//      nextIndex++; 
+//     }
+//   }
+// };
 
 let arr = [1, 0, 2, 1, 0];
 dutch_flag_sort(arr);
 console.log(arr);
 
-arr = [2, 2, 0, 1, 2, 0];
+arr = [2, 2, 0, 3, 2, 0,1];
 dutch_flag_sort(arr);
 console.log(arr);
 
 // Solution
 // -----
-// function dutch_flag_sort(arr) {
-//   // all elements < low are 0, and all elements > high are 2
-//   // all elements from >= low < i are 1
-//   let low = 0,
-//     high = arr.length - 1,
-//     i = 0;
-//   while (i <= high) {
-//     if (arr[i] === 0) {
-//       [arr[i], arr[low]] = [arr[low], arr[i]]; // swap
-//       // increment 'i' and 'low'
-//       i += 1;
-//       low += 1;
-//     } else if (arr[i] === 1) {
-//       i += 1;
-//     } else { // the case for arr[i] === 2
-//       [arr[i], arr[high]] = [arr[high], arr[i]]; // swap
-//       // decrement 'high' only, after the swap the number at index 'i' could be 0, 1, or 2
-//       high -= 1;
-//     }
-//   }
-// }
+function dutch_flag_sort(arr) {
+  // all elements < low are 0, and all elements > high are 2
+  // all elements from >= low < i are 1
+  let low = 0,
+    high = arr.length - 1,
+    i = 0;
+  while (i <= high) {
+    if (arr[i] === 0) {
+      [arr[i], arr[low]] = [arr[low], arr[i]]; // swap
+      // increment 'i' and 'low'
+      i += 1;
+      low += 1;
+    } else if (arr[i] === 1) {
+      i += 1;
+    } else { // the case for arr[i] === 2
+      [arr[i], arr[high]] = [arr[high], arr[i]]; // swap
+      // decrement 'high' only, after the swap the number at index 'i' could be 0, 1, or 2
+      high -= 1;
+    }
+  }
+}
 
 // -----
 
