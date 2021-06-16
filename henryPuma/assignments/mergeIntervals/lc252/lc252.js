@@ -13,9 +13,33 @@ class Interval {
   }
 }
 
-const can_attend_all_appointments = function(intervals) {
-  // TODO: Write your code here
-  return false;
+// Precondition: 
+// intervals: array containing a collection of intervals, length > 1
+// Postcondition:
+// Returns true when none of the intervals intersect, false once we find intersecting intervals
+/* General Idea: Iterate over the intervals array with the assumption that none of them are intersecting
+  Once you find an intersecting interval, exit early by returning false
+  Process: 
+  Sort intervals by leftmost/start values,
+  Iterate index (i) until the second to last interval <=> i < intervalLength - 1
+  Make comparisons with current (i) and next interval (i+1),  
+  With each comparison check if current interval oversteps into next interval,
+  If we end up iterating until second to last interval and haven't found an intersection, 
+  then return true by default
+*/
+function can_attend_all_appointments(intervals) {
+  let intervalLength = intervals.length; // Store interval length to reuse later once more
+  intervals.sort((a, b) => a.start - b.start); // Sort all the intervals by their left/start value
+  // we only iterate until the second to last interval so we can compare it to i+1 (last interval)
+  const lastInterval = --intervalLength;
+  let i = 0; // Variable used to keep track of current node (i)
+  // While intervals[i] is not the second to last interval in the array
+  while (i < lastInterval) {
+    // intervals[i] goes over the next interval <=> goes over interval[i+1], there is an intersection
+    if (intervals[i].end > intervals[i+1].start) return false;
+    i++;
+  }
+  return true;
 };
 
 
@@ -23,19 +47,19 @@ console.log(`Can attend all appointments: ${can_attend_all_appointments([
   new Interval(1, 4),
   new Interval(2, 5),
   new Interval(7, 9),
-])}`);
+])}`); // Intersect, false
 
 console.log(`Can attend all appointments: ${can_attend_all_appointments([
   new Interval(6, 7),
   new Interval(2, 4),
   new Interval(8, 12),
-])}`);
+])}`); // No intersect true
 
 console.log(`Can attend all appointments: ${can_attend_all_appointments([
   new Interval(4, 5),
   new Interval(2, 3),
   new Interval(3, 6),
-])}`);
+])}`); // Intersect, false
 
 
 // Solution
