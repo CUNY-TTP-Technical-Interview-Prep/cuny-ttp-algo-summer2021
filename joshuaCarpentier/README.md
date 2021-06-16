@@ -168,7 +168,7 @@ program containing the following:
 
 #### 06/16 (Wed):
 - "Trees: BFS" Continued ( Each Pair Choose One! )
-  - [] Minimum Depth of a Binary Tree (easy): LC #111 & LC #104 
+  - [x] Minimum Depth of a Binary Tree (easy): LC #111 & LC #104 
   - [] Level Order Successor (easy)
   - [] Connect Level Order Siblings (medium): LC #117
 - Intro to "Trees: DFS" Pattern & Discussion
