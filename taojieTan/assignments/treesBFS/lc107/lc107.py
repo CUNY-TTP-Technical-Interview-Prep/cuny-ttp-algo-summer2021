@@ -45,7 +45,7 @@ def traverse(root):
   if root is None:
     return []
 
-  result = []
+  result = deque()
   queue = [root]
 
   while len(queue):
@@ -61,9 +61,7 @@ def traverse(root):
       
       currLvl.append(temp.val)
     
-    result.append(currLvl)
-
-  result.reverse()
+    result.appendleft(currLvl)
 
   return result
 
