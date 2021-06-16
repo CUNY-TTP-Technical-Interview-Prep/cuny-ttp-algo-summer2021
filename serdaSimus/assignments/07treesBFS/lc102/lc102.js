@@ -1,24 +1,63 @@
 // Problem Statement #
 
 // Given a binary tree, populate an array to represent its level-by-level traversal. You should populate the values of all nodes of each level from left to right in separate sub-arrays.
+/*
+    Input: Binary Tree
+    output: array of the values at each level.
+    
+         12
+       7.   1
+    9    10     5
 
+   queue:
+   0:   [12]
+   1:   
+
+    output: [[12], [7,1], [9,10,5] ]
+
+    queue:  initialize it with root node.
+            FIFO: array(push new items, shift to remove 1st item).
+    
+    loop while queue ISNOT empty:  
+            store length of the queue at this point.
+            loop: up to lengthOfQueue
+                shift node
+                    check if it has a child, if yes push that node to the queue.
+                    store the node.value inside of a an array.
+                    push the array into levels array.
+    return levels array of sub arrays
+
+    edge: root pts to null, i should return empty.
+    
+*/
 class TreeNode {
-
   constructor(value) {
     this.value = value;
     this.left = null;
     this.right = null;
   }
-};
+}
 
-
-const traverse = function(root) {
+const traverse = function (root) {
   levels = [];
   // TODO: Write your code here
+  if (!root) return []; // returns an empty array if root ptr points to null.
+
+  const myQueue = [root];
+
+  while (myQueue.length) {
+    const queueLength = myQueue.length;
+    const subArray = [];
+    for (let i = 0; i < queueLength; i++) {
+      const currentNode = myQueue.shift(); // removes first item from the queue.
+      if (currentNode.left !== null) myQueue.push(currentNode.left); // increase queue
+      if (currentNode.right !== null) myQueue.push(currentNode.right); // increase queue
+      subArray.push(currentNode.value);
+    }
+    levels.push(subArray);
+  }
   return levels;
 };
-
-
 
 var root = new TreeNode(12);
 root.left = new TreeNode(7);
@@ -27,7 +66,6 @@ root.left.left = new TreeNode(9);
 root.right.left = new TreeNode(10);
 root.right.right = new TreeNode(5);
 console.log(`Level order traversal: ${traverse(root)}`);
-
 
 // Solution
 // -----
