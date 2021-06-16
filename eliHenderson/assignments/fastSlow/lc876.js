@@ -67,14 +67,15 @@ const find_middle_of_linked_list2 = (head) => {
   return turtle;
 };
 
-const find_middle_of_linked_list2 = (head) => {
+const find_middle_of_linked_list = (head) => {
   let hare = head;
   let turtle = head;
 
-  while (hare !== null) {
+  while (hare !== null && hare.next !== null) {
     hare = hare.next.next;
     turtle = turtle.next;
   }
+  return turtle;
 };
 
 head = new Node(1);

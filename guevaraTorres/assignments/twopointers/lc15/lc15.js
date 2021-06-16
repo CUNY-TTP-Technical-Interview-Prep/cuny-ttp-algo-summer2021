@@ -1,9 +1,68 @@
 // Problem Statement #
 // Given an array of unsorted numbers, find all unique triplets in it that add up to zero.
+/*
+ Declare a left and right pointer = 0 and arr.length respectively
+ Declare a currentSum in order to determine a triplet based off of the other two pointer
+ Declare a currentTriplet to keep track of the current possible triplet
+ Declare n = 0;
+ While n < arr.length
+ 
+ If currentTriplet.length < 4{
+ currentSum = arr[left] + arr[right]
+ If currentSum !== 0 {
+ If left > right, increment left
+ If right > left, decrement right
+ }
+ }
+ else {
+   triplets[n] = currentTriplet
+   currentTriplet = [];
+ }
+ 
+}
+Return triplets
+
+variables: left, right, currentSum, currentTriplet, n
+
+edge cases: empty array, return -1
+*/
 
 function search_triplets(arr) {
   triplets = [];
   // TODO: Write your code here
+
+  let n = 0,
+  left = 1,
+  right = arr.length - 1,
+  currentTriplet = [],
+  currentSum = 0;
+
+  if(arr.length < 1) return -1;
+
+  for(;n < arr.length; n++){
+    if(n === left) left++;
+    if(n === right) right++;
+    
+    currentSum = n + left + right;
+    currentTriplet = [n, left, right];
+    
+    if(currentTriplet.length < 4){
+      currentSum += arr[right];
+
+    } 
+
+    currentTriplet = [n, left, right];
+    currentSum = n + left + right;   
+    console.log(currentSum);
+    if(currentSum === 0) {
+      triplets[n] = currentTriplet;
+      left = 0;
+      right = arr.length - 1;      
+    }
+    if(arr[left] > arr[right]) left++;
+    if(arr[right] > arr[left]) right--;
+  }
+
   return triplets;
 }
 

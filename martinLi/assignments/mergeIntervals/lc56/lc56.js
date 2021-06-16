@@ -1,7 +1,31 @@
 // Problem Statement #
 
 // Given a list of intervals, merge all the overlapping intervals to
-//produce a list that has only mutually exclusive intervals.
+// produce a list that has only mutually exclusive intervals.
+
+/*
+Input: intervals = [[1,3],[2,6],[8,10],[15,18]]
+Output: [[1,6],[8,10],[15,18]]
+Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].
+
+Input: intervals = [[1,4],[4,5]]
+Output: [[1,5]]
+Explanation: Intervals [1,4] and [4,5] are considered overlapping.
+
+*/
+/*
+sort the intervals by start time.
+
+
+curr_start = intervals[0][0]
+curr_end  = intervals[0][1]
+for loop(i =0; i <intervals.leng; i++ )
+
+      intervals[i][0] > curr_start 
+        intervals[i][1] > curr_end
+          curr_end = intervals[i][1]
+
+*/
 
 class Interval {
   constructor(start, end) {
@@ -14,26 +38,39 @@ class Interval {
   }
 }
 
-//leetcode trial
 const merge = function (intervals) {
-  if (!intervals.length) return intervals;
-  intervals.sort((a, b) =>
-    a.start !== b.start ? a.start - b.start : a.end - b.end
-  );
-  var prev = intervals[0];
-  var res = [prev];
-  for (var curr of intervals) {
-    if (curr.start <= prev.end) {
-      prev.end = Math.max(prev.end, curr.end);
-    } else {
-      res.push(curr);
-      prev = curr;
+  //console.log("hi");
+  if (intervals.length < 2) return intervals;
+  merged = [];
+
+  intervals.sort((a, b) => a.start - b.start);
+  // console.log(intervals);
+  let curr_start = intervals[0].start; //1
+  let curr_end = intervals[0].end; //4
+  console.log(curr_end + " end " + curr_start + " start ");
+
+  for (let i = 1; i < intervals.length; i++) {
+    //2                      3
+    if (intervals[i].start > curr_end) {
+      // 2> 3
+      //   console.log("hi");
+      merged.push(new Interval(curr_start, curr_end));
+      curr_start = intervals[i].start;
+      curr_end = intervals[i].end;
+    }
+    //[1,4][2,3][6,7]
+    /** [1,4] [2, 5] [7,9] */
+    // [1,3][2,6]
+    //ce=6 cs = 1
+    else {
+      //
+      curr_end = Math.max(curr_end, intervals[i].end);
     }
   }
-  return res;
-  //merged = []
+  merged.push(new Interval(curr_start, curr_end));
+
   // TODO: Write your code here
-  //return merged;
+  return merged;
 };
 
 merged_intervals = merge([

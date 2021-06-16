@@ -119,8 +119,8 @@ We will start with a brief introduction of each pattern before jumping into the 
 #### 06/07 (Mon):
 
 - "Two Pointers" Continued: P2P Mock Interview ( Each Pair Choose One! )
-  - [] Triplets with Smaller Sum (medium): LC #259
-  - [] Subarrays with Product Less than a Target (medium): LC #713
+  - [x] Triplets with Smaller Sum (medium): LC #259
+  - [x] Subarrays with Product Less than a Target (medium): LC #713
   - [x] Dutch National Flag Problem (medium): LC #75
 - Intro to "Fast & Slow Pointers" Pattern: Lecture & Discussion
   - [x] LinkedList Cycle (easy): LC #141
@@ -146,12 +146,12 @@ We will start with a brief introduction of each pattern before jumping into the 
 #### 06/10 (Thur):
 
 - "Cyclic Sort" Continued ( Each Pair Choose Two! )
-  - [] Find the Missing Number (easy): LC #268
+  - [x] Find the Missing Number (easy): LC #268
   - [] Find all Missing Numbers (easy): LC #448
-  - [] Find the Duplicate Number (easy): LC #287
+  - [x] Find the Duplicate Number (easy): LC #287
   - [] Find all Duplicate Numbers (easy): LC #442
 - Intro to "In Place Reversal of a LL" Pattern: Lecture & Discussion
-  - [] Reverse a LinkedList (easy): LC #206
+  - [x] Reverse a LinkedList (easy): LC #206
 
 ### .
 
@@ -160,11 +160,11 @@ We will start with a brief introduction of each pattern before jumping into the 
 #### 06/14 (Mon):
 
 - "In Place Reversal of a LL" Continued ( Each Pair Choose One! )
-  - [] Reverse a LinkedList (easy): LC #206
-  - [] Reverse a Sub-list (medium): LC #92
+  - [x] Reverse a LinkedList (easy): LC #206
+  - [x] Reverse a Sub-list (medium): LC #92
   - [] Reverse every K-element Sub-list (medium): LC #25
 - Intro to "Trees: BFS" Pattern & Discussion
-  - [] Binary Tree Level Order Traversal (easy): LC #102
+  - [x] Binary Tree Level Order Traversal (easy): LC #102
 
 #### 06/15 (Tues):
 
