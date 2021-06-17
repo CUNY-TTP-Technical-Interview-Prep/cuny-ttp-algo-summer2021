@@ -154,7 +154,7 @@ program containing the following:
 #### 06/14 (Mon):
 - "In Place Reversal of a LL" Continued ( Each Pair Choose One! )
   - [] Reverse a LinkedList (easy): LC #206
-  - [] Reverse a Sub-list (medium): LC #92
+  - [x] Reverse a Sub-list (medium): LC #92
   - [] Reverse every K-element Sub-list (medium): LC #25 
 - Intro to "Trees: BFS" Pattern & Discussion
   - [] Binary Tree Level Order Traversal (easy): LC #102
@@ -164,7 +164,7 @@ program containing the following:
 - "Trees: BFS" Continued ( Each Pair Choose Two! )
   - [] Reverse Level Order Traversal (easy): LC #107
   - [] Zigzag Traversal (medium): LC #103
-  - [] Level Averages in a Binary Tree (easy): LC #637 
+  - [x] Level Averages in a Binary Tree (easy): LC #637 
 
 #### 06/16 (Wed):
 - "Trees: BFS" Continued ( Each Pair Choose One! )
