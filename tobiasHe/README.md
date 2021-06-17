@@ -157,14 +157,14 @@ program containing the following:
   - [X] Reverse a Sub-list (medium): LC #92
   - [] Reverse every K-element Sub-list (medium): LC #25 
 - Intro to "Trees: BFS" Pattern & Discussion
-  - [] Binary Tree Level Order Traversal (easy): LC #102
+  - [X] Binary Tree Level Order Traversal (easy): LC #102
 
 
 #### 06/15 (Tues):
 - "Trees: BFS" Continued ( Each Pair Choose Two! )
-  - [] Reverse Level Order Traversal (easy): LC #107
+  - [X] Reverse Level Order Traversal (easy): LC #107
   - [] Zigzag Traversal (medium): LC #103
-  - [] Level Averages in a Binary Tree (easy): LC #637 
+  - [X] Level Averages in a Binary Tree (easy): LC #637 
 
 #### 06/16 (Wed):
 - "Trees: BFS" Continued ( Each Pair Choose One! )
