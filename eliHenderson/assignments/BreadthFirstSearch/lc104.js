@@ -90,6 +90,38 @@ function find_maximum_depth(root) {
   }
   return maxHeight;
 }
+const find_maximum_depth = (root) => {
+  if (!root) return null;
+  // create the queue
+  let queue = [];
+  queue.push(root);
+
+  //store the max height
+  let maxHeight = 0;
+
+  //loop while queue is not empty
+  while (queue.length) {
+    //store the currentLevel
+    let currentLvl = [];
+    //store the currentLevel size
+    let levelSize = queue.length;
+
+    //loop from 0 - lvlSize
+    for (let i = 0; i < levelSize; i++) {
+      let currentNode = queue.shift();
+      //put currentNode into the temp array
+
+      currentLvl.push(currentNode.val);
+
+      //check for children
+      if (currentNode.left) queue.push(currentNode.left);
+      if (currentNode.right) queue.push(currentNode.right);
+    }
+    //increment the max Height
+    maxHeight++;
+  }
+  return maxHeight;
+};
 
 const root = new TreeNode(12);
 root.left = new TreeNode(7);

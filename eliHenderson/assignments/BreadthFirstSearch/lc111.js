@@ -130,3 +130,4 @@ console.log(`Tree Minimum Depth: ${find_minimum_depth(root)}`);
 
 root = new TreeNode(null);
 console.log(`Tree Minimum Depth: ${find_minimum_depth(root)}`);
+console.log(`Tree Minimum Depth: ${find_minimum_depth(null)}`);

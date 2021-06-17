@@ -131,3 +131,4 @@ console.log(`Level averages are: ${find_level_averages(root)}`);
 
 var root = new TreeNode(null);
 console.log(`Level averages are: ${find_level_averages(root)}`);
+console.log(`Level averages are: ${find_level_averages(null)}`);
