@@ -2,17 +2,23 @@
 
 // Given the head of a LinkedList and two positions ‘p’ and ‘q’, reverse the LinkedList from position ‘p’ to ‘q’.
 /**
+ * 
  * Input: head of a Singly LinkedList, position left, position right 
  * Output: 
  * 
- * Properties: head, next pointer, Node value, null, current position, next position, last position
+ * Variables: head, next pointer, Node value, null, current position, next position, last position
+
  * 
+ * Brute force Approach
+ * --------------- 
  * Pre-Condition: 
  * 
  * Conditions: 
  * 
+ * Termination-Conditions: 
+
  * 
- * 
+ * Post-Conditions: 
  * 
  * 
  */
