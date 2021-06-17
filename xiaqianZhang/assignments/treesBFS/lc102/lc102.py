@@ -2,6 +2,8 @@
 
 # Given a binary tree, populate an array to represent its level-by-level traversal. 
 # You should populate the values of all nodes of each level from left to right in separate sub-arrays.
+
+# Attempt 1
 # Output with the given test case: [[12], [7, 1],  [9, 10, 5]]
 # declare an array for the queue, initliaze it with the root node
 # edge case: if there's no root node, return the result
@@ -16,11 +18,113 @@
 # add the level array values into the result array
 # return the result
 
+# Attempt 2:
+# Given a binary tree, populate an array to represent its level-by-level traversal. 
+# You should populate the values of all nodes of each level from left to right in separate sub-arrays.
+'''
+input: given a binary tree
+         12
+         /\
+        7  1
+       /   /\
+      9   10 5
+output: return all nodes by its level from left to right 
+        [[12], [7, 1], [9, 10, 5]]
+
+initialize the empty result array that we want to return
+initialize the queue that stores the nodes level by level, initliaze with a root queue = [root]
+loop that while the length of queue is greater than 0, we continue looping doing the following
+  - initliaze a variable to store the size of the level, that is also the size of the queue
+  - initialize a empty array that gets push of the each level nodes's values newLevel = []
+  Then loop through each nodes in the queues (nodes in each level):
+    - initliaze the current node that we want to pop out
+    - constant check if the current nodes that we are looking have any left and right children, if so we push the nodes
+    - push the current node's value into the newLevel array
+  push the newLevel array into the results array
+return the result array
+
+Edge cases: if the root is null, then return an empty array
+
+    
+
+'''
+# Attempt 3:
+# Given a binary tree, populate an array to represent its level-by-level traversal. 
+# You should populate the values of all nodes of each level from left to right in separate sub-arrays.
+'''
+input: given a binary tree
+         12
+         /\
+        7  1
+       /   /\
+      9   10 5
+output: return all nodes by its level from left to right 
+        [[12], [7, 1], [9, 10, 5]]
+
+edge cases: if the root is null then we return empty array
+initialize the empty result array
+init the queue array to store the current level's nodes, init as array that contains root
+while loop while the length of the queue is greater than 0, that means there's still nodes that haven't been go over in the tree
+  initialize the length of the queue stored for later usage as the size of the current level
+  initialize an empty array to store the values of the nodes in each level = newLevel
+  for loop that go through the length of the queue, which is the current level size:
+      initialize the current node that pop out of the queue
+      check if the current node have left and right children, if so we push those children nodes into the queue
+      push the value of the current node into the newLevel array
+  after the for loop, we push the newLevel array into the results array
+return the result array
+'''
 class TreeNode:
   def __init__(self, val):
     self.val = val
     self.left, self.right = None, None
 
+def traverse(root):
+  result = []
+  if root is None:
+    return []
+  
+  queue = [root]
+  while len(queue) > 0:
+    levelSize = len(queue)
+    newLevel = []
+    for each in range(levelSize):
+      currentNode = queue.pop(0)
+
+      if currentNode.left is not None:
+        queue.append(currentNode.left)
+      
+      if currentNode.right is not None:
+        queue.append(currentNode.right)
+      
+      newLevel.append(currentNode.val)
+    result.append(newLevel)
+  return result
+  
+# def traverse(root):
+#   result = []
+#   if root is None:
+#     return []
+  
+#   queue = [root]
+#   while len(queue) > 0:
+#     levelSize = len(queue)
+#     newLevel = []
+#     for each in range(levelSize):
+#       popVar = queue.pop(0)
+
+#       if popVar.left is not None:
+#         queue.append(popVar.left)
+      
+#       if popVar.right is not None:
+#         queue.append(popVar.right)
+      
+#       newLevel.append(popVar.val)
+#     result.append(newLevel)
+
+#   return result
+
+#----------------------
 
 # def traverse(root):
 #   result = []
