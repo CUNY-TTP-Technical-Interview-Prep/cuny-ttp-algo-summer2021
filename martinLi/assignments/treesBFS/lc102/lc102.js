@@ -3,22 +3,39 @@
 // Given a binary tree, populate an array to represent its level-by-level traversal. You should populate the values of all nodes of each level from left to right in separate sub-arrays.
 
 class TreeNode {
-
   constructor(value) {
     this.value = value;
     this.left = null;
     this.right = null;
   }
-};
+}
 
+const traverse = function (root) {
+  if (!root) return [];
 
-const traverse = function(root) {
-  levels = [];
-  // TODO: Write your code here
+  const queue = [root];
+  const levels = [];
+
+  while (queue.length !== 0) {
+    const queueLength = queue.length;
+    const currLevel = [];
+    for (let i = 0; i < queueLength; i++) {
+      const current = queue.shift();
+
+      if (current.left) {
+        queue.push(current.left);
+      }
+      if (current.right) {
+        queue.push(current.right);
+      }
+
+      currLevel.push(current.val);
+    }
+
+    levels.push(currLevel);
+  }
   return levels;
 };
-
-
 
 var root = new TreeNode(12);
 root.left = new TreeNode(7);
@@ -27,7 +44,6 @@ root.left.left = new TreeNode(9);
 root.right.left = new TreeNode(10);
 root.right.right = new TreeNode(5);
 console.log(`Level order traversal: ${traverse(root)}`);
-
 
 // Solution
 // -----
