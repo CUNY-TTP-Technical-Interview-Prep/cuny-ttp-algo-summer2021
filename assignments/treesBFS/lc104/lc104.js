@@ -24,8 +24,10 @@ Postcondition: returns an integer that represents the binary tree's height
   General Idea:
     Add the node children to the nextLevelArray,
     Loop the nextLevelArray until it is empty,
-    While we look at each level we keep track of the current height of the tree,
-    After we finish looking at all the children, we just return the treeheight for the binary tree
+    Grab a node and add it's children,
+    While we look at each level we keep track of the current height of the tree with treeHeight variable,
+    The nextLevelArray queue will be empty once all levels have been processed,
+    With this being true, we return treeHeight
 
  */
 
