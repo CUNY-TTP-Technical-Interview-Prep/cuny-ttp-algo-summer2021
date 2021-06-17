@@ -49,4 +49,3 @@ if (result != null)
 result = find_successor(root, 9)
 if (result != null)
   console.log(result.val)
--
