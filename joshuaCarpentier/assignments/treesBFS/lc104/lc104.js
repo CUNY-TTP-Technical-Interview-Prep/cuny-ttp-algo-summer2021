@@ -31,6 +31,8 @@ class TreeNode {
  * 
  * 
  */
+
+// were using bfs were a dfs would be better depending on depth
 function find_maximum_depth(root) {
 // Pre-Condition: check if empty 
  
