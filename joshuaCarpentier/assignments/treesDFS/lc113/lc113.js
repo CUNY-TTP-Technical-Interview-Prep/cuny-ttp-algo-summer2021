@@ -12,6 +12,26 @@
 //  / |   | \
 // 4  5   2  7
 
+/**
+ * 
+ * Input: tree
+ * Output: Boolean value weather the totalSum of a path equals the targetSum
+ *  
+ * Brute force Approach
+ * --------------- 
+ * Variables: root, root. left, root.right, index, array to store the root essentially a stack, TotalSum
+ * 
+ * 
+ */
+
+
+/**
+ *  Optimal Approach
+ * -----------------
+ *  Variables: root, root. left, root.right, index, array to store the root essentially a stack, TotalSum
+ * 
+ * 
+ */
 class TreeNode {
   constructor(value) {
     this.value = value;
@@ -20,10 +40,17 @@ class TreeNode {
   }
 };
 
-
+// Test Cases are conditions for inputs 
 const find_paths = function(root, sum) {
   allPaths = [];
-  // TODO: Write your code here
+ // Pre-Condition: 
+  
+ // Conditions: 
+  
+ // Termination-Conditions: 
+
+ // Post-Conditions: 
+
   return allPaths;
 };
 
@@ -36,4 +63,8 @@ root.left.left = new TreeNode(4)
 root.right.left = new TreeNode(10)
 root.right.right = new TreeNode(5)
 sum = 23
+console.log(`Tree paths with sum: ${sum}: ${find_paths(root, sum)}`)
+
+
+console.log(`\n ------- Edge Case -------- `);
 console.log(`Tree paths with sum: ${sum}: ${find_paths(root, sum)}`)

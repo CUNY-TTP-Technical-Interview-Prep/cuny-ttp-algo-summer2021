@@ -15,68 +15,49 @@ class TreeNode {
  * 
  * Input: tree
  * Output: Boolean value weather the totalSum of a path equals the targetSum
- * 
- * Variables: root, root. left, root.right, index, array to store the root essentially a stack, TotalSum
- * 
- * EdgeCase different condition for different inputs
- * 
+ *  
  * Brute force Approach
  * --------------- 
- * Pre-Condition: check if empty && if root. value = targetSum
- * 
- * Conditions: 
- * 
- * Termination-Conditions: check if left and right are null
-
- * 
- * Post-Conditions: 
- * 
- * 
- * 
- *  Optimal Approach
- * -----------------
- * Variables: 
-
- * Pre-Condition: 
- * 
- * Conditions: 
- * 
- * Termination-Conditions: 
-
- * 
- * Post-Conditions: 
+ * Variables: root, root. left, root.right, index, array to store the root essentially a stack, TotalSum
  * 
  * 
  */
 
-const has_path = (root, targetSum) => {
-  if (root === null) {
-    return false
+
+/**
+ *  Optimal Approach
+ * -----------------
+ *  Variables: root, root. left, root.right, index, array to store the root essentially a stack, TotalSum
+ * 
+ * 
+ */
+
+var has_path = function (root, sum) {
+  return dfs(root, 0, sum);
+};
+
+var dfs = function (curr, currentSum, targetSum) {
+   // Pre-Condition: check if empty && if root. value = targetSum
+  
+ // Conditions: 
+  
+ // Termination-Conditions: check if left and right are null
+
+ // Post-Conditions: 
+  if (!curr) {
+    return false;
   }
-  
-  let nodeStack = [ root ];
-  let sumStack = [ targetSum - root.val ];
-  
-  while (nodeStack.length) {
-      let currNode = nodeStack.pop();
-      let currSum = sumStack.pop();
-      
-      if ((!currNode.left && !currNode.right) && currSum === 0) {
-          return true;
-      };
-      
-      if (currNode.left) {
-          nodeStack.push(currNode.left);
-          sumStack.push(currSum - currNode.left.val)
-      };
-      
-      if (currNode.right) {
-          nodeStack.push(currNode.right);
-          sumStack.push(currSum - currNode.right.val)
-      };
-  };
-  
-  return false;
+
+  currentSum += curr.value;
+
+  if (curr.left === null && curr.right === null) {
+    return currentSum === targetSum;
+  }
+
+  return (
+    dfs(curr.left, currentSum, targetSum) ||
+    dfs(curr.right, currentSum, targetSum)
+  );
 };
 
 var root = new TreeNode(12);
@@ -86,4 +67,7 @@ root.left.left = new TreeNode(9);
 root.right.left = new TreeNode(10);
 root.right.right = new TreeNode(5);
 console.log(`Tree has path: ${has_path(root, 23)}`);
+console.log(`Tree has path: ${has_path(root, 16)}`);
+
+console.log(`\n ------- Edge Case -------- `);
 console.log(`Tree has path: ${has_path(root, 16)}`);
