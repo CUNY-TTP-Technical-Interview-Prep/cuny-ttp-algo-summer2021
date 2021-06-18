@@ -139,7 +139,7 @@ We will start with a brief introduction of each pattern before jumping into the 
 - "Merge Intervals" Continued ( Each Pair Choose One! )
   - [x] Insert Interval (medium): LC #57
   - [x] Intervals Intersection (medium): LC #986
-  - [] Conflicting Appointments (medium): LC #252
+  - [x] Conflicting Appointments (medium): LC #252
 - Intro to "Cyclic Sort" Pattern: Lecture & Discussion
   - [x] Cyclic Sort (easy)
 
