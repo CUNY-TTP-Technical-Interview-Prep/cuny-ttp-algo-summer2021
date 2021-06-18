@@ -9,8 +9,8 @@ class Node {
   }
 
   get_list() {
-    result = "";
-    temp = this;
+    let result = "";
+    let temp = this;
     while (temp !== null) {
       result += temp.value + " ";
       temp = temp.next;

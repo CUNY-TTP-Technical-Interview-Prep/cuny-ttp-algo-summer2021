@@ -2,6 +2,37 @@
 
 # Given the head of a Singly LinkedList that contains a cycle, write a function to find the starting node of the cycle.
 
+# input: a singly linkedlist with a cycle
+# output: a node representing the starting point of cycle
+# edge cases: 1. empty linkedlist => return None
+#             2. 1 node pointing to itself => return the node
+
+# 1 -> 3 -> -2 -> 4 -> 2
+#      ^          | 
+#      | - - - - -  
+#   return  node at position 2 as the starting point
+
+'''
+  We can use fast and slow pointer pattern to solve this problem. 
+  The problem can be separated into two parts. 
+  First part, we need to find the position where both fast and slow pointers meet. 
+  Second part, we use another pointer (let's call p) pointing to the head initially, 
+  and pointer (let's call q) pointing to the position where slow and fast meet.
+  and keep moving the p pointer and q pointer until they meet. 
+  The position where they meet is the starting node of the cycle. 
+
+  The reason why the position where p pointer and q pointer meet is the starting node of cycle is that:
+  let's assume the distance from the head of the linkedlist to the starting node of cycle is d1,
+  the distance from the starting node of cycle to the position where both slow and fast pointers meet is d2,
+  the distance from the position where both slow and fast pointers meet to the starting node of cycle is d3.
+
+  Then the distance fast pointer travels is: d1 + d2 + d3 + d2
+  the distance slow pointer travel is: d1 + d2 
+  Since fast pointer is always twice as fast as slow pointer, d1 + d2 + d3 + d2 = 2*(d1 + d2)  => d1 = d3
+
+'''
+
+
 from __future__ import print_function
 
 
@@ -20,11 +51,34 @@ class Node:
 
 def find_cycle_start(head):
   # TODO: Write your code here
-  return head
+  if head is None:
+    return None
+
+  slow, fast = head, head
+  
+  while fast and fast.next:
+    fast = fast.next.next
+    slow = slow.next
+
+    if fast == slow:
+      break
+
+  p, q = head, fast
+
+  while p != q:
+    p = p.next
+    q = q.next
+
+  return p
 
 
 def main():
   head = Node(1)
+
+  # case where there is only one node and pointing to itself.
+  head.next = head
+  print("LinkedList cycle start: " + str(find_cycle_start(head).value))
+
   head.next = Node(2)
   head.next.next = Node(3)
   head.next.next.next = Node(4)

@@ -164,20 +164,21 @@ We will start with a brief introduction of each pattern before jumping into the 
   - [x] Reverse a Sub-list (medium): LC #92
   - [] Reverse every K-element Sub-list (hard): LC #25
 - Intro to "Trees: BFS" Pattern & Discussion
-  - [] Binary Tree Level Order Traversal (easy): LC #102
+  - [x] Binary Tree Level Order Traversal (easy): LC #102
 
 #### 06/15 (Tues):
 
 - "Trees: BFS" Continued ( Each Pair Choose Two! )
-  - [] Reverse Level Order Traversal (easy): LC #107
-  - [] Zigzag Traversal (medium): LC #103
-  - [] Level Averages in a Binary Tree (easy): LC #637
+  - [x] Reverse Level Order Traversal (easy): LC #107
+
+  - [x] Zigzag Traversal (medium): LC #103
+  - [x] Level Averages in a Binary Tree (easy): LC #637
 
 #### 06/16 (Wed):
 
 - "Trees: BFS" Continued ( Each Pair Choose One! )
-  - [] Minimum Depth of a Binary Tree (easy): LC #111 & LC #104
-  - [] Level Order Successor (easy)
+  - [x] Minimum Depth of a Binary Tree (easy): LC #111 & LC #104
+  - [x] Level Order Successor (easy)
   - [] Connect Level Order Siblings (medium): LC #117
 - Intro to "Trees: DFS" Pattern & Discussion
   - [] Binary Tree Path Sum (easy): LC #112
