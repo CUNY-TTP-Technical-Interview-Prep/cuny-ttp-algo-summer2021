@@ -2,6 +2,18 @@
 
 // Given a binary tree, populate an array to represent the averages of all of its levels.
 
+
+/*
+
+Iterate through tree using BFS
+Sum all node a each level, once level completed divide by the # node at that lvl and push into result array
+Return result array
+
+*/
+
+
+
+
 class TreeNode {
 
   constructor(value) {
@@ -12,8 +24,34 @@ class TreeNode {
 };
 
 const find_level_averages = function(root) {
-  result = [];
+
+
   // TODO: Write your code here
+
+  if( !root )
+    return []
+
+  let queue = [root]
+  let result = [];
+
+  
+  while( queue.length )
+  {
+
+    let length = queue.length;
+    let sum = 0;
+
+    for( let i = 0; i < length; i++)
+    {
+      let node = queue.shift();
+      if (node.left) queue.push(node.left)
+      if (node.right) queue.push(node.right)
+      sum += node.value
+
+    }
+    result.push( sum/length )
+  }
+
   return result;
 };
 
