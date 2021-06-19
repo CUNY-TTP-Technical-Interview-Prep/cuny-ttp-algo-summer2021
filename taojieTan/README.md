@@ -147,7 +147,7 @@ We will start with a brief introduction of each pattern before jumping into the 
 
 - "Cyclic Sort" Continued ( Each Pair Choose Two! )
   - [x] Find the Missing Number (easy): LC #268
-  - [] Find all Missing Numbers (easy): LC #448
+  - [x] Find all Missing Numbers (easy): LC #448
   - [x] Find the Duplicate Number (easy): LC #287
   - [] Find all Duplicate Numbers (easy): LC #442
 - Intro to "In Place Reversal of a LL" Pattern: Lecture & Discussion
