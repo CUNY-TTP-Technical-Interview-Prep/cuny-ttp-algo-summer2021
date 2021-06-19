@@ -2,6 +2,20 @@
 
 // Given a binary tree, populate an array to represent its level-by-level traversal in reverse order, i.e., the lowest level comes first. You should populate the values of all nodes in each level from left to right in separate sub-arrays.
 
+
+
+/*
+
+Traverse tree from level to level using BFS except I will traverse from R to L instead of L to R
+
+        12
+    7       1
+ 9      10   5
+
+    Stack 12 1 7 5 10 9
+    result 9 10 5 7 1 12 
+*/
+  
 class TreeNode {
 
   constructor(value) {
@@ -14,6 +28,28 @@ class TreeNode {
 const traverse = function(root) {
   result = [];
   // TODO: Write your code here
+  let queue = [root]
+  let stack = []
+
+  while( queue.length )
+  {
+    let length = queue.length;
+
+    for(let i = 0; i < length; i++)
+    {
+      let node = queue.shift()
+      if(node.right) queue.push(node.right)
+      if(node.left) queue.push(node.left)
+      stack.push(node.value)
+    }
+  }
+
+  //get result
+  while( stack.length )
+    {
+      result.push(stack.pop())
+    }
+
   return result;
 }
 
