@@ -21,6 +21,13 @@
 // Given Node: 9
 // Level Order Successor: 10
 
+
+/*
+  Traverse tree using BFS
+  If current node = target
+  return the first item on the queue
+*/
+
 class TreeNode {
 
   constructor(val) {
@@ -33,6 +40,24 @@ class TreeNode {
 
 const find_successor = function(root, key) {
   // TODO: Write your code here
+
+  let queue = [root]
+  
+  while( queue.length )
+    {
+
+      let length = queue.length
+
+      for( let i = 0; i < length; i++)
+      {
+        let node = queue.shift()
+        if(node.left) queue.push(node.left)
+        if(node.right)queue.push(node.right)
+        if( node.val === key) return queue.shift();
+      }
+
+    }
+
   return null;
 };
 
