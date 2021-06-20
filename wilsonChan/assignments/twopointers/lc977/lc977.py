@@ -1,10 +1,60 @@
 # Problem Statement #
-# Given a sorted array, create a new array containing squares of all the numbers of the input array in the sorted order.
+# Given a sorted array, create a new array containing squares of 
+# all the numbers of the input array in the sorted order.
+
+
+'''
+Given: 
+-sorted array (contains -/+ integers)
+
+Result:
+-squaring the numbers in sorted order
+
+
+Example:
+    Input: [-2, -1, 0, 2, 3]        square array -> sort
+    Output: [0, 1, 4, 4, 9]
+
+
+Variables:
+-starting point
+-end point
+-pointer that moves throughout array
+-squaring array
+
+
+Steps / Tasks:
+-Initialize the squared_array (output array) / starting point / ending point
+-Ensure the element/values inside the array are positive with absolute value
+-Square the elements When iterating through array
+-Reverse the array to sort
+
+
+'''
+
+
+
 
 def make_squares(arr):
-  squares = []
   # TODO: Write your code here
-  return squares
+
+  #Initializations
+  squared_array = []
+  left = 0
+  right = len(arr) - 1
+
+  #Sorting while iterating through array from left to right
+  while left <= right:
+    if abs(arr[left]) < abs(arr[right]):
+      squared_array.append(arr[right]**2)
+      right -= 1
+
+    else:
+      squared_array.append(arr[left]**2)
+      left += 1
+  
+  #Reverse the array
+  return squared_array[::-1]
 
 
 def main():
