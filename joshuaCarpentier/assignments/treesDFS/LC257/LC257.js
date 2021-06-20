@@ -15,38 +15,32 @@ class TreeNode {
   /**
    * 
    * Input: tree
-   * Output: Boolean value weather the totalSum of a path equals the targetSum
+   * Output: All root to leaf paths
    *  
-   * Brute force Approach
+   * Naive Approach
    * --------------- 
-   * Variables: root, root. left, root.right, index, array to store the root essentially a stack, TotalSum
+   * Variables: root, root. left, root.right, array to store the results 
    * 
    * 
    */
   
-  
-  /**
-   *  Optimal Approach
-   * -----------------
-   *  Variables: root, root. left, root.right, index, array to store the root essentially a stack, TotalSum
-   * 
-   * 
-   */
+
   
   const binaryTreePaths = (root) =>{
+    let result = [];
+    const travel = (node, path) =>{
+          // Pre-Condition: check if node os empty then push path
+          if(!node.left && !node.right) result.push(path.join('->')); 
 
-
-
+          if(node.left) travel(node.left, [...path, node.left.value]); 
+          if(node.right) travel(node.right, [...path, node.right.value]); 
+      
+    }
+    travel(root, [root.value]);
+      return result;
   }
 
-
-     // Pre-Condition: check if empty && if root. value = targetSum
-    
-   // Conditions: 
-    
-   // Termination-Conditions: check if left and right are null
   
-   // Post-Conditions: 
    
   
   var root = new TreeNode(12);
@@ -61,3 +55,11 @@ class TreeNode {
   console.log(`\n ------- Edge Case -------- `);
   console.log(`Root to eaf paths: ${binaryTreePaths(root)}`);
   
+
+    /**
+   *  Optimal Approach
+   * -----------------
+   *  Variables: 
+   * 
+   * 
+   */
