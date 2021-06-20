@@ -9,8 +9,8 @@ class Node {
   }
 
   get_list() {
-    result = "";
-    temp = this;
+    let result = "";
+    let temp = this;
     while (temp !== null) {
       result += temp.value + " ";
       temp = temp.next;
@@ -19,12 +19,19 @@ class Node {
   }
 };
 
-
 const reverse = function(head) {
-  // TODO: Write your code here
-  return head;
-};
+  let previous = null;
+  let current = head;
+  let next = head;
 
+  while (current !== null) {
+    next = current.next;
+    current.next = previous;
+    previous = current;
+    current = next;
+  }
+  return previous;
+};
 head = new Node(2);
 head.next = new Node(4);
 head.next.next = new Node(6);
