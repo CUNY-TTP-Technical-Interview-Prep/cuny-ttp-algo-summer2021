@@ -38,7 +38,6 @@ function smallest_subarray_with_given_sum(s, arr) {
         currentWindowSize < smallestWindowSize
           ? currentWindowSize
           : smallestWindowSize;
-      break;
     } else {
       sum += arr[windowEnd];
       currentWindowSize++;

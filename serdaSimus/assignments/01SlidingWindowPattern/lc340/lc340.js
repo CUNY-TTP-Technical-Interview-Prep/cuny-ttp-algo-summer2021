@@ -30,7 +30,8 @@ looop through the given array:
 
 function longest_substring_with_k_distinct(str, k) {
   // TODO: Write code here
-  if (str === "" || k > str.length || !str.length) return -1;
+
+  if (str === "" || !k) return -1; // could also return null.
 
   const myHashMap = {};
   let windowStart = 0;
@@ -62,7 +63,7 @@ function longest_substring_with_k_distinct(str, k) {
     }
   }
 
-  return maxWindowSize > -1 ? maxWindowSize : -1;
+  return maxWindowSize >= 0 ? maxWindowSize : 0;
 }
 
 console.log(

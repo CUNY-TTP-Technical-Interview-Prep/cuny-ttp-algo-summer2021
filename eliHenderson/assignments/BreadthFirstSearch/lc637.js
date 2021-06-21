@@ -24,8 +24,10 @@
  *  return result array
  *
  * * edge:
- *  what if the root is null
  *  what if the root value is null
+ *
+ *  assumption:
+ *    return null for this case
  *
  * Time: O(N)
  * Space: O(1)
@@ -126,3 +128,7 @@ root.right.left = new TreeNode(10);
 root.right.right = new TreeNode(5);
 
 console.log(`Level averages are: ${find_level_averages(root)}`);
+
+var root = new TreeNode(null);
+console.log(`Level averages are: ${find_level_averages(root)}`);
+console.log(`Level averages are: ${find_level_averages(null)}`);
