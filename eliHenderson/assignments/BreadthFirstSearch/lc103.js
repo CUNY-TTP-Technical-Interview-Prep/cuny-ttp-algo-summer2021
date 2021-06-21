@@ -34,10 +34,13 @@
  * Time: O(N)
  * Space: O(1)
  *
- *  * edge:
- *  what if the root is null
- *  what if the root value is null
  *
+ *  * edge:
+ *  what if the root value is null
+ *  var root = new TreeNode(null);
+ *
+ *  assumption:
+ *    return null for this case
  */
 
 class TreeNode {
