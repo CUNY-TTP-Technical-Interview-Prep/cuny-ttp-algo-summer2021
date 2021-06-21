@@ -1,6 +1,9 @@
 // Problem Statement #
 
-// Given a binary tree, populate an array to represent its level-by-level traversal. You should populate the values of all nodes of each level from left to right in separate sub-arrays.
+// Given a binary tree, populate an array to represent its 
+// level-by-level traversal. 
+// You should populate the values of all nodes of each 
+// level from left to right in separate sub-arrays.
 
 class TreeNode {
 
@@ -11,12 +14,46 @@ class TreeNode {
   }
 };
 
+/**
+ *     12 bfs vist each level
+ *   /    \
+ *  7       1
+ * / \     / \
+  9  null 10  5 
+ / \      / \ / \
+ null--------null
+Input: root = [12,7,1,9,null,10,5]
+Output: [[12],[7,1],[9,10,5]]
 
+dfs vist each side completley before other side
+
+
+*/
 const traverse = function(root) {
-  levels = [];
-  // TODO: Write your code here
-  return levels;
+    if(!root) return []
+    
+    const queue = [root] 
+    const levels = [] 
+    
+    while(queue.length !== 0){
+       const queueLength = queue.length 
+       const currLevel = [] 
+       for(let i = 0; i < queueLength; i++){
+           const current = queue.shift()
+           
+           if(current.left){
+               queue.push(current.left)
+           }
+           if(current.right){
+               queue.push(current.right)
+           }
+           currLevel.push(current.val)
+       }
+       levels.push(currLevel)
+   }
+    return levels
 };
+
 
 
 
@@ -26,6 +63,7 @@ root.right = new TreeNode(1);
 root.left.left = new TreeNode(9);
 root.right.left = new TreeNode(10);
 root.right.right = new TreeNode(5);
+console.log(root)
 console.log(`Level order traversal: ${traverse(root)}`);
 
 

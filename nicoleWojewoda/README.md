@@ -141,7 +141,7 @@ We will start with a brief introduction of each pattern before jumping into the 
   - [] Intervals Intersection (medium): LC #986
   - [x] Conflicting Appointments (medium): LC #252
 - Intro to "Cyclic Sort" Pattern: Lecture & Discussion
-  - [] Cyclic Sort (easy)
+  - [x] Cyclic Sort (easy)
 
 #### 06/10 (Thur):
 
@@ -160,18 +160,18 @@ We will start with a brief introduction of each pattern before jumping into the 
 #### 06/14 (Mon):
 
 - "In Place Reversal of a LL" Continued ( Each Pair Choose One! )
-  - [] Reverse a LinkedList (easy): LC #206
+  - [x] Reverse a LinkedList (easy): LC #206
   - [] Reverse a Sub-list (medium): LC #92
   - [] Reverse every K-element Sub-list (medium): LC #25
 - Intro to "Trees: BFS" Pattern & Discussion
-  - [] Binary Tree Level Order Traversal (easy): LC #102
+  - [x] Binary Tree Level Order Traversal (easy): LC #102
 
 #### 06/15 (Tues):
 
 - "Trees: BFS" Continued ( Each Pair Choose Two! )
   - [] Reverse Level Order Traversal (easy): LC #107
   - [] Zigzag Traversal (medium): LC #103
-  - [] Level Averages in a Binary Tree (easy): LC #637
+  - [x] Level Averages in a Binary Tree (easy): LC #637
 
 #### 06/16 (Wed):
 

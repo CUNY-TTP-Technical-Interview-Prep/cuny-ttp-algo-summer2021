@@ -4,6 +4,49 @@ import math
 # return the minimal length of a contiguous subarray [numsl, numsl+1, ..., numsr-1, numsr] 
 # of which the sum is greater than or equal to target. If there is no such subarray, return 0 instead.
 
+#Attempt 3:
+'''
+Input: array of positive integers, positive integer target sum
+Output: minimum length of continous subarray that have the sum >= targer sum
+
+Edge case: if arr is empty or no such subarray, return 0
+
+initliaze windowStart = 0, currentSum = 0, resultLength = math.inf
+for loop that go through each index in the array:
+    currentSum increased by the array index
+    currentLength incremented by one if the currentSym increased by one array index
+    while loop until if the currentSum is larger or equal than the targetSum
+      check the subarray with the minimal length
+        resultLength = minimum of the resultLength and the difference of the currentIndex - windowStart Index + 1 (ex: index 4 - 2 = 2, but there's 2, 3, 4 three numbers, so +1)
+        currentSum decreemnt of the array index value
+        windowStart incremented by one to continue looping and updating the currentSum
+return the resultLength
+'''
+def smallest_subarray_with_given_sum(target, arr):
+  windowStart = 0
+  currentSum = 0
+  resultLength = math.inf
+
+  for each in range(len(arr)):
+    currentSum += arr[each]
+    while currentSum >= target:
+      resultLength = min(resultLength, each - windowStart + 1)
+      currentSum -= arr[windowStart]
+      windowStart +=1
+    
+  if arr is [] or resultLength == math.inf:
+    return 0
+  return resultLength
+
+def main():
+  print("Smallest subarray length: " + str(smallest_subarray_with_given_sum(7, [2, 1, 5, 2, 3, 2]))) # 5, 2 [2]
+  print("Smallest subarray length: " + str(smallest_subarray_with_given_sum(7, [2, 1, 5, 2, 8]))) # 8 [1]
+  print("Smallest subarray length: " + str(smallest_subarray_with_given_sum(8, [3, 4, 1, 1, 6]))) # 3, 4, 1 [3]
+
+
+main()
+
+
 # input: array with positive integers, target sum is positive integer
 # output: minimum length of the subarray that have >= sum
 # we want to loop through the array and get the currentSum by adding up the numbers
@@ -26,50 +69,6 @@ import math
 #     return 0
 #   return minLen
 
-#Attempt 2:
-# Given an array of positive integers nums and a positive integer target, 
-# return the minimal length of a contiguous subarray [numsl, numsl+1, ..., numsr-1, numsr] 
-# of which the sum is greater than or equal to target. If there is no such subarray, return 0 instead.
-# Input: List of positive integers and positive target number
-# Output: shortest length of continoues subarray that is >= than the target sum
-# Edge case: array is empty: return 0
-
-# initialize the windowStart = 0, and the currentSum = 0, constant update the currentSum to see if it's closer to the targetSum
-# initialize the shortestLength = math.inf, we want to initialize as large as possible
-# loop through each value in the array:
-#  update the currentSum += arr[each]
-#  if currentSum >= targetSum:
-#     update the shortestLength = min(shortestLength, currentIndex - windowStart + 1) 
-#   currentSum -= arr[each]
-#   windowStart+=1
-
-
-def smallest_subarray_with_given_sum(s, arr):
-  if arr == []:
-    return 0
-
-  windowStart = 0
-  currentSum = 0
-  shortestLength = math.inf
-
-  for each in range(len(arr)):
-    currentSum += arr[each]
-    while currentSum >= s:
-      shortestLength = min(shortestLength, each - windowStart + 1)
-      currentSum -= arr[windowStart]
-      windowStart +=1
-
-  return shortestLength
-
-
-
-def main():
-  print("Smallest subarray length: " + str(smallest_subarray_with_given_sum(7, [2, 1, 5, 2, 3, 2]))) # 5, 2 [2]
-  print("Smallest subarray length: " + str(smallest_subarray_with_given_sum(7, [2, 1, 5, 2, 8]))) # 8 [1]
-  print("Smallest subarray length: " + str(smallest_subarray_with_given_sum(8, [3, 4, 1, 1, 6]))) # 3, 4, 1 [3]
-
-
-main()
 
 
 

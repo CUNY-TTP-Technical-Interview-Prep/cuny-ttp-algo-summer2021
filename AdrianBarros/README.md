@@ -134,7 +134,7 @@ program containing the following:
 #### 06/09 (Wed):
 - "Merge Intervals" Continued ( Each Pair Choose One! )
   - [X] Insert Interval (medium): LC #57
-  - [] Intervals Intersection (medium): LC #986 
+  - [X] Intervals Intersection (medium): LC #986 
   - [] Conflicting Appointments (medium): LC #252 
 - Intro to "Cyclic Sort" Pattern: Lecture & Discussion
   - [X] Cyclic Sort (easy)
@@ -153,8 +153,8 @@ program containing the following:
 
 #### 06/14 (Mon):
 - "In Place Reversal of a LL" Continued ( Each Pair Choose One! )
-  - [] Reverse a LinkedList (easy): LC #206
-  - [] Reverse a Sub-list (medium): LC #92
+  - [X] Reverse a LinkedList (easy): LC #206
+  - [X] Reverse a Sub-list (medium): LC #92
   - [] Reverse every K-element Sub-list (medium): LC #25 
 - Intro to "Trees: BFS" Pattern & Discussion
   - [] Binary Tree Level Order Traversal (easy): LC #102
