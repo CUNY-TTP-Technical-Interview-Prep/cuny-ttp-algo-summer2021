@@ -157,13 +157,13 @@ program containing the following:
   - [X] Reverse a Sub-list (medium): LC #92
   - [] Reverse every K-element Sub-list (medium): LC #25 
 - Intro to "Trees: BFS" Pattern & Discussion
-  - [] Binary Tree Level Order Traversal (easy): LC #102
+  - [X] Binary Tree Level Order Traversal (easy): LC #102
 
 
 #### 06/15 (Tues):
 - "Trees: BFS" Continued ( Each Pair Choose Two! )
   - [] Reverse Level Order Traversal (easy): LC #107
-  - [] Zigzag Traversal (medium): LC #103
+  - [X] Zigzag Traversal (medium): LC #103
   - [] Level Averages in a Binary Tree (easy): LC #637 
 
 #### 06/16 (Wed):
@@ -172,11 +172,11 @@ program containing the following:
   - [] Level Order Successor (easy)
   - [] Connect Level Order Siblings (medium): LC #117
 - Intro to "Trees: DFS" Pattern & Discussion
-  - [] Binary Tree Path Sum (easy): LC #112
+  - [X] Binary Tree Path Sum (easy): LC #112
 
 #### 06/17 (Thur):
 - "Trees: DFS" Continued ( Each Pair Choose Two! )
-  - [] All Paths for a Sum (medium): LC #113 & LC #257 
+  - [X] All Paths for a Sum (medium): LC #113 & LC #257 
   - [] Sum of Path Numbers (medium): LC #129
   - [] Path With Given Sequence (medium): LC #1430
   - [] Count Paths for a Sum (medium): LC #437
