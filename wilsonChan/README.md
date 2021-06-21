@@ -107,7 +107,7 @@ program containing the following:
 
 - "Two Pointers" Continued: P2P Mock Interview ( Each Pair Choose Two! )
   - [x] Remove Duplicates (easy): LC #26
-  - [] Squaring a Sorted Array (easy): LC #977
+  - [x] Squaring a Sorted Array (easy): LC #977
   - [] Triplet Sum to Zero (medium): LC #15
   - [] Triplet Sum Close to Target (medium): LC #16
 
@@ -125,7 +125,7 @@ program containing the following:
 
 #### 06/08 (Tues):
 - "Fast & Slow Pointers" Continued: P2P Mock Interview ( Each Pair Choose One! )
-  - [] Start of LinkedList Cycle (medium): LC #142 
+  - [x] Start of LinkedList Cycle (medium): LC #142 
   - [] Happy Number (medium): LC #202
   - [] Middle of the LinkedList (easy): LC #876 
 - Intro to "Merge Intervals" Pattern: Lecture & Discussion
