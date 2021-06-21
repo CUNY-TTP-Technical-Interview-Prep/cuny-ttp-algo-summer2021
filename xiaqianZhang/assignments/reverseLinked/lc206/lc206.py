@@ -2,6 +2,7 @@
 
 # Given the head of a Singly LinkedList, reverse the LinkedList. Write a function to return the new head of the reversed LinkedList.
 
+# Attempt 1: 
 # input: head of LL
 # output: after reverse the LL, we want to return the new head
 # edge cases: if the head is null, return null
@@ -22,6 +23,22 @@
             null   <-     1    <-    2
 """
 
+
+# Given the head of a Singly LinkedList, reverse the LinkedList. Write a function to return the new head of the reversed LinkedList.
+
+# Attempt 2: 
+# Input: head of original LL  1 -> 2 -> 3 -> 5 -> 4
+# Output: return the head of the reversed LL 4 -> 5 -> 3 -> 2 -> 1
+# Edge cases: if the head is null, then we return 0
+# initialize three variables: prev = None, current = head and next = None
+# while loop that loop through each node in the LL, since current is starting at the head, when it reach to null, then we've loop through the entire LL
+    # Therefore While current is not None: we want to doing the reversed
+        # first by kept the original current.next variable and stored in the next
+        # then current.next should be the prev to do the reversed. given from the input current = 1, in the reversed. current.next is expected to be null since 1 is the last node
+        # after the first node gets reversed, we move the prev into the next nodes, then prev becomes current node
+        # lastly update the current node as the next, which is original current.next in the original LL
+# after the while loop, return the head of the reversed LL, which is prev since it is the last node of the original LL
+
 from __future__ import print_function
 
 
@@ -37,21 +54,34 @@ class Node:
       temp = temp.next
     print()
 
-
 def reverse(head):
-  if head == None:
-    return None
+  if head is None:
+    return 0
   
-  prev = None
-  current = head
-  next = None
+  prev, current, next = None, head, None
 
   while current is not None:
     next = current.next
     current.next = prev
     prev = current
     current = next
+    
   return prev
+
+# def reverse(head):
+#   if head == None:
+#     return None
+  
+#   prev = None
+#   current = head
+#   next = None
+
+#   while current is not None:
+#     next = current.next
+#     current.next = prev
+#     prev = current
+#     current = next
+#   return prev
 
 
 def main():
@@ -75,14 +105,14 @@ main()
 
 # Solution
 # -----
-def reverse(head):
-  previous, current, next = None, head, None
-  while current is not None:
-    next = current.next  # temporarily store the next node
-    current.next = previous  # reverse the current node
-    previous = current  # before we move to the next node, point previous to the current node
-    current = next  # move on the next node
-  return previous
+# def reverse(head):
+#   previous, current, next = None, head, None
+#   while current is not None:
+#     next = current.next  # temporarily store the next node
+#     current.next = previous  # reverse the current node
+#     previous = current  # before we move to the next node, point previous to the current node
+#     current = next  # move on the next node
+#   return previous
   
 # -----
 
