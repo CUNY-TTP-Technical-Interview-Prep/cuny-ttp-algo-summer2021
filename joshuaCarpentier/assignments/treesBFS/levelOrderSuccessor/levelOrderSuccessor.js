@@ -31,6 +31,42 @@ class TreeNode {
 };
 
 
+/**
+ * 
+ * Input: tree
+ * Output: the maximum depth level
+ * 
+ * Variables: root, root. left, root.right, index, array to store the root 
+
+ * 
+ * Brute force Approach
+ * --------------- 
+ * Pre-Condition: 
+ * 
+ * Conditions: 
+ * 
+ * Termination-Conditions: 
+
+ * 
+ * Post-Conditions: 
+ * 
+ * 
+ * 
+ *  Optimal Approach
+ * -----------------
+ * Variables: 
+
+ * Pre-Condition: 
+ * 
+ * Conditions: 
+ * 
+ * Termination-Conditions: 
+
+ * 
+ * Post-Conditions: 
+ * 
+ * 
+ */
 const find_successor = function(root, key) {
   // TODO: Write your code here
   return null;
