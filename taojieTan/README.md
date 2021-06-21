@@ -138,8 +138,8 @@ We will start with a brief introduction of each pattern before jumping into the 
 
 - "Merge Intervals" Continued ( Each Pair Choose One! )
   - [x] Insert Interval (medium): LC #57
-  - [] Intervals Intersection (medium): LC #986
-  - [] Conflicting Appointments (medium): LC #252
+  - [x] Intervals Intersection (medium): LC #986
+  - [x] Conflicting Appointments (medium): LC #252
 - Intro to "Cyclic Sort" Pattern: Lecture & Discussion
   - [x] Cyclic Sort (easy)
 
@@ -147,9 +147,9 @@ We will start with a brief introduction of each pattern before jumping into the 
 
 - "Cyclic Sort" Continued ( Each Pair Choose Two! )
   - [x] Find the Missing Number (easy): LC #268
-  - [] Find all Missing Numbers (easy): LC #448
+  - [x] Find all Missing Numbers (easy): LC #448
   - [x] Find the Duplicate Number (easy): LC #287
-  - [] Find all Duplicate Numbers (easy): LC #442
+  - [x] Find all Duplicate Numbers (easy): LC #442
 - Intro to "In Place Reversal of a LL" Pattern: Lecture & Discussion
   - [x] Reverse a LinkedList (easy): LC #206
 
@@ -170,14 +170,14 @@ We will start with a brief introduction of each pattern before jumping into the 
 
 - "Trees: BFS" Continued ( Each Pair Choose Two! )
   - [x] Reverse Level Order Traversal (easy): LC #107
-  - [] Zigzag Traversal (medium): LC #103
+  - [x] Zigzag Traversal (medium): LC #103
   - [x] Level Averages in a Binary Tree (easy): LC #637
 
 #### 06/16 (Wed):
 
 - "Trees: BFS" Continued ( Each Pair Choose One! )
   - [x] Minimum Depth of a Binary Tree (easy): LC #111 & LC #104
-  - [] Level Order Successor (easy)
+  - [x] Level Order Successor (easy)
   - [] Connect Level Order Siblings (medium): LC #117
 - Intro to "Trees: DFS" Pattern & Discussion
   - [x] Binary Tree Path Sum (easy): LC #112
@@ -185,8 +185,8 @@ We will start with a brief introduction of each pattern before jumping into the 
 #### 06/17 (Thur):
 
 - "Trees: DFS" Continued ( Each Pair Choose Two! )
-  - [] All Paths for a Sum (medium): LC #113 & LC #257
-  - [] Sum of Path Numbers (medium): LC #129
+  - [x] All Paths for a Sum (medium): LC #113 & LC #257
+  - [x] Sum of Path Numbers (medium): LC #129
   - [] Path With Given Sequence (medium): LC #1430
   - [] Count Paths for a Sum (medium): LC #437
 
