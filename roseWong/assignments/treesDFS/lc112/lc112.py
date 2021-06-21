@@ -1,5 +1,6 @@
 # Problem Statement #
 
+
 # Given a binary tree and a number ‘S’, find if the tree has a path from root-to-leaf such that the
 # sum of all the node values of that path equals ‘S’.
 
@@ -17,6 +18,7 @@
 
 # Key learnings:  first do the edge case, then do the base case, then complete with the recursive logic.
 
+
 class TreeNode:
   def __init__(self, val, left=None, right=None):
     self.val = val
@@ -25,6 +27,7 @@ class TreeNode:
 
 
 def has_path(root, sum):
+
   if not root :
     return False
   
