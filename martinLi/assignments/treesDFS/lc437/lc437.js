@@ -27,8 +27,28 @@ class TreeNode {
 }
 
 const count_paths = function (root, S) {
+  let res = 0;
+
+  const helper = (root, sum) => {
+    if (!root) return;
+    sum -= root.value;
+    if (sum === 0) {
+      res++;
+    }
+    helper(root.left, sum);
+    helper(root.right, sum);
+  };
+
+  const main = (root, sum) => {
+    if (!root) return 0;
+    helper(root, sum);
+    main(root.left, sum);
+    main(root.right, sum);
+    return;
+  };
+  main(root, S);
+  return res;
   // TODO: Write your code here
-  return -1;
 };
 
 var root = new TreeNode(12);
