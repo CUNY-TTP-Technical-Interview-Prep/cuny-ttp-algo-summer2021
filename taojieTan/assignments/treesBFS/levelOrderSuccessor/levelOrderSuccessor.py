@@ -21,6 +21,16 @@
 # Given Node: 9
 # Level Order Successor: 10
 
+'''
+  edge cases: 1. empty tree => return None
+              2. cannot find the successor => return None
+
+  We can apply BFS pattern using a queue to traverse through every node.
+  When we found the given target node, next node in the queue will be the successor. 
+  We can use a variable (let's call it visited) to keep track of whether the target node has been visited or not. 
+  If visited is true, then we store the current node as the successor and immediately break out the loop.
+
+'''
 
 class TreeNode:
   def __init__(self, val):
@@ -29,7 +39,26 @@ class TreeNode:
 
 
 def find_successor(root, key):
-  # TODO: Write your code here
+  if root is None:
+    return None
+
+  visited = False
+  queue = [root]
+
+  while len(queue):
+    num_of_nodes = len(queue)
+    for i in range(num_of_nodes):
+      node = queue.pop(0)
+      if int(node.val) == key and visited is False:
+        visited = True
+      elif visited is True:
+        return node
+      
+      if node.left:
+        queue.append(node.left)
+      if node.right:
+        queue.append(node.right)
+
   return None
 
 
@@ -46,6 +75,5 @@ def main():
   result = find_successor(root, 9)
   if result:
     print(result.val)
-
 
 main()

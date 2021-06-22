@@ -2,14 +2,75 @@
 
 # Given a binary tree, populate an array to represent its zigzag level order traversal. You should populate the values of all nodes of the first level from left to right, then right to left for the next level and keep alternating in the same manner for the following levels.
 
+# input: a binary tree
+# output: an array with all the nodes in zigzag level order
+# edge cases: 1. empty tree: => return []
+#             2. root without child => return [the root] 
+
+'''
+          12
+      7        1
+   9    2   10   5          ==> return [[12], [1, 7], [9, 2, 10, 5], [17, 20, 3, 6]]
+ 6  3     20 17
+'''
+
+''' 
+  We can apply BFS pattern using queue to store every node from right to left, 
+  and then use deque collections to append each node value to the left or right based on the level.
+  If it is odd level, we append each node value at the beginning of deque; 
+  otherwise, append at the end of the deque.
+  At the end, we will get result list with zigzag level order
+
+  Pseudo code:
+  First, we declare and initialize a queue with root node, and a level variable with 1.
+
+  While queue is not empty, we initialize a length variable representing numbers of node in current level,
+  and a deque object to store each node in current level.  
+
+  for each node in this level, we pop the first node from queue, and check if it has left or right children.
+  We store the right child first and then left child to the queue. 
+  Then we check if the current level is even or odd, 
+  if even, we append each value to the end of deque;
+  else, we append left the value to the deque.
+
+  When finish the for loop, we append the deque to result list.
+  When finish traversing all the nodes (when length of queue is null), we will get the final result.
+''' 
+
+from collections import deque
+
 class TreeNode:
   def __init__(self, val):
     self.val = val
     self.left, self.right = None, None
 
 def traverse(root):
+  if root is None:
+    return []
+
   result = []
-  # TODO: Write your code here
+  queue = [root]
+  level = 1
+
+  while len(queue):
+    num_of_nodes = len(queue)
+    temp = deque()
+
+    for i in range(num_of_nodes):
+      node = queue.pop(0)
+      if level % 2 == 0:
+        temp.append(node.val)
+      else:
+        temp.appendleft(node.val)
+
+      if node.right:
+        queue.append(node.right)
+      if node.left:
+        queue.append(node.left)
+    
+    level += 1
+    result.append(temp)
+  
   return result
 
 
@@ -23,7 +84,8 @@ def main():
   root.right.left.left = TreeNode(20)
   root.right.left.right = TreeNode(17)
   print("Zigzag traversal: " + str(traverse(root)))
-
+  
+#  ==> return [[12], [1, 7], [9, 10, 5], [17, 20]]
 
 main()
 
