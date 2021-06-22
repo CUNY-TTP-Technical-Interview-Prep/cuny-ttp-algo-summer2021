@@ -30,6 +30,13 @@ Steps / Tasks:
 -Reverse the array to sort
 
 
+Complexities:
+Time: O(N) - Iterating from left to right inside given array, 
+the numbers are sorted and squared
+
+Space: O(N) - The size of the array varies since it's 
+dependent on initial input
+
 '''
 
 
