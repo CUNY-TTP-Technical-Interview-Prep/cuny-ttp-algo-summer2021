@@ -16,7 +16,7 @@ Precondition:
 root: The root of the binary tree, if null automatically return false
 sum: The sum we want from the root to the leaf
 
-Question: Are all the nodes going to have values < sum?
+Question: Are all the nodes going to have values < sum? Yes
 
 
 Post condition: 
@@ -25,7 +25,7 @@ Return a boolean that tells us whether or not a sum from root->leaf exists and =
 nodeStack: Keeps track of all the future nodes that we are going to look at,
 sumStack: Keep the compliment sum of the current node and the targetSum <=> sum (parameter)
 
-LEAF: A node where node !== null, node.left and node.right === null
+LEAF NODE: A node where node !== null, node.left and node.right === null
 
 
 General Idea:
@@ -39,10 +39,10 @@ LINE: 52 Check if the current node is a leaf, if it is ==> check if the currentS
 If this case is met then return TRUE
 
 Otherwise, check the currentNode's children (left && right),
-If either exist, then add that node to the nodeStack and update the sumStack with currentSum where (currentSum- currentNode.child.value) gets pushed to the sum stack
+If either exist, then add that node to the nodeStack and update the sumStack with currentSum where (currentSum - currentNode.child.value) gets pushed,
 
 
-If for some reason we process all the paths in the binary tree and NO PATH adds up to sum, then by default we return false
+If for some reason we process all the paths in the binary tree and NO PATH adds up to sum, then by default we return FALSE
 
 */
 
@@ -54,7 +54,7 @@ const has_path = function(root, sum) {
 
   let currentNode = null, currentSum = 0;
 
-  while(nodeStack.length){ // Iterate at most N times, we exhaust all paths from root to leaves
+  while(nodeStack.length){ // Iterate at most N times. In the worst case we exhaust all paths from root to leaves.
     currentNode = nodeStack.pop(); 
     currentSum = sumStack.pop(); 
     if (!currentNode.left && !currentNode.right && currentSum === 0) return true;
