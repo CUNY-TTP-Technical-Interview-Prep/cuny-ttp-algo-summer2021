@@ -176,8 +176,8 @@ program containing the following:
 
 #### 06/17 (Thur):
 - "Trees: DFS" Continued ( Each Pair Choose Two! )
-  - [] All Paths for a Sum (medium): LC #113 & LC #257 
-  - [] Sum of Path Numbers (medium): LC #129
+  - [X] All Paths for a Sum (medium): LC #113 & LC #257 
+  - [X] Sum of Path Numbers (medium): LC #129
   - [] Path With Given Sequence (medium): LC #1430
   - [] Count Paths for a Sum (medium): LC #437
 
@@ -186,7 +186,7 @@ program containing the following:
 
 #### 06/21 (Mon):
 - Intro to "Heaps" Pattern & Discussion
-  - [] Find the Median of a Number Stream (medium): LC #295
+  - [X] Find the Median of a Number Stream (medium): LC #295
 - "Heaps" Continued ( *No Luck This Time, Only One Problem To Choose From! )
   - [] Sliding Window Median (hard): LC #480
 - Intro to "Subsets" Pattern & Discussion
