@@ -7,16 +7,22 @@
 
 // If the count of numbers inserted in the class is even, the median will be the average of the middle two numbers.
 
-class MedianOfAStream {
-  insert_num(num) {
-    // TODO: Write your code here
-    return -1;
-  }
+/* 
+  keep track of median at any given time
+  if we use 1 heap we can track either the max or min number at the heap
+  to find the median, we can use two heaps. 
+  One will keep track of the max value of lower half   (max heap)
+  and the other will keep track of the min value of the uppper half (min heap)
+  If the max heap and min heap both contain even numbers then we can take the average of the max and min values
+  If the amount of numbers is odd then we can just take the max value of the max heap.
+*/
 
-  find_median(self) {
-    // TODO: Write your code here
-    return 0.0;
-  }
+// need more time to implement this.
+
+class MedianOfAStream {
+	insert_num(num) {}
+
+	find_median() {}
 }
 
 var medianOfAStream = new MedianOfAStream();
