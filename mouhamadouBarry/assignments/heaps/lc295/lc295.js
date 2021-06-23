@@ -36,6 +36,7 @@
 
     let numArr = []
     numArr.push(num)
+    
 */
 class MedianOfAStream {
   insert_num(num) {
