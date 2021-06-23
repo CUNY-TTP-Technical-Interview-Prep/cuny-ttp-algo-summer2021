@@ -14,7 +14,8 @@ class TreeNode {
 const traverse = function(root) {
   result = [];
   // TODO: Write your code here
-  return result;
+  return levels
+  
 }
 
 var root = new TreeNode(12)
