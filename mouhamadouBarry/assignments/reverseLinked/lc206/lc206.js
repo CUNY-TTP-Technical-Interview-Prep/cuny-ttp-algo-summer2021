@@ -1,7 +1,32 @@
 // Problem Statement #
 
 // Given the head of a Singly LinkedList, reverse the LinkedList. Write a function to return the new head of the reversed LinkedList.
+/*
 
+LOOK THE METHOD THAT A LINKED LIST HAS
+->they do not have a length method
+
+INPUT: A singly Linkedlist
+OUTPUT: Return a reversed the Linkedlist
+
+LOGIC:
+
+  let previous = null
+  let current = head
+
+  while(head.next){
+
+    let next = current.next
+    current.next = previous
+    let previous = current
+    current = next
+
+  }
+  return previous
+
+
+
+*/
 class Node {
   constructor(value, next=null){
     this.value = value;
@@ -9,8 +34,8 @@ class Node {
   }
 
   get_list() {
-    result = "";
-    temp = this;
+    let result = "";
+    let temp = this;
     while (temp !== null) {
       result += temp.value + " ";
       temp = temp.next;
@@ -22,7 +47,18 @@ class Node {
 
 const reverse = function(head) {
   // TODO: Write your code here
-  return head;
+  let previous = null
+  let current = head
+
+  while(current != null){
+
+    let next = current.next
+    current.next = previous
+    previous = current
+    current = next
+
+  }
+  return previous
 };
 
 head = new Node(2);
