@@ -99,9 +99,9 @@ program containing the following:
 - "Sliding Window" Continued: P2P Mock Interview ( Each Pair Choose One! )
   - [X] Smallest Subarray with a given sum (easy): LC #209
   - [X] Longest Substring with K Distinct Characters (medium): LC #340
-  - [] Fruits into Baskets (medium): LC 904
+  - [X] Fruits into Baskets (medium): LC 904
 - Intro to "Two Pointers" Pattern: Lecture & Discussion
-  - [] Pair with Target Sum (easy): LC #1
+  - [X] Pair with Target Sum (easy): LC #1
 
 #### 06/03 (Thur):
 
