@@ -15,39 +15,34 @@ class TreeNode {
  * Input: tree
  * Output: the maximum depth level
  * 
- * Variables: root, root. left, root.right, index, array to store the root 
-
  * 
  * Brute force Approach
  * --------------- 
- * Pre-Condition: check if empty 
- * 
- * Conditions: 
- * 
- * Termination-Conditions: if there is only a root node return level
-
- * 
- * Post-Conditions: 
- * 
- * there is only really a pre condition since were only going to lowest level
- * 
- * 
- *  Optimal Approach
- * -----------------
- * Variables: 
-
- * Pre-Condition: 
- * 
- * Conditions: 
- * 
- * Termination-Conditions: 
-
- * 
- * Post-Conditions: 
+ * Variables: root, root. left, root.right, index, array to store the root 
  * 
  * 
  */
+
+
+/**
+ *  Optimal Approach
+ * -----------------
+ *  Variables: 
+ * 
+ * 
+ */
+
+// were using bfs were a dfs would be better depending on depth
 function find_maximum_depth(root) {
+// Pre-Condition: check if empty 
+ 
+// Conditions: 
+
+// Termination-Conditions: if there is only a root node return level
+
+// Post-Conditions: 
+ 
+ // there is only really a pre condition since were only going to lowest level
 
   if (!root) return 0;
     let queue = [root];
@@ -74,3 +69,8 @@ console.log(`Tree Maximum Depth: ${find_maximum_depth(root)}`);
 root.left.left = new TreeNode(9);
 root.right.left.left = new TreeNode(11);
 console.log(`Tree Maximum Depth: ${find_maximum_depth(root)}`);
+
+
+console.log(`\n ------- Edge Case -------- `);
+console.log(`Tree has path: ${has_path(root, 16)}`);
+

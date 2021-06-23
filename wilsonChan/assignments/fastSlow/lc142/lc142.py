@@ -1,6 +1,43 @@
 # Problem Statement #
 
-# Given the head of a Singly LinkedList that contains a cycle, write a function to find the starting node of the cycle.
+# Given the head of a Singly LinkedList that contains a cycle, 
+# write a function to find the starting node of the cycle.
+
+'''
+Given:
+-linked list with a head
+-parameter contains only head (no need to modify linked list)
+
+
+Result:
+-find the starting node of the cycle
+
+
+Example / Visual:
+[1] [2] [3] [4] [5] [6]
+ S -[ ]
+ F -[ ]-[ ]
+
+
+
+Steps / Tasks:
+-Initialize two pointers: slow and fast
+  -Since cycle is involved, one pointer would have to move faster than the other
+-Any instance when fast and slow pointers meet, identify the starting position in 
+ the next cycle
+
+Edge case:
+-If there is no head or nothing next to the head
+  -return None (null)
+
+
+
+Complexities:
+Time: O(N)
+Space: O(1) - the given linked list is a fixed size and does not ever change
+
+'''
+
 
 from __future__ import print_function
 
@@ -20,7 +57,27 @@ class Node:
 
 def find_cycle_start(head):
   # TODO: Write your code here
-  return head
+
+  slow, fast = head, head
+
+  if not head or not head.next:       #Edge cases
+    return None
+
+  while fast and fast.next:    #fast pointer will always be ahead by one position
+    fast = fast.next.next
+    slow = slow.next
+
+    if fast == slow:
+      break
+
+  if fast == slow:         #ensures that fast pointer is one position further than head
+    while fast != head:
+      fast = fast.next
+      head = head.next
+    return head
+
+  else:
+    return None
 
 
 def main():
@@ -40,6 +97,10 @@ def main():
   head.next.next.next.next.next.next = head
   print("LinkedList cycle start: " + str(find_cycle_start(head).value))
 
+  #My Example: there are two extra next positions after one full cycle. The
+  #next cycle will start on position 2
+  head.next.next.next.next.next = head.next.next.next.next.next.next.next
+  print("This LinkedList cycle starts at: " + str(find_cycle_start(head).value))
 
 main()
 
