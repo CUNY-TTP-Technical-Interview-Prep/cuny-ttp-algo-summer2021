@@ -169,6 +169,7 @@ We will start with a brief introduction of each pattern before jumping into the 
 #### 06/15 (Tues):
 
 - "Trees: BFS" Continued ( Each Pair Choose Two! )
+
   - [x] Reverse Level Order Traversal (easy): LC #107
 
   - [x] Zigzag Traversal (medium): LC #103
@@ -198,9 +199,9 @@ We will start with a brief introduction of each pattern before jumping into the 
 #### 06/21 (Mon):
 
 - Intro to "Heaps" Pattern & Discussion
-  - [] Find the Median of a Number Stream (medium): LC #295
+  - [x] Find the Median of a Number Stream (medium): LC #295
 - "Heaps" Continued ( \*No Luck This Time, Only One Problem To Choose From! )
-  - [] Sliding Window Median (hard): LC #480
+  - [x] Sliding Window Median (hard): LC #480
 - Intro to "Subsets" Pattern & Discussion
   - [] Subsets (easy): LC #78
 
