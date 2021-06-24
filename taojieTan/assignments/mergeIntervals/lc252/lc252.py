@@ -2,15 +2,48 @@
 
 # Given an array of intervals representing ‘N’ appointments, find out if a person can attend all the appointments.
 
+# input: an array with intervals (unsorted)
+# output: a boolean value 
+# edge cases: 1. empty array => return False
+#             2. all intervals are the same (e.g. [[1,1], [1,1], [1,1]]) => return False
+#             3. if each end interval is right on the start interval of next interval (e.g. [[1,2], [2,3], [3,4]])  => return True
+
+'''
+  Basically, we are asked to find any overlap interval, if there is one, we simply return False.
+  
+  We first sort the array, and we traverse through each interval to check 
+  if the end interval of current element is greater to the start interval of next element, if yes, we found an overlap and return False.
+  Time complexity will be O(N*Log(N)) and space complexity is O(1).
+
+'''
+
 def can_attend_all_appointments(intervals):
-  # TODO: Write your code here
-  return False
+
+  if not intervals:
+    return False
+  
+  start, end = 0, 1
+  intervals.sort()
+  print(intervals)
+
+  for i in range(len(intervals) - 1):
+    curr_interval = intervals[i]
+    next_interval = intervals[i+1]
+
+    if curr_interval[end] > next_interval[start]:
+      return False
+  
+
+  return True
 
 
 def main():
   print("Can attend all appointments: " + str(can_attend_all_appointments([[1, 4], [2, 5], [7, 9]])))
   print("Can attend all appointments: " + str(can_attend_all_appointments([[6, 7], [2, 4], [8, 12]])))
   print("Can attend all appointments: " + str(can_attend_all_appointments([[4, 5], [2, 3], [3, 6]])))
+  print("Can attend all appointments: " + str(can_attend_all_appointments([[3, 4], [1, 3], [4, 6]])))
+  print("Can attend all appointments: " + str(can_attend_all_appointments([])))
+
 
 
 main()

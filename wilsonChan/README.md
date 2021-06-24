@@ -107,7 +107,7 @@ program containing the following:
 
 - "Two Pointers" Continued: P2P Mock Interview ( Each Pair Choose Two! )
   - [x] Remove Duplicates (easy): LC #26
-  - [] Squaring a Sorted Array (easy): LC #977
+  - [x] Squaring a Sorted Array (easy): LC #977
   - [] Triplet Sum to Zero (medium): LC #15
   - [] Triplet Sum Close to Target (medium): LC #16
 
@@ -125,7 +125,7 @@ program containing the following:
 
 #### 06/08 (Tues):
 - "Fast & Slow Pointers" Continued: P2P Mock Interview ( Each Pair Choose One! )
-  - [] Start of LinkedList Cycle (medium): LC #142 
+  - [x] Start of LinkedList Cycle (medium): LC #142 
   - [] Happy Number (medium): LC #202
   - [] Middle of the LinkedList (easy): LC #876 
 - Intro to "Merge Intervals" Pattern: Lecture & Discussion
@@ -153,7 +153,7 @@ program containing the following:
 
 #### 06/14 (Mon):
 - "In Place Reversal of a LL" Continued ( Each Pair Choose One! )
-  - [] Reverse a LinkedList (easy): LC #206
+  - [x] Reverse a LinkedList (easy): LC #206
   - [x] Reverse a Sub-list (medium): LC #92
   - [] Reverse every K-element Sub-list (medium): LC #25 
 - Intro to "Trees: BFS" Pattern & Discussion
@@ -162,7 +162,7 @@ program containing the following:
 
 #### 06/15 (Tues):
 - "Trees: BFS" Continued ( Each Pair Choose Two! )
-  - [] Reverse Level Order Traversal (easy): LC #107
+  - [x] Reverse Level Order Traversal (easy): LC #107
   - [] Zigzag Traversal (medium): LC #103
   - [x] Level Averages in a Binary Tree (easy): LC #637 
 
@@ -172,12 +172,12 @@ program containing the following:
   - [] Level Order Successor (easy)
   - [] Connect Level Order Siblings (medium): LC #117
 - Intro to "Trees: DFS" Pattern & Discussion
-  - [] Binary Tree Path Sum (easy): LC #112
+  - [x] Binary Tree Path Sum (easy): LC #112
 
 #### 06/17 (Thur):
 - "Trees: DFS" Continued ( Each Pair Choose Two! )
   - [] All Paths for a Sum (medium): LC #113 & LC #257 
-  - [] Sum of Path Numbers (medium): LC #129
+  - [x] Sum of Path Numbers (medium): LC #129
   - [] Path With Given Sequence (medium): LC #1430
   - [] Count Paths for a Sum (medium): LC #437
 
