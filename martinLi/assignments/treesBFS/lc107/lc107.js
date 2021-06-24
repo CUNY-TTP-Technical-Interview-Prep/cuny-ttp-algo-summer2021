@@ -11,7 +11,7 @@ left to right.
 
 
 This would result in the return of
-[[15 7] [9  20] [3]]
+[15 7 9 20 3] =>([15 7]) ([9 20] [3])
 
 
 */
@@ -26,17 +26,37 @@ class TreeNode {
 const traverse = function (root) {
   //passing in entire Binary Tree!
 
-  const result = []; // array of arrays
-  const queue = [root]; // holds the root val
+  let result = []; // array of arrays
 
   if (root === null) {
+    //if null then return empty []
     return result;
   }
 
-  while (queue.length) {
-    const currLevel = [];
+  let queue = [root]; // holds the root val
+  //in queue, what
+  while (queue.length !== 0) {
+    //keep track number of nodes within a queue
+    let node_counter = queue.length;
+    let row_result = [];
+
+    while (node_counter > 0) {
+      //builds up row_result list
+      let current_node = queue.shift();
+      if (current_node.left !== null) {
+        //if it has a left child...
+        queue.push(current_node.left);
+      }
+      if (current_node.right !== null) {
+        //if it has a right child...
+        queue.push(current_node.right);
+      }
+      row_result.push(current_node.value); //we just want to push the node's value
+      node_counter--; //decrement row counter
+    }
+    result.unshift(row_result);
   }
-  // TODO: Write your code here
+
   return result;
 };
 
@@ -48,6 +68,20 @@ root.right.left = new TreeNode(10);
 root.right.right = new TreeNode(5);
 console.log(`Reverse level order traversal: ${traverse(root)}`);
 
+/**
+ * 3 
+9  20
+  15 7
+
+ */
+
+var root = new TreeNode(3);
+root.left = new TreeNode(9);
+root.right = new TreeNode(20);
+//root.left.left = new TreeNode(9);
+root.right.left = new TreeNode(15);
+root.right.right = new TreeNode(7);
+console.log(`Reverse level order traversal: ${traverse(root)}`);
 // Solution
 // -----
 // const traverse = function(root) {
