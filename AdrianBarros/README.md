@@ -135,16 +135,16 @@ program containing the following:
 - "Merge Intervals" Continued ( Each Pair Choose One! )
   - [X] Insert Interval (medium): LC #57
   - [X] Intervals Intersection (medium): LC #986 
-  - [] Conflicting Appointments (medium): LC #252 
+  - [X] Conflicting Appointments (medium): LC #252 
 - Intro to "Cyclic Sort" Pattern: Lecture & Discussion
   - [X] Cyclic Sort (easy)
 
 #### 06/10 (Thur):
 - "Cyclic Sort" Continued ( Each Pair Choose Two! )
   - [X] Find the Missing Number (easy): LC #268 
-  - [] Find all Missing Numbers (easy): LC #448 
-  - [] Find the Duplicate Number (easy): LC #287 
-  - [] Find all Duplicate Numbers (easy): LC #442 
+  - [X] Find all Missing Numbers (easy): LC #448 
+  - [X] Find the Duplicate Number (easy): LC #287 
+  - [X] Find all Duplicate Numbers (easy): LC #442 
 - Intro to "In Place Reversal of a LL" Pattern: Lecture & Discussion
   - [X] Reverse a LinkedList (easy): LC #206
   
@@ -186,9 +186,9 @@ program containing the following:
 
 #### 06/21 (Mon):
 - Intro to "Heaps" Pattern & Discussion
-  - [] Find the Median of a Number Stream (medium): LC #295
+  - [X] Find the Median of a Number Stream (medium): LC #295
 - "Heaps" Continued ( *No Luck This Time, Only One Problem To Choose From! )
-  - [] Sliding Window Median (hard): LC #480
+  - [X] Sliding Window Median (hard): LC #480
 - Intro to "Subsets" Pattern & Discussion
   - [] Subsets (easy): LC #78
 
