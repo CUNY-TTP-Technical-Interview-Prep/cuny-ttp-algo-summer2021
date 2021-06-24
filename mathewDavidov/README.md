@@ -188,7 +188,7 @@ program containing the following:
 - Intro to "Heaps" Pattern & Discussion
   - [X] Find the Median of a Number Stream (medium): LC #295
 - "Heaps" Continued ( *No Luck This Time, Only One Problem To Choose From! )
-  - [] Sliding Window Median (hard): LC #480
+  - [X] Sliding Window Median (hard): LC #480
 - Intro to "Subsets" Pattern & Discussion
   - [] Subsets (easy): LC #78
 
