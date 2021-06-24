@@ -6,8 +6,10 @@
 input: head ptr to a linked-list.
 output: head ptr, to the same linked-list reversed.
 
-
-        h
+p: previous
+h: head/current
+n: head.next
+ p      h    n
 null <- 1 -> 2 -> 3 -> 4 -> 5->null
 
 

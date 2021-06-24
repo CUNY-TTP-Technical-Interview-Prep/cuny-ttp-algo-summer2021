@@ -178,7 +178,7 @@ We will start with a brief introduction of each pattern before jumping into the 
 - "Trees: BFS" Continued ( Each Pair Choose One! )
   - [x] Minimum Depth of a Binary Tree (easy): LC #111 & LC #104
   - [x] Level Order Successor (easy)
-  - [] Connect Level Order Siblings (medium): LC #117
+  - [x] Connect Level Order Siblings (medium): LC #117
 - Intro to "Trees: DFS" Pattern & Discussion
   - [x] Binary Tree Path Sum (easy): LC #112
 
