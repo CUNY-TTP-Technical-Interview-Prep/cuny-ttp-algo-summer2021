@@ -22,6 +22,9 @@ Problem 1: Given an unsorted array of numbers and a target ‘key’, remove all
  *            left and right pointer to do the two pointer approach
  * 
  * use a while loop to traverse all the elements if left pointer is less or equal than the right
+ *      compare if the right is equal to the key
+ *          decrement the right
+ *          pop the last elements;
  *      compare if the left is equal to the key
  *          compare if it is fist time
  *                set isFirsttime false
