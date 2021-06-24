@@ -2,7 +2,10 @@
 # find the maximum sum of any contiguous subarray of size ‘k’.
 
 # I drew a blank and then spinned my wheels for several minutes, so had to refer to old work
-# Even with the work in front of me I had to reverse engineer, but I do understand it still.
+# Even with the work in front of me I had to reverse engineer, but I do understand it.
+
+# we sum consecutive numbers until we hit the window size of k, then we compare this total with
+# previous max totals and keep the highest max total.
 
 def max_sub_array_of_size_k(k, arr):
   maxSum = 0
