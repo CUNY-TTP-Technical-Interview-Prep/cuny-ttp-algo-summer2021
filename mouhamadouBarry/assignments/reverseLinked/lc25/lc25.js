@@ -47,25 +47,7 @@ class Node {
 const reverse_every_k_elements = function(head, k) {
   // TODO: Write your code here
 
-  if (k <= 1 || head === null) {
-    return head;
-  }
-
-  let current = head
-  let previous = null
-  while (current != null) {
-    let next = null; // will be used to temporarily store the next node
-    let i = 0;
-    while (i < k) { // reverse 'k' nodes
-      next = current.next;
-      current.next = previous;
-      previous = current;
-      current = next;
-      i ++;
-    }
-    
-  }
-  return head;
+ 
 }
 
 
@@ -147,3 +129,34 @@ console.log(`Nodes of reversed LinkedList are: ${reverse_every_k_elements(head, 
 
 // Space complexity #
 // We only used constant space, therefore, the space complexity of our algorithm is O(1).
+
+
+/*--------------------------MY OLD WORK---------------------------- 
+
+
+
+
+ if (k <= 1 || head === null) {
+    return head;
+  }
+
+  let current = head
+  let previous = null
+  while (current != null) {
+    let next = null; // will be used to temporarily store the next node
+    let i = 0;
+    while (i < k) { // reverse 'k' nodes
+      next = current.next;
+      current.next = previous;
+      previous = current;
+      current = next;
+      i ++;
+    }
+    
+  }
+  return head;
+
+
+
+
+*/
