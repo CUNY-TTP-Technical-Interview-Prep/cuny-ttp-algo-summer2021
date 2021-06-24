@@ -26,6 +26,12 @@ class TreeNode {
   }
 }
 
+/*
+LC inprogress
+We have a res variable which keeps track of the
+number of paths
+
+*/
 const count_paths = function (root, S) {
   let res = 0;
 

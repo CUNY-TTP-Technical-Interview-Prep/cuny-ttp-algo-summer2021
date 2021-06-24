@@ -27,7 +27,7 @@ otherwise it returns false
 const has_path = function (root, sum) {
   if (!root) {
     return false;
-  }
+  } // 23 - 12=> 11 - 1=> 10
   if (root.left === null && root.right === null) return sum === root.value;
   else {
     return (
