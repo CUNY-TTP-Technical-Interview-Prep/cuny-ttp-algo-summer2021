@@ -147,11 +147,11 @@ We will start with a brief introduction of each pattern before jumping into the 
 
 - "Cyclic Sort" Continued ( Each Pair Choose Two! )
   - [x] Find the Missing Number (easy): LC #268
-  - [] Find all Missing Numbers (easy): LC #448
+  - [x] Find all Missing Numbers (easy): LC #448
   - [] Find the Duplicate Number (easy): LC #287
   - [] Find all Duplicate Numbers (easy): LC #442
 - Intro to "In Place Reversal of a LL" Pattern: Lecture & Discussion
-  - [] Reverse a LinkedList (easy): LC #206
+  - [x] Reverse a LinkedList (easy): LC #206
 
 ### .
 
@@ -160,18 +160,18 @@ We will start with a brief introduction of each pattern before jumping into the 
 #### 06/14 (Mon):
 
 - "In Place Reversal of a LL" Continued ( Each Pair Choose One! )
-  - [] Reverse a LinkedList (easy): LC #206
-  - [] Reverse a Sub-list (medium): LC #92
+  - [x] Reverse a LinkedList (easy): LC #206
+  - [x] Reverse a Sub-list (medium): LC #92
   - [] Reverse every K-element Sub-list (medium): LC #25
 - Intro to "Trees: BFS" Pattern & Discussion
-  - [] Binary Tree Level Order Traversal (easy): LC #102
+  - [x] Binary Tree Level Order Traversal (easy): LC #102
 
 #### 06/15 (Tues):
 
 - "Trees: BFS" Continued ( Each Pair Choose Two! )
-  - [] Reverse Level Order Traversal (easy): LC #107
+  - [x] Reverse Level Order Traversal (easy): LC #107
   - [] Zigzag Traversal (medium): LC #103
-  - [] Level Averages in a Binary Tree (easy): LC #637
+  - [x] Level Averages in a Binary Tree (easy): LC #637
 
 #### 06/16 (Wed):
 
@@ -186,9 +186,9 @@ We will start with a brief introduction of each pattern before jumping into the 
 
 - "Trees: DFS" Continued ( Each Pair Choose Two! )
   - [] All Paths for a Sum (medium): LC #113 & LC #257
-  - [] Sum of Path Numbers (medium): LC #129
+  - [x] Sum of Path Numbers (medium): LC #129
   - [] Path With Given Sequence (medium): LC #1430
-  - [] Count Paths for a Sum (medium): LC #437
+  - [x] Count Paths for a Sum (medium): LC #437
 
 ### .
 

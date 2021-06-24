@@ -29,7 +29,7 @@ const traverse = function (root) {
         queue.push(current.right);
       }
 
-      currLevel.push(current.val);
+      currLevel.push(current.value);
     }
 
     levels.push(currLevel);
