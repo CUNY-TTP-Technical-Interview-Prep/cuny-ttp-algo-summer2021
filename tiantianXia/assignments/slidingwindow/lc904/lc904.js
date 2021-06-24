@@ -6,22 +6,6 @@
 
 // Write a function to return the maximum number of fruits in both baskets.
 
-/**
- * input:
- * @param {*} fruits: an array of the characters
- * 
- * output: 
- * maxNum: the maximum number of fruits in both baskets
- * 
- * variables: windowStart, windowEnd: to operate a sliding window
- * maxNum store the maximum number of the fruites
- * frequency: store the frequency of each fruites
- * 
- * run a for loop to implement all the element in the array
- * count the frequency of each fruit 
- * 
- * 
- */
 
 function fruits_into_baskets(fruits) {
   // TODO: Write code here
@@ -93,3 +77,20 @@ console.log(
 // }
 
 // return maxLength;
+
+/**
+ * input:
+ * @param {*} fruits: an array of the characters
+ * 
+ * output: 
+ * maxNum: the maximum number of fruits in both baskets
+ * 
+ * variables: windowStart, windowEnd: to operate a sliding window
+ * maxNum store the maximum number of the fruites
+ * frequency: store the frequency of each fruites
+ * 
+ * run a for loop to implement all the element in the array
+ * count the frequency of each fruit 
+ * 
+ * 
+ */
