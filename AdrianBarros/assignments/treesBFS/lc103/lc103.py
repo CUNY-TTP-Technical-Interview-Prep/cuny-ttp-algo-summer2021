@@ -9,6 +9,11 @@ step2: keep track of the level (counter%2 == 0)
 step3: the conditional will determine if the values will be looked at (queue or stack)
 step4: adding values accordingly adding left and right if any
 final return
+
+
+time complexity: O(n)
+space complexity: O(n/2) = O(n)
+
 '''
 
 

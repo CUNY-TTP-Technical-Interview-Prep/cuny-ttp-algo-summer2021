@@ -3,6 +3,44 @@
 
 # Write a function to return the indices of the two numbers (i.e. the pair) such that they add up to the given target.
 
+#Attempt 2
+'''
+Input: list of integers and target Sum integer
+Output: index of the two numbers in the list that have the sum as the target sum
+edge case: if the array is empty, return null
+
+initliaze two variables, two pointer that one starts from index 0, another starts at the end of the array
+  while the left pointer is smaller than the right pointer:
+    initliaze a currentSum that is the sum of the start and end
+    check if the currentSum is:
+      equal as the target: return the index of start and end
+      smaller than the target: move the start index rightwards because the currentSum is too small
+      less than 0: move the end index leftwards since the currentSum is too large
+'''
+
+def pair_with_targetsum(arr, target):
+  start = 0
+  end = len(arr)-1
+  while start < end:
+    currentSum = arr[start] + arr[end]
+    if target == currentSum:
+      return [start, end]
+    elif currentSum < target:
+      start+=1
+    else:
+      end-=1
+  return []
+
+
+def main():
+  print(pair_with_targetsum([1, 2, 3, 4, 6], 6))
+  print(pair_with_targetsum([2, 5, 9, 11], 11))
+  print(pair_with_targetsum([], 11))
+
+
+main()
+
+
 # input: sorted list that may including negative numbers, target sum that may be negative
 # output: pair of index that the numbers added up to the target sum
 # edge cases: empty array, sum not found -> return empty array
@@ -31,14 +69,6 @@
 #       rightIndex -=1
 
 #   return []
-
-def main():
-  print(pair_with_targetsum([1, 2, 3, 4, 6], 6))
-  print(pair_with_targetsum([2, 5, 9, 11], 11))
-  print(pair_with_targetsum([], 11))
-
-
-main()
 
 
 
