@@ -169,7 +169,7 @@ We will start with a brief introduction of each pattern before jumping into the 
 #### 06/15 (Tues):
 
 - "Trees: BFS" Continued ( Each Pair Choose Two! )
-  - [] Reverse Level Order Traversal (easy): LC #107
+  - [x] Reverse Level Order Traversal (easy): LC #107
   - [] Zigzag Traversal (medium): LC #103
   - [x] Level Averages in a Binary Tree (easy): LC #637
 
@@ -186,9 +186,9 @@ We will start with a brief introduction of each pattern before jumping into the 
 
 - "Trees: DFS" Continued ( Each Pair Choose Two! )
   - [] All Paths for a Sum (medium): LC #113 & LC #257
-  - [] Sum of Path Numbers (medium): LC #129
+  - [x] Sum of Path Numbers (medium): LC #129
   - [] Path With Given Sequence (medium): LC #1430
-  - [] Count Paths for a Sum (medium): LC #437
+  - [x] Count Paths for a Sum (medium): LC #437
 
 ### .
 
