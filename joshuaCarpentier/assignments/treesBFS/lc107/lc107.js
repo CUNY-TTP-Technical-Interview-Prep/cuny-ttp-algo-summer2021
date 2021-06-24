@@ -1,6 +1,21 @@
 // Problem Statement #
 
-// Given a binary tree, populate an array to represent its level-by-level traversal in reverse order, i.e., the lowest level comes first. You should populate the values of all nodes in each level from left to right in separate sub-arrays.
+// Given a binary tree, populate an array to represent its level-by-level traversal in reverse order, i.e., the lowest level comes first. 
+//You should populate the values of all nodes in each level from left to right in separate sub-arrays.
+
+
+
+  /**
+   * 
+   * Input: tree
+   * Output: last to root in array
+   *  
+   * Naive Approach
+   * --------------- 
+   * Variables: root, root. left, root.right, array to store the results 
+   * 
+   * 
+   */
 
 class TreeNode {
 
@@ -11,11 +26,32 @@ class TreeNode {
   }
 };
 
-const traverse = function(root) {
-  result = [];
-  // TODO: Write your code here
-  return result;
-}
+const traverse = (root) =>{
+    let result = [];
+    let queue = [root];
+    
+    while(queue.length) {
+        let levelSize = queue.length;
+        let currentLevel = [];
+        for (let i = 0; i < levelSize; i += 1) {
+            let currentNode = queue.shift();
+            if (currentNode.left) console.log(`Left push: ${queue.push(currentNode.left)}`)
+            if (currentNode.right) console.log(`Right push: ${queue.push(currentNode.right)}`)
+              console.log(`currentNode : ${currentNode.value}`);
+             currentLevel.push(currentNode.value);
+
+        }
+        console.log(`Checker : ${currentLevel}`);
+        console.log(`Result Check : ${result.unshift(currentLevel)}`);
+
+        // result.unshift(currentLevel);
+    }
+    return result;
+
+  
+  }
+
+
 
 var root = new TreeNode(12)
 root.left = new TreeNode(7)
@@ -24,6 +60,8 @@ root.left.left = new TreeNode(9)
 root.right.left = new TreeNode(10)
 root.right.right = new TreeNode(5)
 console.log(`Reverse level order traversal: ${traverse(root)}`)
+console.log(`\n ------- Edge Case -------- `);
+// console.log(`Reverse level order traversal: ${traverse(root)}`);
 
 // Solution
 // -----

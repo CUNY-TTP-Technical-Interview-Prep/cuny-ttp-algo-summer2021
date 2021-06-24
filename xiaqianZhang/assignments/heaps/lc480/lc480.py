@@ -1,6 +1,7 @@
 # Problem Statement #
 
-# Given an array of numbers and a number ‘k’, find the median of all the ‘k’ sized sub-arrays (or windows) of the array.
+# Given an array of numbers and a number ‘k’, 
+# find the median of all the ‘k’ sized sub-arrays (or windows) of the array.
 
 # Example 1:
 
@@ -23,6 +24,9 @@
 #   - [1, 2, -1, 3, 5] -> median is 2.0
 #   - [1, 2, -1, 3, 5] -> median is 3.0
 
+'''
+Idea:
+'''
 class SlidingWindowMedian:
 
   def find_sliding_window_median(self, nums, k):

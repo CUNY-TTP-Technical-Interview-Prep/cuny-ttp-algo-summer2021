@@ -3,34 +3,40 @@
 
 # Write a function to return the indices of the two numbers (i.e. the pair) such that they add up to the given target.
 
-#Attempt 2
+#Attempt 3
 '''
-Input: list of integers and target Sum integer
-Output: index of the two numbers in the list that have the sum as the target sum
-edge case: if the array is empty, return null
+Input: sorted array that may contain negative integers
+Output: return the index of two integers that have the same sum as the target sum
 
-initliaze two variables, two pointer that one starts from index 0, another starts at the end of the array
-  while the left pointer is smaller than the right pointer:
-    initliaze a currentSum that is the sum of the start and end
-    check if the currentSum is:
-      equal as the target: return the index of start and end
-      smaller than the target: move the start index rightwards because the currentSum is too small
-      less than 0: move the end index leftwards since the currentSum is too large
+Edge case: if the array is empty, return 0
+intialize two index:
+startIndex = 0
+lastIndex = len(arr) - 1
+
+while startIndex less than the lastIndex, that means these two index are not meeting each other:
+  check if the sum of these two index are equal to the targetSum:
+    if so, return the startIndex and lastIndex as array pair
+    if the sum of these two index are smaller than the targetSum:
+      increment the startIndex by 1, since the array is sorted, startIndex starts with the smaller numbers
+    since our currentsum is smaller than the target Sum, we want to increase the current sum size
+    else if the current sum is larger than the targetSum:
+      decrement the lastIndex, since lastIndex is larger value, we want to lower the current Sum
+
 '''
 
 def pair_with_targetsum(arr, target):
-  start = 0
-  end = len(arr)-1
-  while start < end:
-    currentSum = arr[start] + arr[end]
-    if target == currentSum:
-      return [start, end]
-    elif currentSum < target:
-      start+=1
-    else:
-      end-=1
-  return []
+  startIndex = 0
+  lastIndex = len(arr) - 1
+  if len(arr) == 0:
+    return []
 
+  while startIndex < lastIndex:
+    if arr[startIndex] + arr[lastIndex] == target:
+      return [startIndex, lastIndex]
+    elif arr[startIndex] + arr[lastIndex] < target:
+      startIndex += 1
+    else:
+      lastIndex -= 1
 
 def main():
   print(pair_with_targetsum([1, 2, 3, 4, 6], 6))
@@ -85,20 +91,3 @@ main()
 
 
 
-
-
-
-
-# Solution
-# -----
-#   left, right = 0, len(arr) - 1
-#   while(left < right):
-#     current_sum = arr[left] + arr[right]
-#     if current_sum == target_sum:
-#       return [left, right]
-
-#     if target_sum > current_sum:
-#       left += 1  # we need a pair with a bigger sum
-#     else:
-#       right -= 1  # we need a pair with a smaller sum
-#   return [-1, -1]
