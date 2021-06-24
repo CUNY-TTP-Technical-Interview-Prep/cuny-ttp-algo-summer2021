@@ -89,6 +89,10 @@ Heap.maxComparator = (a, b) => { return b - a; }
 //heap is undefined need something to create it//
 class MedianOfAStream {
   insert_num(num) {
+
+    if (!this.maxHeap) this.maxHeap = new Heap(Heap.maxComparator);
+    if (!this.minHeap) this.minHeap = new Heap(Heap.minComparator);
+
     if (this.maxHeap.peek() === null || num < this.maxHeap.peek()) {
       this.maxHeap.add(num);
     } else {

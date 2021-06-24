@@ -13,38 +13,34 @@
 //        2  9
 
 
+//17 + 1
+
 
 /*
-Given a 0-9 digit binary tree
-Goal is to sum each root-to-leaf path that represent a number
+Given: A binary tree 
+Goal: turn each path into number and then add the number 
+and return Sum
 
-Variables:
 sum = 0
 
-create another function to recursvely solve the problem
-the parameters would include node which is the root and a string value,
-function dfs(node, num){
-    num += node.value.toString()
+create a recursive function dfs that takes in a node, num(string){
+   num += node.value.toString() 1 + 7 = 17 
 
-  a condtional to check if the node has a left and right
-  if not then you have your number and add it to the sum
-  if(!node.left && !node.right){
-    sum += num
-  }
+ a conditional to check if there is no left or no right
+ sum += num//17 + 192 + 199
 
-  a conditional to check if their is a left node
-  dfs( node.left, num)
+ a conditional to check if there is a left
+ call recursive function (node.left, num)
 
-  a conditional to check if their is a right node
-  dfs(node.right, num)
-]
-
-
-  dfs(root, '')
-  return sum 
+ a conditional to check if there is right
+  call recursive function (node.left, num)
 }
-edge cases:
-if there is no root return -1
+
+dfs(root,'')
+return sum
+edge cases{
+  root node is null return 0
+}
 
 */
 class TreeNode {
@@ -58,12 +54,13 @@ class TreeNode {
 
 
 const find_sum_of_path_numbers = function (root) {
-  let sum = 0
 
-  if (root == null) {
-    return -1;
+  let sum = 0;
+
+  if (root === null) {
+    return 0
   }
-  //recursive function
+
   function dfs(node, num) {
     num += node.value.toString()
 
@@ -79,8 +76,10 @@ const find_sum_of_path_numbers = function (root) {
       dfs(node.right, num)
     }
   }
+
   dfs(root, '')
   return sum
+
 };
 
 
@@ -93,3 +92,19 @@ root.right.left = new TreeNode(6)
 root.right.right = new TreeNode(5)
 console.log(`Total Sum of Path Numbers: ${find_sum_of_path_numbers(root)}`)
 
+var root2 = new TreeNode(3); // 335 + 312 + 319 = 335 + 631 = 966
+root2.left = new TreeNode(3);
+root2.right = new TreeNode(1);
+root2.left.left = new TreeNode(5);
+root2.right.left = new TreeNode(2);
+root2.right.right = new TreeNode(9);
+console.log(`Total Sum of Path Numbers: ${find_sum_of_path_numbers(root2)}`)
+
+
+/*
+
+          1
+        0   1
+      1   6   5
+101 + 116 +115
+*/
