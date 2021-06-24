@@ -1,6 +1,7 @@
 # Problem Statement #
 
 # Given an array of positive numbers and a positive number ‘k,’ find the maximum sum of any contiguous subarray of size ‘k’.
+
 # Personal note - "Diary" - I am able to understand and explain the code after
 # Melissa walked us through a solution.  Here I "copy" the code by typing it in per class'
 # instructions. I "translated" it to Python, which I am very rusty at.
