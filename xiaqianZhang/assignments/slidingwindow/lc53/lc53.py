@@ -3,40 +3,36 @@ from typing_extensions import final
 # find the contiguous subarray (containing at least one number) 
 # which has the largest sum and return its sum.
 
-#Attempt 4:
+#Attempt 5:
 '''
-input: size of the subarrary that we want to sum call k, array that may contains negative integers
-output: largest sum of the numbers in the array that is size of k
+Input: integer k and array that may contains negative 
+Output: find the subarray with size k that have the largest sum
+edge case: if the array is empty, return None
 
-initliaze with a windowStart = 0, currentSum = 0, largestSum = 0
-for loop that go through each index in the array:
-  currentSum will be increment the index value of the array
-  if current index is greater than the size of k-1 [0, 1, 2] size of k = 3, so the index will be ended at 3-1 = index 2
-    update the largest sum = max(currentSum, largestSum)
-    currentSum decrement the first index of the subarray of size k
-    windowStart increment by 1
-
-return the largestSum
-
-Edge case:
-1. if the k is < 1: return 0
-2. if the arr is empty, return 0
+initliaze a startIndex = 0, currentSum = 0, maxSum = 0
+for loop that go through each value in the array:
+  increment the currentSum's value
+  when the current index is greater than the size of k:
+    update the maxSum's value
+    decrement the currentSum's value by the startIndex's value
+    startIndex increment by one 
+return the maxSum
 '''
 def max_sub_array_of_size_k(k, arr):
-  windowStart = 0
+  startIndex = 0
   currentSum = 0
-  largestSum = 0
+  maxSum = 0
 
-  if k == 0 or arr is None:
+  if len(arr) < 1:
     return 0
 
   for each in range(len(arr)):
     currentSum += arr[each]
-    if each >= k-1:
-      largestSum = max(currentSum, largestSum)
-      currentSum -= arr[windowStart]
-      windowStart+=1
-  return largestSum
+    if each >= k - 1:
+      maxSum = max(maxSum, currentSum)
+      currentSum -= arr[startIndex]
+      startIndex+=1
+  return maxSum
 
 def main():
   print("Maximum sum of a subarray of size K: " + str(max_sub_array_of_size_k(3, [2, 1, 5, 1, 3, 2]))) #9
