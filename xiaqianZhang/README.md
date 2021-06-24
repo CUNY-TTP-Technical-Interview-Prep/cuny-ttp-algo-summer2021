@@ -106,8 +106,8 @@ program containing the following:
 #### 06/03 (Thur):
 
 - "Two Pointers" Continued: P2P Mock Interview ( Each Pair Choose Two! )
-  - [] Remove Duplicates (easy): LC #26
-  - [] Squaring a Sorted Array (easy): LC #977
+  - [X] Remove Duplicates (easy): LC #26
+  - [X] Squaring a Sorted Array (easy): LC #977
   - [] Triplet Sum to Zero (medium): LC #15
   - [X] Triplet Sum Close to Target (medium): LC #16
 
