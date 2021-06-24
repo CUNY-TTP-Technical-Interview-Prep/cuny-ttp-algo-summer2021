@@ -176,10 +176,10 @@ program containing the following:
 
 #### 06/17 (Thur):
 - "Trees: DFS" Continued ( Each Pair Choose Two! )
-  - [] All Paths for a Sum (medium): LC #113 & LC #257 
+  - [x] All Paths for a Sum (medium): LC #113 & LC #257 
   - [x] Sum of Path Numbers (medium): LC #129
   - [] Path With Given Sequence (medium): LC #1430
-  - [] Count Paths for a Sum (medium): LC #437
+  - [x] Count Paths for a Sum (medium): LC #437
 
 ### .
 ### /// Week Four ///
