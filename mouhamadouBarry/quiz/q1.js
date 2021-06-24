@@ -32,11 +32,11 @@ function returnSum(arr, k){
     let sum = 0
     let max = 0
 
-    while ( endPtr < arr.length ){
+    while ( endPtr < arr.length){
         
         sum = sum + arr[endPtr]
         
-        if (endPtr>k-1){
+        if ( endPtr >= (k-1) ){
             max = Math.max(max, sum)
             sum = sum - arr[startPtr]
             startPtr++
@@ -59,7 +59,7 @@ function main(){
 
     console.log(`My array is ${arr} and my k is ${k}`)
 
-    console.log( returnSum(arr,3) )
+    console.log( returnSum(arr,k) )
 }
 
 main() 
