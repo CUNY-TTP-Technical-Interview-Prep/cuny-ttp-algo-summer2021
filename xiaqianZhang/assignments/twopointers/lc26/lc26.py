@@ -4,7 +4,7 @@
 
 
 def remove_duplicates(arr):
-
+  return
 
 
 def main():
