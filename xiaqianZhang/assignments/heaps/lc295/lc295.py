@@ -7,64 +7,109 @@
 
 # If the count of numbers inserted in the class is even, the median will be the average of the middle two numbers.
 
-      
+
+'''
+class MedianFinder:
+    def __init__(self):
+        self.small = []  # the smaller half of the list, max heap (invert min-heap)
+        self.large = []  # the larger half of the list, min heap
+
+    def addNum(self, num):
+        if len(self.small) == len(self.large):
+            heappush(self.large, -heappushpop(self.small, -num))
+        else:
+            heappush(self.small, -heappushpop(self.large, num))
+
+    def findMedian(self):
+        if len(self.small) == len(self.large):
+            return float(self.large[0] - self.small[0]) / 2.0
+        else:
+            return float(self.large[0])
+
+large = [1]
+num = 2
+large = [1, 2] root = 1 since it is min heap
+pop out the -1
+num = -1
+push into the small array
+
+small = [-1]
+large = [2]
+
+num = 3
+small [-1, -3] -3 pop out since it is min heap
+after the pop out, we reversed the sign and push to the large 
+small [-1]
+large [2, 3]
+
+num = 4
+large [2, 3, 4]
+pop out the min heap, pop out 2
+push -2 into the small
+small [-2, -1]
+large [3, 4]
+
+num = 5
+push the -5 into small array
+small [-5, -2, -1]
+pop out the -5
+push -(-5) into large subarray
+
+large [3, 4, 5]
+
+'''
+
+'''
+Attempt 2
+
+Idea: create two heap, 
+one is min heap that contains the larger numbers
+one is max heap that contains the smaller numbers
+Then the root of the min heap is the largest value within that heap
+And the root of the max heap is the largest value within this heap
+Then check if these two heap have the same length size
+if so, take two heap's root value and divide by 2
+else, take the root value of the min heap side
+'''
+from heapq import *
+
 class MedianOfAStream:
   def __init__(self):
-    self.heapList = []
-    self.currentSize = 0
+    self.smaller = []
+    self.larger = []
 
   def insert_num(self, num):
-    self.heapList.append(num)
-    self.currentSize += 1
-    currentIndex = self.currentSize - 1 #insert the number at the end of the array
-    parentIndex = abs(currentIndex - 1) // 2
-    # if the parent value are greater than the current value, we want to swap
-    while currentIndex > 0 and self.heapList[parentIndex] > self.heapList[currentIndex]:
-      self.heapList[parentIndex], self.heapList[currentIndex] = self.heapList[currentIndex], self.heapList[parentIndex]
-      currentIndex = parentIndex
-      parentIndex = abs(currentIndex - 1) // 2
-    
-    return -1
+    if len(self.smaller) == len(self.larger):
+      heappush(self.larger, -heappushpop(self.smaller, -num))
+    else:
+      heappush(self.smaller, -heappushpop(self.larger, num))
 
   def find_median(self):
-    if self.heapList is []:
-      return None
-
-    #start of by getting the median index
-    med = self.currentSize // 2
-    med1 = self.currentSize // 2 - 1
-    if self.currentSize % 2 == 0:
-      return (self.heapList[med] + self.heapList[med1]) / 2
+    if len(self.smaller) == len(self.larger):
+      return (self.larger[0] - self.smaller[0]) / 2
     else:
-      return self.heapList[med]
+      return self.larger[0]
 
-  # Attempt 1
-  # def __init__(self):
-  #     self.heapList = []
-  #     self.currentSize = 0
+# from heapq import *
 
-  # def insert_num(self, num):
-  #  self.heapList.append(num)
-  #  self.currentSize += 1
-  #  currentNode = (self.currentSize -1) #currentIndex
-  #  parentNode = abs(currentNode-1) // 2 #parentIndex
-  #  while currentNode > 0 and self.heapList[parentNode] > self.heapList[currentNode]: #larger value to the end of the array
-  #    self.heapList[parentNode], self.heapList[currentNode] = self.heapList[currentNode], self.heapList[parentNode]
-  #    currentNode = parentNode #now the currentNode is swap as the parentNode's value
-  #    parentNode = (currentNode - 1) // 2 #update the parentNode as the currentNode's parent (like original parent's parent)
+# class MedianOfAStream:
+#   def __init__(self):
+#     self.small = []
+#     self.large = []
 
-  #  return -1
+#   def insert_num(self, num):
+#     if len(self.small) == len(self.large):
+#       heappush(self.large, -heappushpop(self.small, -num))
+#     else:
+#       heappush(self.small, -heappushpop(self.large, num))
 
-  # def find_median(self):
-  #   if self.heapList is []:
-  #     return None
-    
-  #   med = self.currentSize // 2 # since we are looking for the index, we want int, so use //
-  #   med1 = self.currentSize // 2 - 1
-  #   if self.currentSize % 2 == 0:
-  #     return (self.heapList[med] + self.heapList[med1]) / 2 # since here we are looking for med, we could have float /
-  #   else:
-  #     return self.heapList[med]
+
+#   def find_median(self):
+#     if len(self.small) == len(self.large):
+#       #the root of each side and divide by 2
+#       return (-self.small[0] + self.large[0]) / 2
+#     else:
+#       return self.large[0]
 
 
 def main():

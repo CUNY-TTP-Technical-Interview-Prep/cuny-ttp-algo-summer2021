@@ -10,6 +10,54 @@
 # Write a function to return the maximum number of fruits in both baskets.
 
 '''
+Attempt 2:
+Input: array of characters that contains dulicate character
+output: return the max length of subarray that contains two different character
+Initialize startIndex = 0, maxNum = 0, currentCount = {}
+The directionary that used to count the appearence of the index, we don't want the size of the dictionary > 2
+
+first by loop through the array and checking if the current index's character is in the dictionary:
+  if so, append its count value by 0
+  else: set its count value as 1
+  within this for loop, we want to have the condition that if the size of the dictionary is greater than 2:
+    set a variable for the start index in the dictionary
+    then decrement the count of this index's character by 1
+    if the count is equal to 0:
+      remove the first key character in the dictionary
+    increment the startIndex by 1
+  update the maxNum = max bt(maxNum, currentIndex - startIndex + 1)
+return maxNum
+'''
+
+def fruits_into_baskets(arr):
+  startIndex = 0
+  maxNum = 0
+  currentCount = {}
+  for eachIndex in range(len(arr)):
+    currentValue = arr[eachIndex]
+    if currentValue not in currentCount:
+      currentCount[currentValue] = 0
+    currentCount[currentValue] += 1
+
+    while len(currentCount) > 2:
+      startValue = arr[startIndex]
+      currentCount[startValue] -= 1
+      if currentCount[startValue] == 0:
+        del currentCount[startValue]
+      
+      startIndex+=1
+    maxNum = max(maxNum, eachIndex - startIndex + 1)
+  return maxNum
+
+def main():
+  print("Maximum number of fruits: " + str(fruits_into_baskets(['A', 'B', 'C', 'A', 'C'])))
+  # CAC
+  print("Maximum number of fruits: " + str(fruits_into_baskets(['A', 'B', 'C', 'B', 'B', 'C'])))
+  # BCBBC
+
+main()
+
+'''
 Input: array of character
 Output: return the maximum of two unique characters in a row
 
@@ -30,34 +78,28 @@ for loop that go through each index value in array:
 return maxNum
 
 '''
-def fruits_into_baskets(fruits):
-  windowStart = 0
-  maxNum = 0
-  countV = {}
+# def fruits_into_baskets(fruits):
+#   windowStart = 0
+#   maxNum = 0
+#   countV = {}
 
-  for each in range(len(fruits)):
-    currentV = fruits[each]
-    if currentV not in countV:
-      countV[currentV] = 0
-    countV[currentV] +=1
+#   for each in range(len(fruits)):
+#     currentV = fruits[each]
+#     if currentV not in countV:
+#       countV[currentV] = 0
+#     countV[currentV] +=1
 
-    while len(countV) > 2:
-      initV = fruits[windowStart]
-      countV[initV] -=1
-      if countV[initV] == 0:
-        del countV[initV]
+#     while len(countV) > 2:
+#       initV = fruits[windowStart]
+#       countV[initV] -=1
+#       if countV[initV] == 0:
+#         del countV[initV]
       
-      windowStart += 1
-    maxNum = max(maxNum, each - windowStart + 1)
-  return maxNum
+#       windowStart += 1
+#     maxNum = max(maxNum, each - windowStart + 1)
+#   return maxNum
 
-def main():
-  print("Maximum number of fruits: " + str(fruits_into_baskets(['A', 'B', 'C', 'A', 'C'])))
-  #ABA BCC CAC
-  print("Maximum number of fruits: " + str(fruits_into_baskets(['A', 'B', 'C', 'B', 'B', 'C'])))
-  # BCBBC
 
-main()
 
 
 
