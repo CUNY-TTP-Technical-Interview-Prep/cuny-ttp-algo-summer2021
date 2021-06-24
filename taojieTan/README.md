@@ -178,7 +178,7 @@ We will start with a brief introduction of each pattern before jumping into the 
 - "Trees: BFS" Continued ( Each Pair Choose One! )
   - [x] Minimum Depth of a Binary Tree (easy): LC #111 & LC #104
   - [x] Level Order Successor (easy)
-  - [] Connect Level Order Siblings (medium): LC #117
+  - [x] Connect Level Order Siblings (medium): LC #117
 - Intro to "Trees: DFS" Pattern & Discussion
   - [x] Binary Tree Path Sum (easy): LC #112
 
@@ -197,7 +197,7 @@ We will start with a brief introduction of each pattern before jumping into the 
 #### 06/21 (Mon):
 
 - Intro to "Heaps" Pattern & Discussion
-  - [] Find the Median of a Number Stream (medium): LC #295
+  - [x] Find the Median of a Number Stream (medium): LC #295
 - "Heaps" Continued ( \*No Luck This Time, Only One Problem To Choose From! )
   - [] Sliding Window Median (hard): LC #480
 - Intro to "Subsets" Pattern & Discussion

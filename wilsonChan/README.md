@@ -153,7 +153,7 @@ program containing the following:
 
 #### 06/14 (Mon):
 - "In Place Reversal of a LL" Continued ( Each Pair Choose One! )
-  - [] Reverse a LinkedList (easy): LC #206
+  - [x] Reverse a LinkedList (easy): LC #206
   - [x] Reverse a Sub-list (medium): LC #92
   - [] Reverse every K-element Sub-list (medium): LC #25 
 - Intro to "Trees: BFS" Pattern & Discussion
@@ -190,7 +190,7 @@ program containing the following:
 - "Heaps" Continued ( *No Luck This Time, Only One Problem To Choose From! )
   - [] Sliding Window Median (hard): LC #480
 - Intro to "Subsets" Pattern & Discussion
-  - [] Subsets (easy): LC #78
+  - [x] Subsets (easy): LC #78
 
 #### 06/22 (Tues):
 - "Subsets" Continued ( Each Pair Choose One! )
